@@ -1,4 +1,4 @@
-# timmomatic v0.33 run on Taito at CSC 
+# trimmomatic v0.33 run on Taito at CSC 
 
 trimmomatic PE -threads 8 -phred33 \ 
 2_150911_BC7F8NANXX_P2211_101_1.fastq.gz \
