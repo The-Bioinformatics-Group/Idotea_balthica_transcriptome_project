@@ -6,7 +6,7 @@ I will follow the 'best practice' pipeline fron the paper, SNP genotyping and po
 All analysis will be done on the Taito supercluster at CSC.
 
 
-# PREPROCESSING
+# Preprocessing
 1. Visualize with FASTQC
 2. Trim adapters and low quality with TRIMMOMATIC
 3. Error correct with REPTILE
