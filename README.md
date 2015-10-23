@@ -17,5 +17,9 @@ All analysis will be done on the Taito supercluster at CSC.
 Using TRINITY
 
 
+# Quality Evaluation
+Using TRANSRATE
+
+
 # Annotation 
 Using PANNZER
