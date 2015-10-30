@@ -17,8 +17,8 @@ Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
 Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
 ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
 
-Input Read Pairs: 
-296173922 Both Surviving: 262020548 (88.47%) 
+Input Read Pairs: 296173922 
+Both Surviving: 262020548 (88.47%) 
 Forward Only Surviving: 28871039 (9.75%) 
 Reverse Only Surviving: 1602357 (0.54%) 
 Dropped: 3679978 (1.24%)
