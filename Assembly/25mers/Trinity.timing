@@ -1,0 +1,22 @@
+Statistics:
+===========
+Trinity Version:      v2.1.0
+Compiler:             GCC
+Trinity Parameters:   --seqType fa --max_memory 300G --left left.fa --right right.fa --CPU 24 --normalize_reads --grid_conf /appl/bio/trinity/trinityrnaseq-2.1.0/hpc_conf/taito.slurm
+Paired mode
+ Input data
+  Left.fasta    1206 MByte
+  Right.fasta   1195 MByte
+  Number of unique KMERs: 102470716
+  Number of reads:        0 Output data
+  Trinity.fasta 104 MByte
+
+Runtime
+=======
+Start:       Mon Nov  2 09:38:57 EET 2015
+End:         Mon Nov  2 16:45:30 EET 2015
+Trinity   25593 seconds
+  Inchworm   1297 seconds
+  Chrysalis  4857 seconds
+  Butterfly  0 seconds
+  Rest       19439 seconds
