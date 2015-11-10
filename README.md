@@ -9,15 +9,15 @@ All analysis will be done on the Taito supercluster at CSC.
 # Preprocessing
 1. Visualize with FASTQC
 2. Trim adapters and low quality with TRIMMOMATIC
-3. Error correct with REPTILE
+3. Error correct with RCORRECTOR
 4. In silico normalization built into TRINITY
 
 
 # De novo Assembly
-Using TRINITY
+Using TRINITY (20/25/30mers)
 
 
-# Quality Evaluation
+# Quality Evaluation / Optimization
 Using TRANSRATE
 
 
