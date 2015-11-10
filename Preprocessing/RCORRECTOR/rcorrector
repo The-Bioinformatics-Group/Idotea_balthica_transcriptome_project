@@ -1,0 +1,12 @@
+# rcorrector downloaded and installed on 2015-11-06 run on Taito at CSC 
+# https:// github.com/mourisl/rcorrector.git
+
+perl $USERAPPL/rcorrector/rcorrector/run_rcorrector.pl \-1 $WRKDIR/reptile_data/trimmomatic_unzipped/out_fw_paired.fastq \-2 $WRKDIR/reptile_data/trimmomatic_unzipped/out_rev_paired.fastq \-t 16 -k 25 # 16 threads, 25mers
+
+# OUTPUT (~3hrs, 16cores, 12GB RAM) ################################
+
+Stored 139073753 kmersWeak kmer threshold rate: 0.006066Bad quality threshold is ;Processed 524041096 reads        Corrected 44876577 bases.# NOTES ##########################################################
+
+# I ran using 20mers and 1,658,557 more bases were corrected than with 25mers.
+
+Stored 128297607 kmersWeak kmer threshold rate: 0.009025Bad quality threshold is ;Processed 524041096 reads        Corrected 46535134 bases.# This seems insignificant since there are more than 500M reads averaging 125 bases in length
