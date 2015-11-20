@@ -1,0 +1,1098 @@
+Trinity version: v2.1.0
+** NOTE: Latest version of Trinity is v2.1.1, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+* Found ParaFly installed at: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/parafly/bin/ParaFly
+
+Tuesday, November 17, 2015: 02:51:07	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/ExitTester.jar 0
+Tuesday, November 17, 2015: 02:51:08	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/ExitTester.jar 1
+Tuesday, November 17, 2015: 02:51:08	CMD: mkdir -p /wrk/ketaya/trinity/trinity_out_dir
+Tuesday, November 17, 2015: 02:51:08	CMD: mkdir -p /wrk/ketaya/trinity/trinity_out_dir/chrysalis
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+Converting input files. (in parallel)Tuesday, November 17, 2015: 02:51:08	CMD: cat /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_fw_paired.cor.fq.normalized_K25_C50_pctSD200.fq | /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/fastool/fastool --illumina-trinity --to-fasta >> left.fa 2> /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_fw_paired.cor.fq.normalized_K25_C50_pctSD200.fq.readcount 
+Tuesday, November 17, 2015: 02:51:08	CMD: cat /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq | /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/fastool/fastool --illumina-trinity --to-fasta >> right.fa 2> /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq.readcount 
+Tuesday, November 17, 2015: 02:51:52	CMD: touch left.fa.ok right.fa.ok
+Tuesday, November 17, 2015: 02:51:52	CMD: cat left.fa right.fa > both.fa
+Tuesday, November 17, 2015: 02:51:57	CMD: touch both.fa.ok
+-------------------------------------------
+----------- Jellyfish  --------------------
+-- (building a k-mer catalog from reads) --
+-------------------------------------------
+
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/jellyfish/bin/jellyfish count -t 8 -m 25 -s 11777662297  --canonical  both.fa
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/jellyfish/bin/jellyfish dump -L 1 mer_counts.jf > jellyfish.kmers.fa
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/jellyfish/bin/jellyfish histo -t 8 -o jellyfish.kmers.fa.histo mer_counts.jf
+----------------------------------------------
+--------------- Inchworm ---------------------
+-- (Linear contig construction from k-mers) --
+----------------------------------------------
+
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Inchworm/bin//inchworm --kmers jellyfish.kmers.fa --run_inchworm -K 25 -L 25 --monitor 1   --DS  --num_threads 6  --PARALLEL_IWORM  > /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa.tmp
+* Running CMD: mv /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa.tmp /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa
+Tuesday, November 17, 2015: 03:00:26	CMD: touch /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa.finished
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/misc/fasta_filter_by_min_length.pl /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa 100 > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K25.L25.DS.fa.min100
+* Running CMD: bowtie-build -q /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K25.L25.DS.fa.min100 /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K25.L25.DS.fa.min100
+* Running CMD: bash -c " set -o pipefail; bowtie -a -m 20 --best --strata --threads 8  --chunkmbs 512 -q -S -f /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K25.L25.DS.fa.min100 both.fa  | samtools view -@ 8 -F4 -Sb - | samtools sort -m 80G -@ 8 -no - - > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm.bowtie.nameSorted.bam" 
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/scaffold_iworm_contigs/scaffold_iworm_contigs /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm.bowtie.nameSorted.bam /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm_scaffolds.txt
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/GraphFromFasta -i /wrk/ketaya/trinity/trinity_out_dir/inchworm.K25.L25.DS.fa -r both.fa -min_contig_length 200 -min_glue 2 -glue_factor 0.05 -min_iso_ratio 0.05 -t 8 -k 24 -kk 48  -scaffolding /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm_scaffolds.txt  > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/GraphFromIwormFasta.out
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/CreateIwormFastaBundle -i /wrk/ketaya/trinity/trinity_out_dir/chrysalis/GraphFromIwormFasta.out -o /wrk/ketaya/trinity/trinity_out_dir/chrysalis/bundled_iworm_contigs.fasta -min 200
+* Running CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/ReadsToTranscripts -i both.fa -f /wrk/ketaya/trinity/trinity_out_dir/chrysalis/bundled_iworm_contigs.fasta -o /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out -t 8 -max_mem_reads 50000000 
+* Running CMD: /bin/sort -T . -S 80G -k 1,1n /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out.sort
+Tuesday, November 17, 2015: 03:48:58	CMD: mkdir -p read_partitions/Fb_0/CBin_0
+Tuesday, November 17, 2015: 03:48:58	CMD: mkdir -p read_partitions/Fb_0/CBin_1
+Tuesday, November 17, 2015: 03:48:59	CMD: mkdir -p read_partitions/Fb_0/CBin_2
+Tuesday, November 17, 2015: 03:48:59	CMD: mkdir -p read_partitions/Fb_0/CBin_3
+Tuesday, November 17, 2015: 03:48:59	CMD: mkdir -p read_partitions/Fb_0/CBin_4
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_5
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_6
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_7
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_8
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_9
+Tuesday, November 17, 2015: 03:49:00	CMD: mkdir -p read_partitions/Fb_0/CBin_10
+Tuesday, November 17, 2015: 03:49:01	CMD: mkdir -p read_partitions/Fb_0/CBin_11
+Tuesday, November 17, 2015: 03:49:01	CMD: mkdir -p read_partitions/Fb_0/CBin_12
+Tuesday, November 17, 2015: 03:49:01	CMD: mkdir -p read_partitions/Fb_0/CBin_13
+Tuesday, November 17, 2015: 03:49:01	CMD: mkdir -p read_partitions/Fb_0/CBin_14
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_15
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_16
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_17
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_18
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_19
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_20
+Tuesday, November 17, 2015: 03:49:02	CMD: mkdir -p read_partitions/Fb_0/CBin_21
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_22
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_23
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_24
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_25
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_26
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_27
+Tuesday, November 17, 2015: 03:49:03	CMD: mkdir -p read_partitions/Fb_0/CBin_28
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_29
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_30
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_31
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_32
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_33
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_34
+Tuesday, November 17, 2015: 03:49:04	CMD: mkdir -p read_partitions/Fb_0/CBin_35
+Tuesday, November 17, 2015: 03:49:05	CMD: mkdir -p read_partitions/Fb_0/CBin_36
+Tuesday, November 17, 2015: 03:49:05	CMD: mkdir -p read_partitions/Fb_0/CBin_37
+Tuesday, November 17, 2015: 03:49:05	CMD: mkdir -p read_partitions/Fb_0/CBin_38
+Tuesday, November 17, 2015: 03:49:05	CMD: mkdir -p read_partitions/Fb_0/CBin_39
+Tuesday, November 17, 2015: 03:49:05	CMD: mkdir -p read_partitions/Fb_0/CBin_40
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_41
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_42
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_43
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_44
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_45
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_46
+Tuesday, November 17, 2015: 03:49:06	CMD: mkdir -p read_partitions/Fb_0/CBin_47
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_48
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_49
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_50
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_51
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_52
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_53
+Tuesday, November 17, 2015: 03:49:07	CMD: mkdir -p read_partitions/Fb_0/CBin_54
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_55
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_56
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_57
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_58
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_59
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_60
+Tuesday, November 17, 2015: 03:49:08	CMD: mkdir -p read_partitions/Fb_0/CBin_61
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_62
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_63
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_64
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_65
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_66
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_67
+Tuesday, November 17, 2015: 03:49:09	CMD: mkdir -p read_partitions/Fb_0/CBin_68
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_69
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_70
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_71
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_72
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_73
+Tuesday, November 17, 2015: 03:49:10	CMD: mkdir -p read_partitions/Fb_0/CBin_74
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_75
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_76
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_77
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_78
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_79
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_80
+Tuesday, November 17, 2015: 03:49:11	CMD: mkdir -p read_partitions/Fb_0/CBin_81
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_82
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_83
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_84
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_85
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_86
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_87
+Tuesday, November 17, 2015: 03:49:12	CMD: mkdir -p read_partitions/Fb_0/CBin_88
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_89
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_90
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_91
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_92
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_93
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_94
+Tuesday, November 17, 2015: 03:49:13	CMD: mkdir -p read_partitions/Fb_0/CBin_95
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_96
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_97
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_98
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_99
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_100
+Tuesday, November 17, 2015: 03:49:14	CMD: mkdir -p read_partitions/Fb_0/CBin_101
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_102
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_103
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_104
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_105
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_106
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_107
+Tuesday, November 17, 2015: 03:49:15	CMD: mkdir -p read_partitions/Fb_0/CBin_108
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_109
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_110
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_111
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_112
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_113
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_114
+Tuesday, November 17, 2015: 03:49:16	CMD: mkdir -p read_partitions/Fb_0/CBin_115
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_116
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_117
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_118
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_119
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_120
+Tuesday, November 17, 2015: 03:49:17	CMD: mkdir -p read_partitions/Fb_0/CBin_121
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_122
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_123
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_124
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_125
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_126
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_127
+Tuesday, November 17, 2015: 03:49:18	CMD: mkdir -p read_partitions/Fb_0/CBin_128
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_129
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_130
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_131
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_132
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_133
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_134
+Tuesday, November 17, 2015: 03:49:19	CMD: mkdir -p read_partitions/Fb_0/CBin_135
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_136
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_137
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_138
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_139
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_140
+Tuesday, November 17, 2015: 03:49:20	CMD: mkdir -p read_partitions/Fb_0/CBin_141
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_142
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_143
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_144
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_145
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_146
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_147
+Tuesday, November 17, 2015: 03:49:21	CMD: mkdir -p read_partitions/Fb_0/CBin_148
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_149
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_150
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_151
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_152
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_153
+Tuesday, November 17, 2015: 03:49:22	CMD: mkdir -p read_partitions/Fb_0/CBin_154
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_155
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_156
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_157
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_158
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_159
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_160
+Tuesday, November 17, 2015: 03:49:23	CMD: mkdir -p read_partitions/Fb_0/CBin_161
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_162
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_163
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_164
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_165
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_166
+Tuesday, November 17, 2015: 03:49:24	CMD: mkdir -p read_partitions/Fb_0/CBin_167
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_168
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_169
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_170
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_171
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_172
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_173
+Tuesday, November 17, 2015: 03:49:25	CMD: mkdir -p read_partitions/Fb_0/CBin_174
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_175
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_176
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_177
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_178
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_179
+Tuesday, November 17, 2015: 03:49:26	CMD: mkdir -p read_partitions/Fb_0/CBin_180
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_181
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_182
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_183
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_184
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_185
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_186
+Tuesday, November 17, 2015: 03:49:27	CMD: mkdir -p read_partitions/Fb_0/CBin_187
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_188
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_189
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_190
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_191
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_192
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_193
+Tuesday, November 17, 2015: 03:49:28	CMD: mkdir -p read_partitions/Fb_0/CBin_194
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_195
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_196
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_197
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_198
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_199
+Tuesday, November 17, 2015: 03:49:29	CMD: mkdir -p read_partitions/Fb_0/CBin_200
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_201
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_202
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_203
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_204
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_205
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_206
+Tuesday, November 17, 2015: 03:49:30	CMD: mkdir -p read_partitions/Fb_0/CBin_207
+Tuesday, November 17, 2015: 03:49:31	CMD: mkdir -p read_partitions/Fb_0/CBin_208
+Tuesday, November 17, 2015: 03:49:31	CMD: mkdir -p read_partitions/Fb_0/CBin_209
+Tuesday, November 17, 2015: 03:49:31	CMD: mkdir -p read_partitions/Fb_0/CBin_210
+Tuesday, November 17, 2015: 03:49:31	CMD: mkdir -p read_partitions/Fb_0/CBin_211
+Tuesday, November 17, 2015: 03:49:31	CMD: mkdir -p read_partitions/Fb_0/CBin_212
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_213
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_214
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_215
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_216
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_217
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_218
+Tuesday, November 17, 2015: 03:49:32	CMD: mkdir -p read_partitions/Fb_0/CBin_219
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_220
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_221
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_222
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_223
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_224
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_225
+Tuesday, November 17, 2015: 03:49:33	CMD: mkdir -p read_partitions/Fb_0/CBin_226
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_227
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_228
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_229
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_230
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_231
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_232
+Tuesday, November 17, 2015: 03:49:34	CMD: mkdir -p read_partitions/Fb_0/CBin_233
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_234
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_235
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_236
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_237
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_238
+Tuesday, November 17, 2015: 03:49:35	CMD: mkdir -p read_partitions/Fb_0/CBin_239
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_240
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_241
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_242
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_243
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_244
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_245
+Tuesday, November 17, 2015: 03:49:36	CMD: mkdir -p read_partitions/Fb_0/CBin_246
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_247
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_248
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_249
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_250
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_251
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_252
+Tuesday, November 17, 2015: 03:49:37	CMD: mkdir -p read_partitions/Fb_0/CBin_253
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_254
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_255
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_256
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_257
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_258
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_259
+Tuesday, November 17, 2015: 03:49:38	CMD: mkdir -p read_partitions/Fb_0/CBin_260
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_261
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_262
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_263
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_264
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_265
+Tuesday, November 17, 2015: 03:49:39	CMD: mkdir -p read_partitions/Fb_0/CBin_266
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_267
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_268
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_269
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_270
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_271
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_272
+Tuesday, November 17, 2015: 03:49:40	CMD: mkdir -p read_partitions/Fb_0/CBin_273
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_274
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_275
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_276
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_277
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_278
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_279
+Tuesday, November 17, 2015: 03:49:41	CMD: mkdir -p read_partitions/Fb_0/CBin_280
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_281
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_282
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_283
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_284
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_285
+Tuesday, November 17, 2015: 03:49:42	CMD: mkdir -p read_partitions/Fb_0/CBin_286
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_287
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_288
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_289
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_290
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_291
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_292
+Tuesday, November 17, 2015: 03:49:43	CMD: mkdir -p read_partitions/Fb_0/CBin_293
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_294
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_295
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_296
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_297
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_298
+Tuesday, November 17, 2015: 03:49:44	CMD: mkdir -p read_partitions/Fb_0/CBin_299
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_300
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_301
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_302
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_303
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_304
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_305
+Tuesday, November 17, 2015: 03:49:45	CMD: mkdir -p read_partitions/Fb_0/CBin_306
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_307
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_308
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_309
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_310
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_311
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_312
+Tuesday, November 17, 2015: 03:49:46	CMD: mkdir -p read_partitions/Fb_0/CBin_313
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_314
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_315
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_316
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_317
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_318
+Tuesday, November 17, 2015: 03:49:47	CMD: mkdir -p read_partitions/Fb_0/CBin_319
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_320
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_321
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_322
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_323
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_324
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_325
+Tuesday, November 17, 2015: 03:49:48	CMD: mkdir -p read_partitions/Fb_0/CBin_326
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_327
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_328
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_329
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_330
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_331
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_332
+Tuesday, November 17, 2015: 03:49:49	CMD: mkdir -p read_partitions/Fb_0/CBin_333
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_334
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_335
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_336
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_337
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_338
+Tuesday, November 17, 2015: 03:49:50	CMD: mkdir -p read_partitions/Fb_0/CBin_339
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_340
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_341
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_342
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_343
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_344
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_345
+Tuesday, November 17, 2015: 03:49:51	CMD: mkdir -p read_partitions/Fb_0/CBin_346
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_347
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_348
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_349
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_350
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_351
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_352
+Tuesday, November 17, 2015: 03:49:52	CMD: mkdir -p read_partitions/Fb_0/CBin_353
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_354
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_355
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_356
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_357
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_358
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_359
+Tuesday, November 17, 2015: 03:49:53	CMD: mkdir -p read_partitions/Fb_0/CBin_360
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_361
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_362
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_363
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_364
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_365
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_366
+Tuesday, November 17, 2015: 03:49:54	CMD: mkdir -p read_partitions/Fb_0/CBin_367
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_368
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_369
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_370
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_371
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_372
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_373
+Tuesday, November 17, 2015: 03:49:55	CMD: mkdir -p read_partitions/Fb_0/CBin_374
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_375
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_376
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_377
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_378
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_379
+Tuesday, November 17, 2015: 03:49:56	CMD: mkdir -p read_partitions/Fb_0/CBin_380
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_381
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_382
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_383
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_384
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_385
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_386
+Tuesday, November 17, 2015: 03:49:57	CMD: mkdir -p read_partitions/Fb_0/CBin_387
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_388
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_389
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_390
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_391
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_392
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_393
+Tuesday, November 17, 2015: 03:49:58	CMD: mkdir -p read_partitions/Fb_0/CBin_394
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_395
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_396
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_397
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_398
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_399
+Tuesday, November 17, 2015: 03:49:59	CMD: mkdir -p read_partitions/Fb_0/CBin_400
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_401
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_402
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_403
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_404
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_405
+Tuesday, November 17, 2015: 03:50:00	CMD: mkdir -p read_partitions/Fb_0/CBin_406
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_407
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_408
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_409
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_410
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_411
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_412
+Tuesday, November 17, 2015: 03:50:01	CMD: mkdir -p read_partitions/Fb_0/CBin_413
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_414
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_415
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_416
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_417
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_418
+Tuesday, November 17, 2015: 03:50:02	CMD: mkdir -p read_partitions/Fb_0/CBin_419
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_420
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_421
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_422
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_423
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_424
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_425
+Tuesday, November 17, 2015: 03:50:03	CMD: mkdir -p read_partitions/Fb_0/CBin_426
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_427
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_428
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_429
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_430
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_431
+Tuesday, November 17, 2015: 03:50:04	CMD: mkdir -p read_partitions/Fb_0/CBin_432
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_433
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_434
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_435
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_436
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_437
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_438
+Tuesday, November 17, 2015: 03:50:05	CMD: mkdir -p read_partitions/Fb_0/CBin_439
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_440
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_441
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_442
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_443
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_444
+Tuesday, November 17, 2015: 03:50:06	CMD: mkdir -p read_partitions/Fb_0/CBin_445
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_446
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_447
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_448
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_449
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_450
+Tuesday, November 17, 2015: 03:50:07	CMD: mkdir -p read_partitions/Fb_0/CBin_451
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_452
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_453
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_454
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_455
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_456
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_457
+Tuesday, November 17, 2015: 03:50:08	CMD: mkdir -p read_partitions/Fb_0/CBin_458
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_459
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_460
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_461
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_462
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_463
+Tuesday, November 17, 2015: 03:50:09	CMD: mkdir -p read_partitions/Fb_0/CBin_464
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_465
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_466
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_467
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_468
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_469
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_470
+Tuesday, November 17, 2015: 03:50:10	CMD: mkdir -p read_partitions/Fb_0/CBin_471
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_472
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_473
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_474
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_475
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_476
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_477
+Tuesday, November 17, 2015: 03:50:11	CMD: mkdir -p read_partitions/Fb_0/CBin_478
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_479
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_480
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_481
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_482
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_483
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_484
+Tuesday, November 17, 2015: 03:50:12	CMD: mkdir -p read_partitions/Fb_0/CBin_485
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_486
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_487
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_488
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_489
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_490
+Tuesday, November 17, 2015: 03:50:13	CMD: mkdir -p read_partitions/Fb_0/CBin_491
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_492
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_493
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_494
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_495
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_496
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_497
+Tuesday, November 17, 2015: 03:50:14	CMD: mkdir -p read_partitions/Fb_0/CBin_498
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_499
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_500
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_501
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_502
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_503
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_504
+Tuesday, November 17, 2015: 03:50:15	CMD: mkdir -p read_partitions/Fb_0/CBin_505
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_506
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_507
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_508
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_509
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_510
+Tuesday, November 17, 2015: 03:50:16	CMD: mkdir -p read_partitions/Fb_0/CBin_511
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_512
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_513
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_514
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_515
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_516
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_517
+Tuesday, November 17, 2015: 03:50:17	CMD: mkdir -p read_partitions/Fb_0/CBin_518
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_519
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_520
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_521
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_522
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_523
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_524
+Tuesday, November 17, 2015: 03:50:18	CMD: mkdir -p read_partitions/Fb_0/CBin_525
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_526
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_527
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_528
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_529
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_530
+Tuesday, November 17, 2015: 03:50:19	CMD: mkdir -p read_partitions/Fb_0/CBin_531
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_532
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_533
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_534
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_535
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_536
+Tuesday, November 17, 2015: 03:50:20	CMD: mkdir -p read_partitions/Fb_0/CBin_537
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_538
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_539
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_540
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_541
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_542
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_543
+Tuesday, November 17, 2015: 03:50:21	CMD: mkdir -p read_partitions/Fb_0/CBin_544
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_545
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_546
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_547
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_548
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_549
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_550
+Tuesday, November 17, 2015: 03:50:22	CMD: mkdir -p read_partitions/Fb_0/CBin_551
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_552
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_553
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_554
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_555
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_556
+Tuesday, November 17, 2015: 03:50:23	CMD: mkdir -p read_partitions/Fb_0/CBin_557
+Tuesday, November 17, 2015: 03:50:24	CMD: mkdir -p read_partitions/Fb_0/CBin_558
+Tuesday, November 17, 2015: 03:50:24	CMD: mkdir -p read_partitions/Fb_0/CBin_559
+Tuesday, November 17, 2015: 03:50:24	CMD: mkdir -p read_partitions/Fb_0/CBin_560
+Tuesday, November 17, 2015: 03:50:24	CMD: mkdir -p read_partitions/Fb_0/CBin_561
+Tuesday, November 17, 2015: 03:50:24	CMD: mkdir -p read_partitions/Fb_0/CBin_562
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_563
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_564
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_565
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_566
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_567
+Tuesday, November 17, 2015: 03:50:25	CMD: mkdir -p read_partitions/Fb_0/CBin_568
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_569
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_570
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_571
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_572
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_573
+Tuesday, November 17, 2015: 03:50:26	CMD: mkdir -p read_partitions/Fb_0/CBin_574
+Tuesday, November 17, 2015: 03:50:27	CMD: mkdir -p read_partitions/Fb_0/CBin_575
+Tuesday, November 17, 2015: 03:50:27	CMD: mkdir -p read_partitions/Fb_0/CBin_576
+Tuesday, November 17, 2015: 03:50:27	CMD: mkdir -p read_partitions/Fb_0/CBin_577
+Tuesday, November 17, 2015: 03:50:27	CMD: mkdir -p read_partitions/Fb_0/CBin_578
+Tuesday, November 17, 2015: 03:50:27	CMD: mkdir -p read_partitions/Fb_0/CBin_579
+Tuesday, November 17, 2015: 03:50:28	CMD: mkdir -p read_partitions/Fb_0/CBin_580
+Tuesday, November 17, 2015: 03:50:28	CMD: mkdir -p read_partitions/Fb_0/CBin_581
+Tuesday, November 17, 2015: 03:50:28	CMD: mkdir -p read_partitions/Fb_0/CBin_582
+Tuesday, November 17, 2015: 03:50:28	CMD: mkdir -p read_partitions/Fb_0/CBin_583
+Tuesday, November 17, 2015: 03:50:28	CMD: mkdir -p read_partitions/Fb_0/CBin_584
+Tuesday, November 17, 2015: 03:50:29	CMD: mkdir -p read_partitions/Fb_0/CBin_585
+Tuesday, November 17, 2015: 03:50:29	CMD: mkdir -p read_partitions/Fb_0/CBin_586
+Tuesday, November 17, 2015: 03:50:29	CMD: mkdir -p read_partitions/Fb_0/CBin_587
+Tuesday, November 17, 2015: 03:50:29	CMD: mkdir -p read_partitions/Fb_0/CBin_588
+Tuesday, November 17, 2015: 03:50:29	CMD: mkdir -p read_partitions/Fb_0/CBin_589
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_590
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_591
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_592
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_593
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_594
+Tuesday, November 17, 2015: 03:50:30	CMD: mkdir -p read_partitions/Fb_0/CBin_595
+Tuesday, November 17, 2015: 03:50:31	CMD: mkdir -p read_partitions/Fb_0/CBin_596
+Tuesday, November 17, 2015: 03:50:31	CMD: mkdir -p read_partitions/Fb_0/CBin_597
+Tuesday, November 17, 2015: 03:50:31	CMD: mkdir -p read_partitions/Fb_0/CBin_598
+Tuesday, November 17, 2015: 03:50:31	CMD: mkdir -p read_partitions/Fb_0/CBin_599
+Tuesday, November 17, 2015: 03:50:31	CMD: mkdir -p read_partitions/Fb_0/CBin_600
+Tuesday, November 17, 2015: 03:50:32	CMD: mkdir -p read_partitions/Fb_0/CBin_601
+Tuesday, November 17, 2015: 03:50:32	CMD: mkdir -p read_partitions/Fb_0/CBin_602
+Tuesday, November 17, 2015: 03:50:32	CMD: mkdir -p read_partitions/Fb_0/CBin_603
+Tuesday, November 17, 2015: 03:50:32	CMD: mkdir -p read_partitions/Fb_0/CBin_604
+Tuesday, November 17, 2015: 03:50:32	CMD: mkdir -p read_partitions/Fb_0/CBin_605
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_606
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_607
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_608
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_609
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_610
+Tuesday, November 17, 2015: 03:50:33	CMD: mkdir -p read_partitions/Fb_0/CBin_611
+Tuesday, November 17, 2015: 03:50:34	CMD: mkdir -p read_partitions/Fb_0/CBin_612
+Tuesday, November 17, 2015: 03:50:34	CMD: mkdir -p read_partitions/Fb_0/CBin_613
+Tuesday, November 17, 2015: 03:50:34	CMD: mkdir -p read_partitions/Fb_0/CBin_614
+Tuesday, November 17, 2015: 03:50:34	CMD: mkdir -p read_partitions/Fb_0/CBin_615
+Tuesday, November 17, 2015: 03:50:34	CMD: mkdir -p read_partitions/Fb_0/CBin_616
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_617
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_618
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_619
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_620
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_621
+Tuesday, November 17, 2015: 03:50:35	CMD: mkdir -p read_partitions/Fb_0/CBin_622
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_623
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_624
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_625
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_626
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_627
+Tuesday, November 17, 2015: 03:50:36	CMD: mkdir -p read_partitions/Fb_0/CBin_628
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_629
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_630
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_631
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_632
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_633
+Tuesday, November 17, 2015: 03:50:37	CMD: mkdir -p read_partitions/Fb_0/CBin_634
+Tuesday, November 17, 2015: 03:50:38	CMD: mkdir -p read_partitions/Fb_0/CBin_635
+Tuesday, November 17, 2015: 03:50:38	CMD: mkdir -p read_partitions/Fb_0/CBin_636
+Tuesday, November 17, 2015: 03:50:38	CMD: mkdir -p read_partitions/Fb_0/CBin_637
+Tuesday, November 17, 2015: 03:50:38	CMD: mkdir -p read_partitions/Fb_0/CBin_638
+Tuesday, November 17, 2015: 03:50:38	CMD: mkdir -p read_partitions/Fb_0/CBin_639
+Tuesday, November 17, 2015: 03:50:39	CMD: mkdir -p read_partitions/Fb_0/CBin_640
+Tuesday, November 17, 2015: 03:50:39	CMD: mkdir -p read_partitions/Fb_0/CBin_641
+Tuesday, November 17, 2015: 03:50:39	CMD: mkdir -p read_partitions/Fb_0/CBin_642
+Tuesday, November 17, 2015: 03:50:39	CMD: mkdir -p read_partitions/Fb_0/CBin_643
+Tuesday, November 17, 2015: 03:50:39	CMD: mkdir -p read_partitions/Fb_0/CBin_644
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_645
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_646
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_647
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_648
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_649
+Tuesday, November 17, 2015: 03:50:40	CMD: mkdir -p read_partitions/Fb_0/CBin_650
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_651
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_652
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_653
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_654
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_655
+Tuesday, November 17, 2015: 03:50:41	CMD: mkdir -p read_partitions/Fb_0/CBin_656
+Tuesday, November 17, 2015: 03:50:42	CMD: mkdir -p read_partitions/Fb_0/CBin_657
+Tuesday, November 17, 2015: 03:50:42	CMD: mkdir -p read_partitions/Fb_0/CBin_658
+Tuesday, November 17, 2015: 03:50:42	CMD: mkdir -p read_partitions/Fb_0/CBin_659
+Tuesday, November 17, 2015: 03:50:42	CMD: mkdir -p read_partitions/Fb_0/CBin_660
+Tuesday, November 17, 2015: 03:50:42	CMD: mkdir -p read_partitions/Fb_0/CBin_661
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_662
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_663
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_664
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_665
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_666
+Tuesday, November 17, 2015: 03:50:43	CMD: mkdir -p read_partitions/Fb_0/CBin_667
+Tuesday, November 17, 2015: 03:50:44	CMD: mkdir -p read_partitions/Fb_0/CBin_668
+Tuesday, November 17, 2015: 03:50:44	CMD: mkdir -p read_partitions/Fb_0/CBin_669
+Tuesday, November 17, 2015: 03:50:44	CMD: mkdir -p read_partitions/Fb_0/CBin_670
+Tuesday, November 17, 2015: 03:50:44	CMD: mkdir -p read_partitions/Fb_0/CBin_671
+Tuesday, November 17, 2015: 03:50:44	CMD: mkdir -p read_partitions/Fb_0/CBin_672
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_673
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_674
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_675
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_676
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_677
+Tuesday, November 17, 2015: 03:50:45	CMD: mkdir -p read_partitions/Fb_0/CBin_678
+Tuesday, November 17, 2015: 03:50:46	CMD: mkdir -p read_partitions/Fb_0/CBin_679
+Tuesday, November 17, 2015: 03:50:46	CMD: mkdir -p read_partitions/Fb_0/CBin_680
+Tuesday, November 17, 2015: 03:50:46	CMD: mkdir -p read_partitions/Fb_0/CBin_681
+Tuesday, November 17, 2015: 03:50:46	CMD: mkdir -p read_partitions/Fb_0/CBin_682
+Tuesday, November 17, 2015: 03:50:46	CMD: mkdir -p read_partitions/Fb_0/CBin_683
+Tuesday, November 17, 2015: 03:50:47	CMD: mkdir -p read_partitions/Fb_0/CBin_684
+Tuesday, November 17, 2015: 03:50:47	CMD: mkdir -p read_partitions/Fb_0/CBin_685
+Tuesday, November 17, 2015: 03:50:47	CMD: mkdir -p read_partitions/Fb_0/CBin_686
+Tuesday, November 17, 2015: 03:50:47	CMD: mkdir -p read_partitions/Fb_0/CBin_687
+Tuesday, November 17, 2015: 03:50:47	CMD: mkdir -p read_partitions/Fb_0/CBin_688
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_689
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_690
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_691
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_692
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_693
+Tuesday, November 17, 2015: 03:50:48	CMD: mkdir -p read_partitions/Fb_0/CBin_694
+Tuesday, November 17, 2015: 03:50:49	CMD: mkdir -p read_partitions/Fb_0/CBin_695
+Tuesday, November 17, 2015: 03:50:49	CMD: mkdir -p read_partitions/Fb_0/CBin_696
+Tuesday, November 17, 2015: 03:50:49	CMD: mkdir -p read_partitions/Fb_0/CBin_697
+Tuesday, November 17, 2015: 03:50:49	CMD: mkdir -p read_partitions/Fb_0/CBin_698
+Tuesday, November 17, 2015: 03:50:49	CMD: mkdir -p read_partitions/Fb_0/CBin_699
+Tuesday, November 17, 2015: 03:50:50	CMD: mkdir -p read_partitions/Fb_0/CBin_700
+Tuesday, November 17, 2015: 03:50:50	CMD: mkdir -p read_partitions/Fb_0/CBin_701
+Tuesday, November 17, 2015: 03:50:50	CMD: mkdir -p read_partitions/Fb_0/CBin_702
+Tuesday, November 17, 2015: 03:50:50	CMD: mkdir -p read_partitions/Fb_0/CBin_703
+Tuesday, November 17, 2015: 03:50:50	CMD: mkdir -p read_partitions/Fb_0/CBin_704
+Tuesday, November 17, 2015: 03:50:51	CMD: mkdir -p read_partitions/Fb_0/CBin_705
+Tuesday, November 17, 2015: 03:50:51	CMD: mkdir -p read_partitions/Fb_0/CBin_706
+Tuesday, November 17, 2015: 03:50:51	CMD: mkdir -p read_partitions/Fb_0/CBin_707
+Tuesday, November 17, 2015: 03:50:51	CMD: mkdir -p read_partitions/Fb_0/CBin_708
+Tuesday, November 17, 2015: 03:50:51	CMD: mkdir -p read_partitions/Fb_0/CBin_709
+Tuesday, November 17, 2015: 03:50:52	CMD: mkdir -p read_partitions/Fb_0/CBin_710
+Tuesday, November 17, 2015: 03:50:52	CMD: mkdir -p read_partitions/Fb_0/CBin_711
+Tuesday, November 17, 2015: 03:50:52	CMD: mkdir -p read_partitions/Fb_0/CBin_712
+Tuesday, November 17, 2015: 03:50:52	CMD: mkdir -p read_partitions/Fb_0/CBin_713
+Tuesday, November 17, 2015: 03:50:52	CMD: mkdir -p read_partitions/Fb_0/CBin_714
+Tuesday, November 17, 2015: 03:50:53	CMD: mkdir -p read_partitions/Fb_0/CBin_715
+Tuesday, November 17, 2015: 03:50:53	CMD: mkdir -p read_partitions/Fb_0/CBin_716
+Tuesday, November 17, 2015: 03:50:53	CMD: mkdir -p read_partitions/Fb_0/CBin_717
+Tuesday, November 17, 2015: 03:50:53	CMD: mkdir -p read_partitions/Fb_0/CBin_718
+Tuesday, November 17, 2015: 03:50:53	CMD: mkdir -p read_partitions/Fb_0/CBin_719
+Tuesday, November 17, 2015: 03:50:54	CMD: mkdir -p read_partitions/Fb_0/CBin_720
+Tuesday, November 17, 2015: 03:50:54	CMD: mkdir -p read_partitions/Fb_0/CBin_721
+Tuesday, November 17, 2015: 03:50:54	CMD: mkdir -p read_partitions/Fb_0/CBin_722
+Tuesday, November 17, 2015: 03:50:54	CMD: mkdir -p read_partitions/Fb_0/CBin_723
+Tuesday, November 17, 2015: 03:50:54	CMD: mkdir -p read_partitions/Fb_0/CBin_724
+Tuesday, November 17, 2015: 03:50:55	CMD: mkdir -p read_partitions/Fb_0/CBin_725
+Tuesday, November 17, 2015: 03:50:55	CMD: mkdir -p read_partitions/Fb_0/CBin_726
+Tuesday, November 17, 2015: 03:50:55	CMD: mkdir -p read_partitions/Fb_0/CBin_727
+Tuesday, November 17, 2015: 03:50:55	CMD: mkdir -p read_partitions/Fb_0/CBin_728
+Tuesday, November 17, 2015: 03:50:56	CMD: mkdir -p read_partitions/Fb_0/CBin_729
+Tuesday, November 17, 2015: 03:50:56	CMD: mkdir -p read_partitions/Fb_0/CBin_730
+Tuesday, November 17, 2015: 03:50:56	CMD: mkdir -p read_partitions/Fb_0/CBin_731
+Tuesday, November 17, 2015: 03:50:56	CMD: mkdir -p read_partitions/Fb_0/CBin_732
+Tuesday, November 17, 2015: 03:50:56	CMD: mkdir -p read_partitions/Fb_0/CBin_733
+Tuesday, November 17, 2015: 03:50:57	CMD: mkdir -p read_partitions/Fb_0/CBin_734
+Tuesday, November 17, 2015: 03:50:57	CMD: mkdir -p read_partitions/Fb_0/CBin_735
+Tuesday, November 17, 2015: 03:50:57	CMD: mkdir -p read_partitions/Fb_0/CBin_736
+Tuesday, November 17, 2015: 03:50:57	CMD: mkdir -p read_partitions/Fb_0/CBin_737
+Tuesday, November 17, 2015: 03:50:57	CMD: mkdir -p read_partitions/Fb_0/CBin_738
+Tuesday, November 17, 2015: 03:50:58	CMD: mkdir -p read_partitions/Fb_0/CBin_739
+Tuesday, November 17, 2015: 03:50:58	CMD: mkdir -p read_partitions/Fb_0/CBin_740
+Tuesday, November 17, 2015: 03:50:58	CMD: mkdir -p read_partitions/Fb_0/CBin_741
+Tuesday, November 17, 2015: 03:50:58	CMD: mkdir -p read_partitions/Fb_0/CBin_742
+Tuesday, November 17, 2015: 03:50:59	CMD: mkdir -p read_partitions/Fb_0/CBin_743
+Tuesday, November 17, 2015: 03:50:59	CMD: mkdir -p read_partitions/Fb_0/CBin_744
+Tuesday, November 17, 2015: 03:50:59	CMD: mkdir -p read_partitions/Fb_0/CBin_745
+Tuesday, November 17, 2015: 03:50:59	CMD: mkdir -p read_partitions/Fb_0/CBin_746
+Tuesday, November 17, 2015: 03:50:59	CMD: mkdir -p read_partitions/Fb_0/CBin_747
+Tuesday, November 17, 2015: 03:51:00	CMD: mkdir -p read_partitions/Fb_0/CBin_748
+Tuesday, November 17, 2015: 03:51:00	CMD: mkdir -p read_partitions/Fb_0/CBin_749
+Tuesday, November 17, 2015: 03:51:00	CMD: mkdir -p read_partitions/Fb_0/CBin_750
+Tuesday, November 17, 2015: 03:51:00	CMD: mkdir -p read_partitions/Fb_0/CBin_751
+Tuesday, November 17, 2015: 03:51:01	CMD: mkdir -p read_partitions/Fb_0/CBin_752
+Tuesday, November 17, 2015: 03:51:01	CMD: mkdir -p read_partitions/Fb_0/CBin_753
+Tuesday, November 17, 2015: 03:51:01	CMD: mkdir -p read_partitions/Fb_0/CBin_754
+Tuesday, November 17, 2015: 03:51:01	CMD: mkdir -p read_partitions/Fb_0/CBin_755
+Tuesday, November 17, 2015: 03:51:01	CMD: mkdir -p read_partitions/Fb_0/CBin_756
+Tuesday, November 17, 2015: 03:51:02	CMD: mkdir -p read_partitions/Fb_0/CBin_757
+Tuesday, November 17, 2015: 03:51:02	CMD: mkdir -p read_partitions/Fb_0/CBin_758
+Tuesday, November 17, 2015: 03:51:02	CMD: mkdir -p read_partitions/Fb_0/CBin_759
+Tuesday, November 17, 2015: 03:51:02	CMD: mkdir -p read_partitions/Fb_0/CBin_760
+Tuesday, November 17, 2015: 03:51:03	CMD: mkdir -p read_partitions/Fb_0/CBin_761
+Tuesday, November 17, 2015: 03:51:03	CMD: mkdir -p read_partitions/Fb_0/CBin_762
+Tuesday, November 17, 2015: 03:51:03	CMD: mkdir -p read_partitions/Fb_0/CBin_763
+Tuesday, November 17, 2015: 03:51:03	CMD: mkdir -p read_partitions/Fb_0/CBin_764
+Tuesday, November 17, 2015: 03:51:03	CMD: mkdir -p read_partitions/Fb_0/CBin_765
+Tuesday, November 17, 2015: 03:51:04	CMD: mkdir -p read_partitions/Fb_0/CBin_766
+Tuesday, November 17, 2015: 03:51:04	CMD: mkdir -p read_partitions/Fb_0/CBin_767
+Tuesday, November 17, 2015: 03:51:04	CMD: mkdir -p read_partitions/Fb_0/CBin_768
+Tuesday, November 17, 2015: 03:51:04	CMD: mkdir -p read_partitions/Fb_0/CBin_769
+Tuesday, November 17, 2015: 03:51:05	CMD: mkdir -p read_partitions/Fb_0/CBin_770
+Tuesday, November 17, 2015: 03:51:05	CMD: mkdir -p read_partitions/Fb_0/CBin_771
+Tuesday, November 17, 2015: 03:51:05	CMD: mkdir -p read_partitions/Fb_0/CBin_772
+Tuesday, November 17, 2015: 03:51:05	CMD: mkdir -p read_partitions/Fb_0/CBin_773
+Tuesday, November 17, 2015: 03:51:06	CMD: mkdir -p read_partitions/Fb_0/CBin_774
+Tuesday, November 17, 2015: 03:51:06	CMD: mkdir -p read_partitions/Fb_0/CBin_775
+Tuesday, November 17, 2015: 03:51:06	CMD: mkdir -p read_partitions/Fb_0/CBin_776
+Tuesday, November 17, 2015: 03:51:06	CMD: mkdir -p read_partitions/Fb_0/CBin_777
+Tuesday, November 17, 2015: 03:51:06	CMD: mkdir -p read_partitions/Fb_0/CBin_778
+Tuesday, November 17, 2015: 03:51:07	CMD: mkdir -p read_partitions/Fb_0/CBin_779
+Tuesday, November 17, 2015: 03:51:07	CMD: mkdir -p read_partitions/Fb_0/CBin_780
+Tuesday, November 17, 2015: 03:51:07	CMD: mkdir -p read_partitions/Fb_0/CBin_781
+Tuesday, November 17, 2015: 03:51:07	CMD: mkdir -p read_partitions/Fb_0/CBin_782
+Tuesday, November 17, 2015: 03:51:08	CMD: mkdir -p read_partitions/Fb_0/CBin_783
+Tuesday, November 17, 2015: 03:51:08	CMD: mkdir -p read_partitions/Fb_0/CBin_784
+Tuesday, November 17, 2015: 03:51:08	CMD: mkdir -p read_partitions/Fb_0/CBin_785
+Tuesday, November 17, 2015: 03:51:08	CMD: mkdir -p read_partitions/Fb_0/CBin_786
+Tuesday, November 17, 2015: 03:51:09	CMD: mkdir -p read_partitions/Fb_0/CBin_787
+Tuesday, November 17, 2015: 03:51:09	CMD: mkdir -p read_partitions/Fb_0/CBin_788
+Tuesday, November 17, 2015: 03:51:09	CMD: mkdir -p read_partitions/Fb_0/CBin_789
+Tuesday, November 17, 2015: 03:51:09	CMD: mkdir -p read_partitions/Fb_0/CBin_790
+Tuesday, November 17, 2015: 03:51:10	CMD: mkdir -p read_partitions/Fb_0/CBin_791
+Tuesday, November 17, 2015: 03:51:10	CMD: mkdir -p read_partitions/Fb_0/CBin_792
+Tuesday, November 17, 2015: 03:51:10	CMD: mkdir -p read_partitions/Fb_0/CBin_793
+Tuesday, November 17, 2015: 03:51:10	CMD: mkdir -p read_partitions/Fb_0/CBin_794
+Tuesday, November 17, 2015: 03:51:11	CMD: mkdir -p read_partitions/Fb_0/CBin_795
+Tuesday, November 17, 2015: 03:51:11	CMD: mkdir -p read_partitions/Fb_0/CBin_796
+Tuesday, November 17, 2015: 03:51:11	CMD: mkdir -p read_partitions/Fb_0/CBin_797
+Tuesday, November 17, 2015: 03:51:11	CMD: mkdir -p read_partitions/Fb_0/CBin_798
+Tuesday, November 17, 2015: 03:51:12	CMD: mkdir -p read_partitions/Fb_0/CBin_799
+Tuesday, November 17, 2015: 03:51:12	CMD: mkdir -p read_partitions/Fb_0/CBin_800
+Tuesday, November 17, 2015: 03:51:12	CMD: mkdir -p read_partitions/Fb_0/CBin_801
+Tuesday, November 17, 2015: 03:51:13	CMD: mkdir -p read_partitions/Fb_0/CBin_802
+Tuesday, November 17, 2015: 03:51:13	CMD: mkdir -p read_partitions/Fb_0/CBin_803
+Tuesday, November 17, 2015: 03:51:13	CMD: mkdir -p read_partitions/Fb_0/CBin_804
+Tuesday, November 17, 2015: 03:51:13	CMD: mkdir -p read_partitions/Fb_0/CBin_805
+Tuesday, November 17, 2015: 03:51:14	CMD: mkdir -p read_partitions/Fb_0/CBin_806
+Tuesday, November 17, 2015: 03:51:14	CMD: mkdir -p read_partitions/Fb_0/CBin_807
+Tuesday, November 17, 2015: 03:51:14	CMD: mkdir -p read_partitions/Fb_0/CBin_808
+Tuesday, November 17, 2015: 03:51:14	CMD: mkdir -p read_partitions/Fb_0/CBin_809
+Tuesday, November 17, 2015: 03:51:15	CMD: mkdir -p read_partitions/Fb_0/CBin_810
+Tuesday, November 17, 2015: 03:51:15	CMD: mkdir -p read_partitions/Fb_0/CBin_811
+Tuesday, November 17, 2015: 03:51:15	CMD: mkdir -p read_partitions/Fb_0/CBin_812
+Tuesday, November 17, 2015: 03:51:15	CMD: mkdir -p read_partitions/Fb_0/CBin_813
+Tuesday, November 17, 2015: 03:51:16	CMD: mkdir -p read_partitions/Fb_0/CBin_814
+Tuesday, November 17, 2015: 03:51:16	CMD: mkdir -p read_partitions/Fb_0/CBin_815
+Tuesday, November 17, 2015: 03:51:16	CMD: mkdir -p read_partitions/Fb_0/CBin_816
+Tuesday, November 17, 2015: 03:51:17	CMD: mkdir -p read_partitions/Fb_0/CBin_817
+Tuesday, November 17, 2015: 03:51:17	CMD: mkdir -p read_partitions/Fb_0/CBin_818
+Tuesday, November 17, 2015: 03:51:17	CMD: mkdir -p read_partitions/Fb_0/CBin_819
+Tuesday, November 17, 2015: 03:51:17	CMD: mkdir -p read_partitions/Fb_0/CBin_820
+Tuesday, November 17, 2015: 03:51:18	CMD: mkdir -p read_partitions/Fb_0/CBin_821
+Tuesday, November 17, 2015: 03:51:18	CMD: mkdir -p read_partitions/Fb_0/CBin_822
+Tuesday, November 17, 2015: 03:51:18	CMD: mkdir -p read_partitions/Fb_0/CBin_823
+Tuesday, November 17, 2015: 03:51:19	CMD: mkdir -p read_partitions/Fb_0/CBin_824
+Tuesday, November 17, 2015: 03:51:19	CMD: mkdir -p read_partitions/Fb_0/CBin_825
+Tuesday, November 17, 2015: 03:51:19	CMD: mkdir -p read_partitions/Fb_0/CBin_826
+Tuesday, November 17, 2015: 03:51:20	CMD: mkdir -p read_partitions/Fb_0/CBin_827
+Tuesday, November 17, 2015: 03:51:20	CMD: mkdir -p read_partitions/Fb_0/CBin_828
+Tuesday, November 17, 2015: 03:51:20	CMD: mkdir -p read_partitions/Fb_0/CBin_829
+Tuesday, November 17, 2015: 03:51:21	CMD: mkdir -p read_partitions/Fb_0/CBin_830
+Tuesday, November 17, 2015: 03:51:21	CMD: mkdir -p read_partitions/Fb_0/CBin_831
+Tuesday, November 17, 2015: 03:51:21	CMD: mkdir -p read_partitions/Fb_0/CBin_832
+Tuesday, November 17, 2015: 03:51:22	CMD: mkdir -p read_partitions/Fb_0/CBin_833
+Tuesday, November 17, 2015: 03:51:22	CMD: mkdir -p read_partitions/Fb_0/CBin_834
+Tuesday, November 17, 2015: 03:51:22	CMD: mkdir -p read_partitions/Fb_0/CBin_835
+Tuesday, November 17, 2015: 03:51:22	CMD: mkdir -p read_partitions/Fb_0/CBin_836
+Tuesday, November 17, 2015: 03:51:23	CMD: mkdir -p read_partitions/Fb_0/CBin_837
+Tuesday, November 17, 2015: 03:51:23	CMD: mkdir -p read_partitions/Fb_0/CBin_838
+Tuesday, November 17, 2015: 03:51:23	CMD: mkdir -p read_partitions/Fb_0/CBin_839
+Tuesday, November 17, 2015: 03:51:24	CMD: mkdir -p read_partitions/Fb_0/CBin_840
+Tuesday, November 17, 2015: 03:51:24	CMD: mkdir -p read_partitions/Fb_0/CBin_841
+Tuesday, November 17, 2015: 03:51:25	CMD: mkdir -p read_partitions/Fb_0/CBin_842
+Tuesday, November 17, 2015: 03:51:25	CMD: mkdir -p read_partitions/Fb_0/CBin_843
+Tuesday, November 17, 2015: 03:51:25	CMD: mkdir -p read_partitions/Fb_0/CBin_844
+Tuesday, November 17, 2015: 03:51:26	CMD: mkdir -p read_partitions/Fb_0/CBin_845
+Tuesday, November 17, 2015: 03:51:26	CMD: mkdir -p read_partitions/Fb_0/CBin_846
+Tuesday, November 17, 2015: 03:51:26	CMD: mkdir -p read_partitions/Fb_0/CBin_847
+Tuesday, November 17, 2015: 03:51:27	CMD: mkdir -p read_partitions/Fb_0/CBin_848
+Tuesday, November 17, 2015: 03:51:27	CMD: mkdir -p read_partitions/Fb_0/CBin_849
+Tuesday, November 17, 2015: 03:51:27	CMD: mkdir -p read_partitions/Fb_0/CBin_850
+Tuesday, November 17, 2015: 03:51:28	CMD: mkdir -p read_partitions/Fb_0/CBin_851
+Tuesday, November 17, 2015: 03:51:28	CMD: mkdir -p read_partitions/Fb_0/CBin_852
+Tuesday, November 17, 2015: 03:51:28	CMD: mkdir -p read_partitions/Fb_0/CBin_853
+Tuesday, November 17, 2015: 03:51:29	CMD: mkdir -p read_partitions/Fb_0/CBin_854
+Tuesday, November 17, 2015: 03:51:29	CMD: mkdir -p read_partitions/Fb_0/CBin_855
+Tuesday, November 17, 2015: 03:51:30	CMD: mkdir -p read_partitions/Fb_0/CBin_856
+Tuesday, November 17, 2015: 03:51:30	CMD: mkdir -p read_partitions/Fb_0/CBin_857
+Tuesday, November 17, 2015: 03:51:30	CMD: mkdir -p read_partitions/Fb_0/CBin_858
+Tuesday, November 17, 2015: 03:51:31	CMD: mkdir -p read_partitions/Fb_0/CBin_859
+Tuesday, November 17, 2015: 03:51:31	CMD: mkdir -p read_partitions/Fb_0/CBin_860
+Tuesday, November 17, 2015: 03:51:31	CMD: mkdir -p read_partitions/Fb_0/CBin_861
+Tuesday, November 17, 2015: 03:51:32	CMD: mkdir -p read_partitions/Fb_0/CBin_862
+Tuesday, November 17, 2015: 03:51:32	CMD: mkdir -p read_partitions/Fb_0/CBin_863
+Tuesday, November 17, 2015: 03:51:33	CMD: mkdir -p read_partitions/Fb_0/CBin_864
+Tuesday, November 17, 2015: 03:51:33	CMD: mkdir -p read_partitions/Fb_0/CBin_865
+Tuesday, November 17, 2015: 03:51:34	CMD: mkdir -p read_partitions/Fb_0/CBin_866
+Tuesday, November 17, 2015: 03:51:34	CMD: mkdir -p read_partitions/Fb_0/CBin_867
+Tuesday, November 17, 2015: 03:51:34	CMD: mkdir -p read_partitions/Fb_0/CBin_868
+Tuesday, November 17, 2015: 03:51:35	CMD: mkdir -p read_partitions/Fb_0/CBin_869
+Tuesday, November 17, 2015: 03:51:35	CMD: mkdir -p read_partitions/Fb_0/CBin_870
+Tuesday, November 17, 2015: 03:51:36	CMD: mkdir -p read_partitions/Fb_0/CBin_871
+Tuesday, November 17, 2015: 03:51:36	CMD: mkdir -p read_partitions/Fb_0/CBin_872
+Tuesday, November 17, 2015: 03:51:37	CMD: mkdir -p read_partitions/Fb_0/CBin_873
+Tuesday, November 17, 2015: 03:51:37	CMD: mkdir -p read_partitions/Fb_0/CBin_874
+Tuesday, November 17, 2015: 03:51:38	CMD: mkdir -p read_partitions/Fb_0/CBin_875
+Tuesday, November 17, 2015: 03:51:38	CMD: mkdir -p read_partitions/Fb_0/CBin_876
+Tuesday, November 17, 2015: 03:51:39	CMD: mkdir -p read_partitions/Fb_0/CBin_877
+Tuesday, November 17, 2015: 03:51:39	CMD: mkdir -p read_partitions/Fb_0/CBin_878
+Tuesday, November 17, 2015: 03:51:39	CMD: mkdir -p read_partitions/Fb_0/CBin_879
+Tuesday, November 17, 2015: 03:51:40	CMD: mkdir -p read_partitions/Fb_0/CBin_880
+Tuesday, November 17, 2015: 03:51:40	CMD: mkdir -p read_partitions/Fb_0/CBin_881
+Tuesday, November 17, 2015: 03:51:41	CMD: mkdir -p read_partitions/Fb_0/CBin_882
+Tuesday, November 17, 2015: 03:51:41	CMD: mkdir -p read_partitions/Fb_0/CBin_883
+Tuesday, November 17, 2015: 03:51:42	CMD: mkdir -p read_partitions/Fb_0/CBin_884
+Tuesday, November 17, 2015: 03:51:42	CMD: mkdir -p read_partitions/Fb_0/CBin_885
+Tuesday, November 17, 2015: 03:51:43	CMD: mkdir -p read_partitions/Fb_0/CBin_886
+Tuesday, November 17, 2015: 03:51:43	CMD: mkdir -p read_partitions/Fb_0/CBin_887
+Tuesday, November 17, 2015: 03:51:44	CMD: mkdir -p read_partitions/Fb_0/CBin_888
+Tuesday, November 17, 2015: 03:51:44	CMD: mkdir -p read_partitions/Fb_0/CBin_889
+Tuesday, November 17, 2015: 03:51:45	CMD: mkdir -p read_partitions/Fb_0/CBin_890
+Tuesday, November 17, 2015: 03:51:46	CMD: mkdir -p read_partitions/Fb_0/CBin_891
+Tuesday, November 17, 2015: 03:51:46	CMD: mkdir -p read_partitions/Fb_0/CBin_892
+Tuesday, November 17, 2015: 03:51:47	CMD: mkdir -p read_partitions/Fb_0/CBin_893
+Tuesday, November 17, 2015: 03:51:47	CMD: mkdir -p read_partitions/Fb_0/CBin_894
+Tuesday, November 17, 2015: 03:51:48	CMD: mkdir -p read_partitions/Fb_0/CBin_895
+Tuesday, November 17, 2015: 03:51:48	CMD: mkdir -p read_partitions/Fb_0/CBin_896
+Tuesday, November 17, 2015: 03:51:49	CMD: mkdir -p read_partitions/Fb_0/CBin_897
+Tuesday, November 17, 2015: 03:51:50	CMD: mkdir -p read_partitions/Fb_0/CBin_898
+Tuesday, November 17, 2015: 03:51:50	CMD: mkdir -p read_partitions/Fb_0/CBin_899
+Tuesday, November 17, 2015: 03:51:51	CMD: mkdir -p read_partitions/Fb_0/CBin_900
+Tuesday, November 17, 2015: 03:51:52	CMD: mkdir -p read_partitions/Fb_0/CBin_901
+Tuesday, November 17, 2015: 03:51:52	CMD: mkdir -p read_partitions/Fb_0/CBin_902
+Tuesday, November 17, 2015: 03:51:53	CMD: mkdir -p read_partitions/Fb_0/CBin_903
+Tuesday, November 17, 2015: 03:51:53	CMD: mkdir -p read_partitions/Fb_0/CBin_904
+Tuesday, November 17, 2015: 03:51:54	CMD: mkdir -p read_partitions/Fb_0/CBin_905
+Tuesday, November 17, 2015: 03:51:55	CMD: mkdir -p read_partitions/Fb_0/CBin_906
+Tuesday, November 17, 2015: 03:51:56	CMD: mkdir -p read_partitions/Fb_0/CBin_907
+Tuesday, November 17, 2015: 03:51:56	CMD: mkdir -p read_partitions/Fb_0/CBin_908
+Tuesday, November 17, 2015: 03:51:57	CMD: mkdir -p read_partitions/Fb_0/CBin_909
+Tuesday, November 17, 2015: 03:51:58	CMD: mkdir -p read_partitions/Fb_0/CBin_910
+Tuesday, November 17, 2015: 03:51:59	CMD: mkdir -p read_partitions/Fb_0/CBin_911
+Tuesday, November 17, 2015: 03:52:00	CMD: mkdir -p read_partitions/Fb_0/CBin_912
+Tuesday, November 17, 2015: 03:52:00	CMD: mkdir -p read_partitions/Fb_0/CBin_913
+Tuesday, November 17, 2015: 03:52:01	CMD: mkdir -p read_partitions/Fb_0/CBin_914
+Tuesday, November 17, 2015: 03:52:02	CMD: mkdir -p read_partitions/Fb_0/CBin_915
+Tuesday, November 17, 2015: 03:52:03	CMD: mkdir -p read_partitions/Fb_0/CBin_916
+Tuesday, November 17, 2015: 03:52:04	CMD: mkdir -p read_partitions/Fb_0/CBin_917
+Tuesday, November 17, 2015: 03:52:05	CMD: mkdir -p read_partitions/Fb_0/CBin_918
+Tuesday, November 17, 2015: 03:52:06	CMD: mkdir -p read_partitions/Fb_0/CBin_919
+Tuesday, November 17, 2015: 03:52:07	CMD: mkdir -p read_partitions/Fb_0/CBin_920
+Tuesday, November 17, 2015: 03:52:08	CMD: mkdir -p read_partitions/Fb_0/CBin_921
+Tuesday, November 17, 2015: 03:52:08	CMD: mkdir -p read_partitions/Fb_0/CBin_922
+Tuesday, November 17, 2015: 03:52:10	CMD: mkdir -p read_partitions/Fb_0/CBin_923
+Tuesday, November 17, 2015: 03:52:11	CMD: mkdir -p read_partitions/Fb_0/CBin_924
+Tuesday, November 17, 2015: 03:52:12	CMD: mkdir -p read_partitions/Fb_0/CBin_925
+Tuesday, November 17, 2015: 03:52:14	CMD: mkdir -p read_partitions/Fb_0/CBin_926
+Tuesday, November 17, 2015: 03:52:15	CMD: mkdir -p read_partitions/Fb_0/CBin_927
+Tuesday, November 17, 2015: 03:52:16	CMD: mkdir -p read_partitions/Fb_0/CBin_928
+Tuesday, November 17, 2015: 03:52:17	CMD: mkdir -p read_partitions/Fb_0/CBin_929
+Tuesday, November 17, 2015: 03:52:18	CMD: mkdir -p read_partitions/Fb_0/CBin_930
+Tuesday, November 17, 2015: 03:52:19	CMD: mkdir -p read_partitions/Fb_0/CBin_931
+Tuesday, November 17, 2015: 03:52:20	CMD: mkdir -p read_partitions/Fb_0/CBin_932
+Tuesday, November 17, 2015: 03:52:21	CMD: mkdir -p read_partitions/Fb_0/CBin_933
+Tuesday, November 17, 2015: 03:52:23	CMD: mkdir -p read_partitions/Fb_0/CBin_934
+Tuesday, November 17, 2015: 03:52:24	CMD: mkdir -p read_partitions/Fb_0/CBin_935
+Tuesday, November 17, 2015: 03:52:25	CMD: mkdir -p read_partitions/Fb_0/CBin_936
+Tuesday, November 17, 2015: 03:52:27	CMD: mkdir -p read_partitions/Fb_0/CBin_937
+Tuesday, November 17, 2015: 03:52:28	CMD: mkdir -p read_partitions/Fb_0/CBin_938
+Tuesday, November 17, 2015: 03:52:29	CMD: mkdir -p read_partitions/Fb_0/CBin_939
+Tuesday, November 17, 2015: 03:52:31	CMD: mkdir -p read_partitions/Fb_0/CBin_940
+Tuesday, November 17, 2015: 03:52:32	CMD: mkdir -p read_partitions/Fb_0/CBin_941
+Tuesday, November 17, 2015: 03:52:33	CMD: mkdir -p read_partitions/Fb_0/CBin_942
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_943
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_944
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_945
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_946
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_947
+Tuesday, November 17, 2015: 03:52:34	CMD: mkdir -p read_partitions/Fb_0/CBin_948
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_949
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_950
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_951
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_952
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_953
+Tuesday, November 17, 2015: 03:52:35	CMD: mkdir -p read_partitions/Fb_0/CBin_954
+Tuesday, November 17, 2015: 03:52:36	CMD: mkdir -p read_partitions/Fb_0/CBin_955
+Tuesday, November 17, 2015: 03:52:36	CMD: mkdir -p read_partitions/Fb_0/CBin_956
+Tuesday, November 17, 2015: 03:52:36	CMD: mkdir -p read_partitions/Fb_0/CBin_957
+Tuesday, November 17, 2015: 03:52:36	CMD: mkdir -p read_partitions/Fb_0/CBin_958
+Tuesday, November 17, 2015: 03:52:36	CMD: mkdir -p read_partitions/Fb_0/CBin_959
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_960
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_961
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_962
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_963
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_964
+Tuesday, November 17, 2015: 03:52:37	CMD: mkdir -p read_partitions/Fb_0/CBin_965
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_966
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_967
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_968
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_969
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_970
+Tuesday, November 17, 2015: 03:52:38	CMD: mkdir -p read_partitions/Fb_0/CBin_971
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_972
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_973
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_974
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_975
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_976
+Tuesday, November 17, 2015: 03:52:39	CMD: mkdir -p read_partitions/Fb_0/CBin_977
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_978
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_979
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_980
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_981
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_982
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_983
+Tuesday, November 17, 2015: 03:52:40	CMD: mkdir -p read_partitions/Fb_0/CBin_984
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_985
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_986
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_987
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_988
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_989
+Tuesday, November 17, 2015: 03:52:41	CMD: mkdir -p read_partitions/Fb_0/CBin_990
+Tuesday, November 17, 2015: 03:52:42	CMD: mkdir -p read_partitions/Fb_0/CBin_991
+Tuesday, November 17, 2015: 03:52:42	CMD: mkdir -p read_partitions/Fb_0/CBin_992
+Tuesday, November 17, 2015: 03:52:42	CMD: mkdir -p read_partitions/Fb_0/CBin_993
+Tuesday, November 17, 2015: 03:52:42	CMD: mkdir -p read_partitions/Fb_0/CBin_994
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_0/CBin_995
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_0/CBin_996
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_0/CBin_997
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_0/CBin_998
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_0/CBin_999
+Tuesday, November 17, 2015: 03:52:43	CMD: mkdir -p read_partitions/Fb_1/CBin_1000
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1001
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1002
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1003
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1004
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1005
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1006
+Tuesday, November 17, 2015: 03:52:44	CMD: mkdir -p read_partitions/Fb_1/CBin_1007
+Tuesday, November 17, 2015: 03:52:45	CMD: touch partitioned_reads.files.list.ok
+Tuesday, November 17, 2015: 03:52:45	CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/write_partitioned_trinity_cmds.pl --reads_list_file partitioned_reads.files.list --CPU 1 --max_memory 1G  --seqType fa --trinity_complete --full_cleanup  > recursive_trinity.cmds
+Tuesday, November 17, 2015: 03:52:45	CMD: touch recursive_trinity.cmds.ok
+Tuesday, November 17, 2015: 03:52:45	CMD: touch recursive_trinity.cmds.ok
+
+
+--------------------------------------------------------------------------------
+------------ Trinity Phase 2: Assembling Clusters of Reads ---------------------
+--------------------------------------------------------------------------------
+
+$VAR1 = {
+          'grid' => 'SLURM',
+          'cmd' => 'sbatch -M csc -p serial --mem=10000 --time=12:00:00 -J trin_sub',
+          'max_nodes' => '500',
+          'cmds_per_node' => '200'
+        };
+  CMDS: 200 / 100733  [1/500 nodes in use]     CMDS: 400 / 100733  [2/500 nodes in use]     CMDS: 600 / 100733  [3/500 nodes in use]     CMDS: 800 / 100733  [4/500 nodes in use]     CMDS: 1000 / 100733  [5/500 nodes in use]     CMDS: 1200 / 100733  [6/500 nodes in use]     CMDS: 1400 / 100733  [7/500 nodes in use]     CMDS: 1600 / 100733  [8/500 nodes in use]     CMDS: 1800 / 100733  [9/500 nodes in use]     CMDS: 2000 / 100733  [10/500 nodes in use]     CMDS: 2200 / 100733  [11/500 nodes in use]     CMDS: 2400 / 100733  [12/500 nodes in use]     CMDS: 2600 / 100733  [13/500 nodes in use]     CMDS: 2800 / 100733  [14/500 nodes in use]     CMDS: 3000 / 100733  [15/500 nodes in use]     CMDS: 3200 / 100733  [16/500 nodes in use]     CMDS: 3400 / 100733  [17/500 nodes in use]     CMDS: 3600 / 100733  [18/500 nodes in use]     CMDS: 3800 / 100733  [19/500 nodes in use]     CMDS: 4000 / 100733  [20/500 nodes in use]     CMDS: 4200 / 100733  [21/500 nodes in use]     CMDS: 4400 / 100733  [22/500 nodes in use]     CMDS: 4600 / 100733  [23/500 nodes in use]     CMDS: 4800 / 100733  [24/500 nodes in use]     CMDS: 5000 / 100733  [25/500 nodes in use]     CMDS: 5200 / 100733  [26/500 nodes in use]     CMDS: 5400 / 100733  [27/500 nodes in use]     CMDS: 5600 / 100733  [28/500 nodes in use]     CMDS: 5800 / 100733  [29/500 nodes in use]     CMDS: 6000 / 100733  [30/500 nodes in use]     CMDS: 6200 / 100733  [31/500 nodes in use]     CMDS: 6400 / 100733  [32/500 nodes in use]     CMDS: 6600 / 100733  [33/500 nodes in use]     CMDS: 6800 / 100733  [34/500 nodes in use]     CMDS: 7000 / 100733  [35/500 nodes in use]     CMDS: 7200 / 100733  [36/500 nodes in use]     CMDS: 7400 / 100733  [37/500 nodes in use]     CMDS: 7600 / 100733  [38/500 nodes in use]     CMDS: 7800 / 100733  [39/500 nodes in use]     CMDS: 8000 / 100733  [40/500 nodes in use]     CMDS: 8200 / 100733  [41/500 nodes in use]     CMDS: 8400 / 100733  [42/500 nodes in use]     CMDS: 8600 / 100733  [43/500 nodes in use]     CMDS: 8800 / 100733  [44/500 nodes in use]     CMDS: 9000 / 100733  [45/500 nodes in use]     CMDS: 9200 / 100733  [46/500 nodes in use]     CMDS: 9400 / 100733  [47/500 nodes in use]     CMDS: 9600 / 100733  [48/500 nodes in use]     CMDS: 9800 / 100733  [49/500 nodes in use]     CMDS: 10000 / 100733  [50/500 nodes in use]     CMDS: 10200 / 100733  [51/500 nodes in use]     CMDS: 10400 / 100733  [52/500 nodes in use]     CMDS: 10600 / 100733  [53/500 nodes in use]     CMDS: 10800 / 100733  [54/500 nodes in use]     CMDS: 11000 / 100733  [55/500 nodes in use]     CMDS: 11200 / 100733  [56/500 nodes in use]     CMDS: 11400 / 100733  [57/500 nodes in use]     CMDS: 11600 / 100733  [58/500 nodes in use]     CMDS: 11800 / 100733  [59/500 nodes in use]     CMDS: 12000 / 100733  [60/500 nodes in use]     CMDS: 12200 / 100733  [61/500 nodes in use]     CMDS: 12400 / 100733  [62/500 nodes in use]     CMDS: 12600 / 100733  [63/500 nodes in use]     CMDS: 12800 / 100733  [64/500 nodes in use]     CMDS: 13000 / 100733  [65/500 nodes in use]     CMDS: 13200 / 100733  [66/500 nodes in use]     CMDS: 13400 / 100733  [67/500 nodes in use]     CMDS: 13600 / 100733  [68/500 nodes in use]     CMDS: 13800 / 100733  [69/500 nodes in use]     CMDS: 14000 / 100733  [70/500 nodes in use]     CMDS: 14200 / 100733  [71/500 nodes in use]     CMDS: 14400 / 100733  [72/500 nodes in use]     CMDS: 14600 / 100733  [73/500 nodes in use]     CMDS: 14800 / 100733  [74/500 nodes in use]     CMDS: 15000 / 100733  [75/500 nodes in use]     CMDS: 15200 / 100733  [76/500 nodes in use]     CMDS: 15400 / 100733  [77/500 nodes in use]     CMDS: 15600 / 100733  [78/500 nodes in use]     CMDS: 15800 / 100733  [79/500 nodes in use]     CMDS: 16000 / 100733  [80/500 nodes in use]     CMDS: 16200 / 100733  [81/500 nodes in use]     CMDS: 16400 / 100733  [82/500 nodes in use]     CMDS: 16600 / 100733  [83/500 nodes in use]     CMDS: 16800 / 100733  [84/500 nodes in use]     CMDS: 17000 / 100733  [85/500 nodes in use]     CMDS: 17200 / 100733  [86/500 nodes in use]     CMDS: 17400 / 100733  [87/500 nodes in use]     CMDS: 17600 / 100733  [88/500 nodes in use]     CMDS: 17800 / 100733  [89/500 nodes in use]     CMDS: 18000 / 100733  [90/500 nodes in use]     CMDS: 18200 / 100733  [91/500 nodes in use]     CMDS: 18400 / 100733  [92/500 nodes in use]     CMDS: 18600 / 100733  [93/500 nodes in use]     CMDS: 18800 / 100733  [94/500 nodes in use]     CMDS: 19000 / 100733  [95/500 nodes in use]     CMDS: 19200 / 100733  [96/500 nodes in use]     CMDS: 19400 / 100733  [97/500 nodes in use]     CMDS: 19600 / 100733  [98/500 nodes in use]     CMDS: 19800 / 100733  [99/500 nodes in use]     CMDS: 20000 / 100733  [100/500 nodes in use]     CMDS: 20200 / 100733  [101/500 nodes in use]     CMDS: 20400 / 100733  [102/500 nodes in use]     CMDS: 20600 / 100733  [103/500 nodes in use]     CMDS: 20800 / 100733  [104/500 nodes in use]     CMDS: 21000 / 100733  [105/500 nodes in use]     CMDS: 21200 / 100733  [106/500 nodes in use]     CMDS: 21400 / 100733  [107/500 nodes in use]     CMDS: 21600 / 100733  [108/500 nodes in use]     CMDS: 21800 / 100733  [109/500 nodes in use]     CMDS: 22000 / 100733  [110/500 nodes in use]     CMDS: 22200 / 100733  [111/500 nodes in use]     CMDS: 22400 / 100733  [112/500 nodes in use]     CMDS: 22600 / 100733  [113/500 nodes in use]     CMDS: 22800 / 100733  [114/500 nodes in use]     CMDS: 23000 / 100733  [115/500 nodes in use]     CMDS: 23200 / 100733  [116/500 nodes in use]     CMDS: 23400 / 100733  [117/500 nodes in use]     CMDS: 23600 / 100733  [118/500 nodes in use]     CMDS: 23800 / 100733  [119/500 nodes in use]     CMDS: 24000 / 100733  [120/500 nodes in use]     CMDS: 24200 / 100733  [121/500 nodes in use]     CMDS: 24400 / 100733  [122/500 nodes in use]     CMDS: 24600 / 100733  [123/500 nodes in use]     CMDS: 24800 / 100733  [124/500 nodes in use]     CMDS: 25000 / 100733  [125/500 nodes in use]     CMDS: 25200 / 100733  [126/500 nodes in use]     CMDS: 25400 / 100733  [127/500 nodes in use]     CMDS: 25600 / 100733  [128/500 nodes in use]     CMDS: 25800 / 100733  [129/500 nodes in use]     CMDS: 26000 / 100733  [130/500 nodes in use]     CMDS: 26200 / 100733  [131/500 nodes in use]     CMDS: 26400 / 100733  [132/500 nodes in use]     CMDS: 26600 / 100733  [133/500 nodes in use]     CMDS: 26800 / 100733  [134/500 nodes in use]     CMDS: 27000 / 100733  [135/500 nodes in use]     CMDS: 27200 / 100733  [136/500 nodes in use]     CMDS: 27400 / 100733  [137/500 nodes in use]     CMDS: 27600 / 100733  [138/500 nodes in use]     CMDS: 27800 / 100733  [139/500 nodes in use]     CMDS: 28000 / 100733  [140/500 nodes in use]     CMDS: 28200 / 100733  [141/500 nodes in use]     CMDS: 28400 / 100733  [142/500 nodes in use]     CMDS: 28600 / 100733  [143/500 nodes in use]     CMDS: 28800 / 100733  [144/500 nodes in use]     CMDS: 29000 / 100733  [145/500 nodes in use]     CMDS: 29200 / 100733  [146/500 nodes in use]     CMDS: 29400 / 100733  [147/500 nodes in use]     CMDS: 29600 / 100733  [148/500 nodes in use]     CMDS: 29800 / 100733  [149/500 nodes in use]     CMDS: 30000 / 100733  [150/500 nodes in use]     CMDS: 30200 / 100733  [151/500 nodes in use]     CMDS: 30400 / 100733  [152/500 nodes in use]     CMDS: 30600 / 100733  [153/500 nodes in use]     CMDS: 30800 / 100733  [154/500 nodes in use]     CMDS: 31000 / 100733  [155/500 nodes in use]     CMDS: 31200 / 100733  [156/500 nodes in use]     CMDS: 31400 / 100733  [157/500 nodes in use]     CMDS: 31600 / 100733  [158/500 nodes in use]     CMDS: 31800 / 100733  [159/500 nodes in use]     CMDS: 32000 / 100733  [160/500 nodes in use]     CMDS: 32200 / 100733  [161/500 nodes in use]     CMDS: 32400 / 100733  [162/500 nodes in use]     CMDS: 32600 / 100733  [163/500 nodes in use]     CMDS: 32800 / 100733  [164/500 nodes in use]     CMDS: 33000 / 100733  [165/500 nodes in use]     CMDS: 33200 / 100733  [166/500 nodes in use]     CMDS: 33400 / 100733  [167/500 nodes in use]     CMDS: 33600 / 100733  [168/500 nodes in use]     CMDS: 33800 / 100733  [169/500 nodes in use]     CMDS: 34000 / 100733  [170/500 nodes in use]     CMDS: 34200 / 100733  [171/500 nodes in use]     CMDS: 34400 / 100733  [172/500 nodes in use]     CMDS: 34600 / 100733  [173/500 nodes in use]     CMDS: 34800 / 100733  [174/500 nodes in use]     CMDS: 35000 / 100733  [175/500 nodes in use]     CMDS: 35200 / 100733  [176/500 nodes in use]     CMDS: 35400 / 100733  [177/500 nodes in use]     CMDS: 35600 / 100733  [178/500 nodes in use]     CMDS: 35800 / 100733  [179/500 nodes in use]     CMDS: 36000 / 100733  [180/500 nodes in use]     CMDS: 36200 / 100733  [181/500 nodes in use]     CMDS: 36400 / 100733  [182/500 nodes in use]     CMDS: 36600 / 100733  [183/500 nodes in use]     CMDS: 36800 / 100733  [184/500 nodes in use]     CMDS: 37000 / 100733  [185/500 nodes in use]     CMDS: 37200 / 100733  [186/500 nodes in use]     CMDS: 37400 / 100733  [187/500 nodes in use]     CMDS: 37600 / 100733  [188/500 nodes in use]     CMDS: 37800 / 100733  [189/500 nodes in use]     CMDS: 38000 / 100733  [190/500 nodes in use]     CMDS: 38200 / 100733  [191/500 nodes in use]     CMDS: 38400 / 100733  [192/500 nodes in use]     CMDS: 38600 / 100733  [193/500 nodes in use]     CMDS: 38800 / 100733  [194/500 nodes in use]     CMDS: 39000 / 100733  [195/500 nodes in use]     CMDS: 39200 / 100733  [196/500 nodes in use]     CMDS: 39400 / 100733  [197/500 nodes in use]     CMDS: 39600 / 100733  [198/500 nodes in use]     CMDS: 39800 / 100733  [199/500 nodes in use]     CMDS: 40000 / 100733  [200/500 nodes in use]     CMDS: 40200 / 100733  [201/500 nodes in use]     CMDS: 40400 / 100733  [202/500 nodes in use]     CMDS: 40600 / 100733  [203/500 nodes in use]     CMDS: 40800 / 100733  [204/500 nodes in use]     CMDS: 41000 / 100733  [205/500 nodes in use]     CMDS: 41200 / 100733  [206/500 nodes in use]     CMDS: 41400 / 100733  [207/500 nodes in use]     CMDS: 41600 / 100733  [208/500 nodes in use]     CMDS: 41800 / 100733  [209/500 nodes in use]     CMDS: 42000 / 100733  [210/500 nodes in use]     CMDS: 42200 / 100733  [211/500 nodes in use]     CMDS: 42400 / 100733  [212/500 nodes in use]     CMDS: 42600 / 100733  [213/500 nodes in use]     CMDS: 42800 / 100733  [214/500 nodes in use]     CMDS: 43000 / 100733  [215/500 nodes in use]     CMDS: 43200 / 100733  [216/500 nodes in use]     CMDS: 43400 / 100733  [217/500 nodes in use]     CMDS: 43600 / 100733  [218/500 nodes in use]     CMDS: 43800 / 100733  [219/500 nodes in use]     CMDS: 44000 / 100733  [220/500 nodes in use]     CMDS: 44200 / 100733  [221/500 nodes in use]     CMDS: 44400 / 100733  [222/500 nodes in use]     CMDS: 44600 / 100733  [223/500 nodes in use]     CMDS: 44800 / 100733  [224/500 nodes in use]     CMDS: 45000 / 100733  [225/500 nodes in use]     CMDS: 45200 / 100733  [226/500 nodes in use]     CMDS: 45400 / 100733  [227/500 nodes in use]     CMDS: 45600 / 100733  [228/500 nodes in use]     CMDS: 45800 / 100733  [229/500 nodes in use]     CMDS: 46000 / 100733  [230/500 nodes in use]     CMDS: 46200 / 100733  [231/500 nodes in use]     CMDS: 46400 / 100733  [232/500 nodes in use]     CMDS: 46600 / 100733  [233/500 nodes in use]     CMDS: 46800 / 100733  [234/500 nodes in use]     CMDS: 47000 / 100733  [235/500 nodes in use]     CMDS: 47200 / 100733  [236/500 nodes in use]     CMDS: 47400 / 100733  [237/500 nodes in use]     CMDS: 47600 / 100733  [238/500 nodes in use]     CMDS: 47800 / 100733  [239/500 nodes in use]     CMDS: 48000 / 100733  [240/500 nodes in use]     CMDS: 48200 / 100733  [241/500 nodes in use]     CMDS: 48400 / 100733  [242/500 nodes in use]     CMDS: 48600 / 100733  [243/500 nodes in use]     CMDS: 48800 / 100733  [244/500 nodes in use]     CMDS: 49000 / 100733  [245/500 nodes in use]     CMDS: 49200 / 100733  [246/500 nodes in use]     CMDS: 49400 / 100733  [247/500 nodes in use]     CMDS: 49600 / 100733  [248/500 nodes in use]     CMDS: 49800 / 100733  [249/500 nodes in use]     CMDS: 50000 / 100733  [250/500 nodes in use]     CMDS: 50200 / 100733  [251/500 nodes in use]     CMDS: 50400 / 100733  [252/500 nodes in use]     CMDS: 50600 / 100733  [253/500 nodes in use]     CMDS: 50800 / 100733  [254/500 nodes in use]     CMDS: 51000 / 100733  [255/500 nodes in use]     CMDS: 51200 / 100733  [256/500 nodes in use]     CMDS: 51400 / 100733  [257/500 nodes in use]     CMDS: 51600 / 100733  [258/500 nodes in use]     CMDS: 51800 / 100733  [259/500 nodes in use]     CMDS: 52000 / 100733  [260/500 nodes in use]     CMDS: 52200 / 100733  [261/500 nodes in use]     CMDS: 52400 / 100733  [262/500 nodes in use]     CMDS: 52600 / 100733  [263/500 nodes in use]     CMDS: 52800 / 100733  [264/500 nodes in use]     CMDS: 53000 / 100733  [265/500 nodes in use]     CMDS: 53200 / 100733  [266/500 nodes in use]     CMDS: 53400 / 100733  [267/500 nodes in use]     CMDS: 53600 / 100733  [268/500 nodes in use]     CMDS: 53800 / 100733  [269/500 nodes in use]     CMDS: 54000 / 100733  [270/500 nodes in use]     CMDS: 54200 / 100733  [271/500 nodes in use]     CMDS: 54400 / 100733  [272/500 nodes in use]     CMDS: 54600 / 100733  [273/500 nodes in use]     CMDS: 54800 / 100733  [274/500 nodes in use]     CMDS: 55000 / 100733  [275/500 nodes in use]     CMDS: 55200 / 100733  [276/500 nodes in use]     CMDS: 55400 / 100733  [277/500 nodes in use]     CMDS: 55600 / 100733  [278/500 nodes in use]     CMDS: 55800 / 100733  [279/500 nodes in use]     CMDS: 56000 / 100733  [280/500 nodes in use]     CMDS: 56200 / 100733  [281/500 nodes in use]     CMDS: 56400 / 100733  [282/500 nodes in use]     CMDS: 56600 / 100733  [283/500 nodes in use]     CMDS: 56800 / 100733  [284/500 nodes in use]     CMDS: 57000 / 100733  [285/500 nodes in use]     CMDS: 57200 / 100733  [286/500 nodes in use]     CMDS: 57400 / 100733  [287/500 nodes in use]     CMDS: 57600 / 100733  [288/500 nodes in use]     CMDS: 57800 / 100733  [289/500 nodes in use]     CMDS: 58000 / 100733  [290/500 nodes in use]     CMDS: 58200 / 100733  [291/500 nodes in use]     CMDS: 58400 / 100733  [292/500 nodes in use]     CMDS: 58600 / 100733  [293/500 nodes in use]     CMDS: 58800 / 100733  [294/500 nodes in use]     CMDS: 59000 / 100733  [295/500 nodes in use]     CMDS: 59200 / 100733  [296/500 nodes in use]     CMDS: 59400 / 100733  [297/500 nodes in use]     CMDS: 59600 / 100733  [298/500 nodes in use]     CMDS: 59800 / 100733  [299/500 nodes in use]     CMDS: 60000 / 100733  [300/500 nodes in use]     CMDS: 60200 / 100733  [301/500 nodes in use]     CMDS: 60400 / 100733  [302/500 nodes in use]     CMDS: 60600 / 100733  [303/500 nodes in use]     CMDS: 60800 / 100733  [304/500 nodes in use]     CMDS: 61000 / 100733  [305/500 nodes in use]     CMDS: 61200 / 100733  [306/500 nodes in use]     CMDS: 61400 / 100733  [307/500 nodes in use]     CMDS: 61600 / 100733  [308/500 nodes in use]     CMDS: 61800 / 100733  [309/500 nodes in use]     CMDS: 62000 / 100733  [310/500 nodes in use]     CMDS: 62200 / 100733  [311/500 nodes in use]     CMDS: 62400 / 100733  [312/500 nodes in use]     CMDS: 62600 / 100733  [313/500 nodes in use]     CMDS: 62800 / 100733  [314/500 nodes in use]     CMDS: 63000 / 100733  [315/500 nodes in use]     CMDS: 63200 / 100733  [316/500 nodes in use]     CMDS: 63400 / 100733  [317/500 nodes in use]     CMDS: 63600 / 100733  [318/500 nodes in use]     CMDS: 63800 / 100733  [319/500 nodes in use]     CMDS: 64000 / 100733  [320/500 nodes in use]     CMDS: 64200 / 100733  [321/500 nodes in use]     CMDS: 64400 / 100733  [322/500 nodes in use]     CMDS: 64600 / 100733  [323/500 nodes in use]     CMDS: 64800 / 100733  [324/500 nodes in use]     CMDS: 65000 / 100733  [325/500 nodes in use]     CMDS: 65200 / 100733  [326/500 nodes in use]     CMDS: 65400 / 100733  [327/500 nodes in use]     CMDS: 65600 / 100733  [328/500 nodes in use]     CMDS: 65800 / 100733  [329/500 nodes in use]     CMDS: 66000 / 100733  [330/500 nodes in use]     CMDS: 66200 / 100733  [331/500 nodes in use]     CMDS: 66400 / 100733  [332/500 nodes in use]     CMDS: 66600 / 100733  [333/500 nodes in use]     CMDS: 66800 / 100733  [334/500 nodes in use]     CMDS: 67000 / 100733  [335/500 nodes in use]     CMDS: 67200 / 100733  [336/500 nodes in use]     CMDS: 67400 / 100733  [337/500 nodes in use]     CMDS: 67600 / 100733  [338/500 nodes in use]     CMDS: 67800 / 100733  [339/500 nodes in use]     CMDS: 68000 / 100733  [340/500 nodes in use]     CMDS: 68200 / 100733  [341/500 nodes in use]     CMDS: 68400 / 100733  [342/500 nodes in use]     CMDS: 68600 / 100733  [343/500 nodes in use]     CMDS: 68800 / 100733  [344/500 nodes in use]     CMDS: 69000 / 100733  [345/500 nodes in use]     CMDS: 69200 / 100733  [346/500 nodes in use]     CMDS: 69400 / 100733  [347/500 nodes in use]     CMDS: 69600 / 100733  [348/500 nodes in use]     CMDS: 69800 / 100733  [349/500 nodes in use]     CMDS: 70000 / 100733  [350/500 nodes in use]     CMDS: 70200 / 100733  [351/500 nodes in use]     CMDS: 70400 / 100733  [352/500 nodes in use]     CMDS: 70600 / 100733  [353/500 nodes in use]     CMDS: 70800 / 100733  [354/500 nodes in use]     CMDS: 71000 / 100733  [355/500 nodes in use]     CMDS: 71200 / 100733  [356/500 nodes in use]     CMDS: 71400 / 100733  [357/500 nodes in use]     CMDS: 71600 / 100733  [358/500 nodes in use]     CMDS: 71800 / 100733  [359/500 nodes in use]     CMDS: 72000 / 100733  [360/500 nodes in use]     CMDS: 72200 / 100733  [361/500 nodes in use]     CMDS: 72400 / 100733  [362/500 nodes in use]     CMDS: 72600 / 100733  [363/500 nodes in use]     CMDS: 72800 / 100733  [364/500 nodes in use]     CMDS: 73000 / 100733  [365/500 nodes in use]     CMDS: 73200 / 100733  [366/500 nodes in use]     CMDS: 73400 / 100733  [367/500 nodes in use]     CMDS: 73600 / 100733  [368/500 nodes in use]     CMDS: 73800 / 100733  [369/500 nodes in use]     CMDS: 74000 / 100733  [370/500 nodes in use]     CMDS: 74200 / 100733  [371/500 nodes in use]     CMDS: 74400 / 100733  [372/500 nodes in use]     CMDS: 74600 / 100733  [373/500 nodes in use]     CMDS: 74800 / 100733  [374/500 nodes in use]     CMDS: 75000 / 100733  [375/500 nodes in use]     CMDS: 75200 / 100733  [376/500 nodes in use]     CMDS: 75400 / 100733  [377/500 nodes in use]     CMDS: 75600 / 100733  [378/500 nodes in use]     CMDS: 75800 / 100733  [379/500 nodes in use]     CMDS: 76000 / 100733  [380/500 nodes in use]     CMDS: 76200 / 100733  [381/500 nodes in use]     CMDS: 76400 / 100733  [382/500 nodes in use]     CMDS: 76600 / 100733  [383/500 nodes in use]     CMDS: 76800 / 100733  [384/500 nodes in use]     CMDS: 77000 / 100733  [385/500 nodes in use]     CMDS: 77200 / 100733  [386/500 nodes in use]     CMDS: 77400 / 100733  [387/500 nodes in use]     CMDS: 77600 / 100733  [388/500 nodes in use]     CMDS: 77800 / 100733  [389/500 nodes in use]     CMDS: 78000 / 100733  [390/500 nodes in use]     CMDS: 78200 / 100733  [391/500 nodes in use]     CMDS: 78400 / 100733  [392/500 nodes in use]     CMDS: 78600 / 100733  [393/500 nodes in use]     CMDS: 78800 / 100733  [394/500 nodes in use]     CMDS: 79000 / 100733  [395/500 nodes in use]     CMDS: 79200 / 100733  [396/500 nodes in use]     CMDS: 79400 / 100733  [397/500 nodes in use]     CMDS: 79600 / 100733  [398/500 nodes in use]     CMDS: 79800 / 100733  [399/500 nodes in use]     CMDS: 80000 / 100733  [400/500 nodes in use]     CMDS: 80200 / 100733  [401/500 nodes in use]     CMDS: 80400 / 100733  [402/500 nodes in use]     CMDS: 80600 / 100733  [403/500 nodes in use]     CMDS: 80800 / 100733  [404/500 nodes in use]     CMDS: 81000 / 100733  [405/500 nodes in use]     CMDS: 81200 / 100733  [406/500 nodes in use]     CMDS: 81400 / 100733  [407/500 nodes in use]     CMDS: 81600 / 100733  [408/500 nodes in use]     CMDS: 81800 / 100733  [409/500 nodes in use]     CMDS: 82000 / 100733  [410/500 nodes in use]     CMDS: 82200 / 100733  [411/500 nodes in use]     CMDS: 82400 / 100733  [412/500 nodes in use]     CMDS: 82600 / 100733  [413/500 nodes in use]     CMDS: 82800 / 100733  [414/500 nodes in use]     CMDS: 83000 / 100733  [415/500 nodes in use]     CMDS: 83200 / 100733  [416/500 nodes in use]     CMDS: 83400 / 100733  [417/500 nodes in use]     CMDS: 83600 / 100733  [418/500 nodes in use]     CMDS: 83800 / 100733  [419/500 nodes in use]     CMDS: 84000 / 100733  [420/500 nodes in use]     CMDS: 84200 / 100733  [421/500 nodes in use]     CMDS: 84400 / 100733  [422/500 nodes in use]     CMDS: 84600 / 100733  [423/500 nodes in use]     CMDS: 84800 / 100733  [424/500 nodes in use]     CMDS: 85000 / 100733  [425/500 nodes in use]     CMDS: 85200 / 100733  [426/500 nodes in use]     CMDS: 85400 / 100733  [427/500 nodes in use]     CMDS: 85600 / 100733  [428/500 nodes in use]     CMDS: 85800 / 100733  [429/500 nodes in use]     CMDS: 86000 / 100733  [430/500 nodes in use]     CMDS: 86200 / 100733  [431/500 nodes in use]     CMDS: 86400 / 100733  [432/500 nodes in use]     CMDS: 86600 / 100733  [433/500 nodes in use]     CMDS: 86800 / 100733  [434/500 nodes in use]     CMDS: 87000 / 100733  [435/500 nodes in use]     CMDS: 87200 / 100733  [436/500 nodes in use]     CMDS: 87400 / 100733  [437/500 nodes in use]     CMDS: 87600 / 100733  [438/500 nodes in use]     CMDS: 87800 / 100733  [439/500 nodes in use]     CMDS: 88000 / 100733  [440/500 nodes in use]     CMDS: 88200 / 100733  [441/500 nodes in use]     CMDS: 88400 / 100733  [442/500 nodes in use]     CMDS: 88600 / 100733  [443/500 nodes in use]     CMDS: 88800 / 100733  [444/500 nodes in use]     CMDS: 89000 / 100733  [445/500 nodes in use]     CMDS: 89200 / 100733  [446/500 nodes in use]     CMDS: 89400 / 100733  [447/500 nodes in use]     CMDS: 89600 / 100733  [448/500 nodes in use]     CMDS: 89800 / 100733  [449/500 nodes in use]     CMDS: 90000 / 100733  [450/500 nodes in use]     CMDS: 90200 / 100733  [451/500 nodes in use]     CMDS: 90400 / 100733  [452/500 nodes in use]     CMDS: 90600 / 100733  [453/500 nodes in use]     CMDS: 90800 / 100733  [454/500 nodes in use]     CMDS: 91000 / 100733  [455/500 nodes in use]     CMDS: 91200 / 100733  [456/500 nodes in use]     CMDS: 91400 / 100733  [457/500 nodes in use]     CMDS: 91600 / 100733  [458/500 nodes in use]     CMDS: 91800 / 100733  [459/500 nodes in use]     CMDS: 92000 / 100733  [460/500 nodes in use]     CMDS: 92200 / 100733  [461/500 nodes in use]     CMDS: 92400 / 100733  [462/500 nodes in use]     CMDS: 92600 / 100733  [463/500 nodes in use]     CMDS: 92800 / 100733  [464/500 nodes in use]     CMDS: 93000 / 100733  [465/500 nodes in use]     CMDS: 93200 / 100733  [466/500 nodes in use]     CMDS: 93400 / 100733  [467/500 nodes in use]     CMDS: 93600 / 100733  [468/500 nodes in use]     CMDS: 93800 / 100733  [469/500 nodes in use]     CMDS: 94000 / 100733  [470/500 nodes in use]     CMDS: 94200 / 100733  [471/500 nodes in use]     CMDS: 94400 / 100733  [472/500 nodes in use]     CMDS: 94600 / 100733  [473/500 nodes in use]     CMDS: 94800 / 100733  [474/500 nodes in use]     CMDS: 95000 / 100733  [475/500 nodes in use]     CMDS: 95200 / 100733  [476/500 nodes in use]     CMDS: 95400 / 100733  [477/500 nodes in use]     CMDS: 95600 / 100733  [478/500 nodes in use]     CMDS: 95800 / 100733  [479/500 nodes in use]     CMDS: 96000 / 100733  [480/500 nodes in use]     CMDS: 96200 / 100733  [481/500 nodes in use]     CMDS: 96400 / 100733  [482/500 nodes in use]     CMDS: 96600 / 100733  [483/500 nodes in use]     CMDS: 96800 / 100733  [484/500 nodes in use]     CMDS: 97000 / 100733  [485/500 nodes in use]     CMDS: 97200 / 100733  [486/500 nodes in use]     CMDS: 97400 / 100733  [487/500 nodes in use]     CMDS: 97600 / 100733  [488/500 nodes in use]     CMDS: 97800 / 100733  [489/500 nodes in use]     CMDS: 98000 / 100733  [490/500 nodes in use]     CMDS: 98200 / 100733  [491/500 nodes in use]     CMDS: 98400 / 100733  [492/500 nodes in use]     CMDS: 98600 / 100733  [493/500 nodes in use]     CMDS: 98800 / 100733  [494/500 nodes in use]     CMDS: 99000 / 100733  [495/500 nodes in use]     CMDS: 99200 / 100733  [496/500 nodes in use]     CMDS: 99400 / 100733  [497/500 nodes in use]     CMDS: 99600 / 100733  [498/500 nodes in use]     CMDS: 99800 / 100733  [499/500 nodes in use]     CMDS: 100000 / 100733  [500/500 nodes in use]     CMDS: 100200 / 100733  [500/500 nodes in use]     CMDS: 100400 / 100733  [500/500 nodes in use]     CMDS: 100600 / 100733  [497/500 nodes in use]     CMDS: 100733 / 100733  [498/500 nodes in use]   
+* All cmds submitted to grid.  Now waiting for them to finish.
+  CMDS: 100733 / 100733  [495/500 nodes in use]     CMDS: 100733 / 100733  [490/500 nodes in use]     CMDS: 100733 / 100733  [478/500 nodes in use]     CMDS: 100733 / 100733  [470/500 nodes in use]     CMDS: 100733 / 100733  [457/500 nodes in use]     CMDS: 100733 / 100733  [448/500 nodes in use]     CMDS: 100733 / 100733  [445/500 nodes in use]     CMDS: 100733 / 100733  [443/500 nodes in use]     CMDS: 100733 / 100733  [442/500 nodes in use]     CMDS: 100733 / 100733  [441/500 nodes in use]     CMDS: 100733 / 100733  [440/500 nodes in use]     CMDS: 100733 / 100733  [439/500 nodes in use]     CMDS: 100733 / 100733  [437/500 nodes in use]     CMDS: 100733 / 100733  [436/500 nodes in use]     CMDS: 100733 / 100733  [431/500 nodes in use]     CMDS: 100733 / 100733  [425/500 nodes in use]     CMDS: 100733 / 100733  [419/500 nodes in use]     CMDS: 100733 / 100733  [413/500 nodes in use]     CMDS: 100733 / 100733  [405/500 nodes in use]     CMDS: 100733 / 100733  [398/500 nodes in use]     CMDS: 100733 / 100733  [381/500 nodes in use]     CMDS: 100733 / 100733  [355/500 nodes in use]     CMDS: 100733 / 100733  [325/500 nodes in use]     CMDS: 100733 / 100733  [315/500 nodes in use]     CMDS: 100733 / 100733  [313/500 nodes in use]     CMDS: 100733 / 100733  [308/500 nodes in use]     CMDS: 100733 / 100733  [307/500 nodes in use]     CMDS: 100733 / 100733  [306/500 nodes in use]     CMDS: 100733 / 100733  [305/500 nodes in use]     CMDS: 100733 / 100733  [304/500 nodes in use]     CMDS: 100733 / 100733  [301/500 nodes in use]     CMDS: 100733 / 100733  [300/500 nodes in use]     CMDS: 100733 / 100733  [298/500 nodes in use]     CMDS: 100733 / 100733  [297/500 nodes in use]     CMDS: 100733 / 100733  [293/500 nodes in use]     CMDS: 100733 / 100733  [292/500 nodes in use]     CMDS: 100733 / 100733  [291/500 nodes in use]     CMDS: 100733 / 100733  [290/500 nodes in use]     CMDS: 100733 / 100733  [287/500 nodes in use]     CMDS: 100733 / 100733  [284/500 nodes in use]     CMDS: 100733 / 100733  [279/500 nodes in use]     CMDS: 100733 / 100733  [276/500 nodes in use]     CMDS: 100733 / 100733  [266/500 nodes in use]     CMDS: 100733 / 100733  [244/500 nodes in use]     CMDS: 100733 / 100733  [209/500 nodes in use]     CMDS: 100733 / 100733  [156/500 nodes in use]     CMDS: 100733 / 100733  [142/500 nodes in use]     CMDS: 100733 / 100733  [139/500 nodes in use]     CMDS: 100733 / 100733  [135/500 nodes in use]     CMDS: 100733 / 100733  [134/500 nodes in use]     CMDS: 100733 / 100733  [133/500 nodes in use]     CMDS: 100733 / 100733  [131/500 nodes in use]     CMDS: 100733 / 100733  [130/500 nodes in use]     CMDS: 100733 / 100733  [129/500 nodes in use]     CMDS: 100733 / 100733  [128/500 nodes in use]     CMDS: 100733 / 100733  [126/500 nodes in use]     CMDS: 100733 / 100733  [121/500 nodes in use]     CMDS: 100733 / 100733  [117/500 nodes in use]     CMDS: 100733 / 100733  [114/500 nodes in use]     CMDS: 100733 / 100733  [103/500 nodes in use]     CMDS: 100733 / 100733  [89/500 nodes in use]     CMDS: 100733 / 100733  [70/500 nodes in use]     CMDS: 100733 / 100733  [40/500 nodes in use]     CMDS: 100733 / 100733  [21/500 nodes in use]     CMDS: 100733 / 100733  [12/500 nodes in use]     CMDS: 100733 / 100733  [7/500 nodes in use]     CMDS: 100733 / 100733  [6/500 nodes in use]     CMDS: 100733 / 100733  [5/500 nodes in use]     CMDS: 100733 / 100733  [4/500 nodes in use]     CMDS: 100733 / 100733  [3/500 nodes in use]     CMDS: 100733 / 100733  [2/500 nodes in use]     CMDS: 100733 / 100733  [1/500 nodes in use]     CMDS: 100733 / 100733  [0/500 nodes in use]   
+* All nodes completed.  Now auditing job completion status values
+
+
+** Harvesting all assembled transcripts into a single multi-fasta file...
+
+Tuesday, November 17, 2015: 04:49:57	CMD: find read_partitions/  -name '*inity.fasta'  | /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/partitioned_trinity_aggregator.pl TRINITY_DN > Trinity.fasta.tmp
+All commands completed successfully.
+Finished.
+
+All commands completed successfully on the computing grid.
+
+
+###################################################################
+Butterfly assemblies are written to /wrk/ketaya/trinity/trinity_out_dir/Trinity.fasta
+###################################################################
+
+
+jobid: 7647668 
+cores:          8  
+reqmem_per_node: 85.93 GB 
+used_mem_(per_node):  GB 
+wasted_memory:  GB or  % of_allocation_per_node 
+req_runtime: 1-00:00:00  
+used_runtime:   02:16:59  
+architecture: snb 
+partition: serial
