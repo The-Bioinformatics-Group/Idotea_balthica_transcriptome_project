@@ -1,0 +1,2 @@
+assembly,n_seqs,smallest,largest,n_bases,mean_len,n_under_200,n_over_1k,n_over_10k,n_with_orf,mean_orf_percent,n90,n70,n50,n30,n10,gc,gc_skew,at_skew,cpg_ratio,bases_n,proportion_n,linguistic_complexity,score,optimal_score,cutoff
+/wrk/ketaya/trinity/trinity_out_dir/Trinity.fasta,115851,201,21926,78396052,676.69724,0,21597,21,22904,52.49641,260,560,1136,1963,3435,0.39286,0.01596,0.00466,1.74944,0,0.0,0.12403,NA,NA,NA
