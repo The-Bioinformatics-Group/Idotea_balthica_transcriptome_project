@@ -1,0 +1,37 @@
+* ~ 3 hours using 8 cores and 80GB of memory *
+
+################################
+## Counts of transcripts, etc.
+################################
+Total trinity 'genes': 90309
+Total trinity transcripts: 115561
+Percent GC: 39.31
+
+########################################
+Stats based on ALL transcript contigs:
+########################################
+
+Contig N10: 3487
+Contig N20: 2564
+Contig N30: 1968
+Contig N40: 1526
+Contig N50: 1154
+
+Median contig length: 359
+Average contig: 683.20
+Total assembled bases: 78951148
+
+
+#####################################################
+## Stats based on ONLY LONGEST ISOFORM per 'GENE':
+#####################################################
+
+Contig N10: 3104
+Contig N20: 2176
+Contig N30: 1593
+Contig N40: 1152
+Contig N50: 814
+
+Median contig length: 313
+Average contig: 561.57
+Total assembled bases: 50715117
