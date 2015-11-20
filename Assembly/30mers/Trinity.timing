@@ -1,0 +1,22 @@
+Statistics:
+===========
+Trinity Version:      v2.1.0
+Compiler:             GCC
+Trinity Parameters:   --seqType fq --max_memory 80G --left /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_fw_paired.cor.fq.normalized_K25_C50_pctSD200.fq --right /wrk/ketaya/trinity/trinity_rcor_norm/insilico_read_normalization/out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq --CPU 8 --KMER_SIZE 30 --grid_conf /appl/bio/trinity/trinityrnaseq-2.1.0/hpc_conf/taito.slurm
+Paired mode
+ Input data
+  Left.fasta    1653 MByte
+  Right.fasta   1642 MByte
+  Number of unique KMERs: 90778429
+  Number of reads:        0 Output data
+  Trinity.fasta 104 MByte
+
+Runtime
+=======
+Start:       Tue Nov 17 20:06:47 EET 2015
+End:         Tue Nov 17 23:03:29 EET 2015
+Trinity   10602 seconds
+  Inchworm   542 seconds
+  Chrysalis  10013 seconds
+  Butterfly  0 seconds
+  Rest       47 seconds

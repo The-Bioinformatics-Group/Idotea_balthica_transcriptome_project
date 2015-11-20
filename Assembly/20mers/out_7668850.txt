@@ -1,0 +1,72 @@
+Trinity version: v2.1.0
+** NOTE: Latest version of Trinity is v2.1.1, and can be obtained at:
+	https://github.com/trinityrnaseq/trinityrnaseq/releases
+
+* Found ParaFly installed at: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/parafly/bin/ParaFly
+
+Tuesday, November 17, 2015: 17:57:31	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/ExitTester.jar 0
+Tuesday, November 17, 2015: 17:57:31	CMD: java -Xmx64m -XX:ParallelGCThreads=2 -jar /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/ExitTester.jar 1
+
+
+----------------------------------------------------------------------------------
+-------------- Trinity Phase 1: Clustering of RNA-Seq Reads  ---------------------
+----------------------------------------------------------------------------------
+
+
+
+#######################################################################
+Inchworm file: /wrk/ketaya/trinity/trinity_out_dir/inchworm.K20.L20.DS.fa detected.
+Skipping Inchworm Step, Using Previous Inchworm Assembly
+#######################################################################
+
+-- Skipping CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/misc/fasta_filter_by_min_length.pl /wrk/ketaya/trinity/trinity_out_dir/inchworm.K20.L20.DS.fa 100 > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K20.L20.DS.fa.min100, checkpoint exists.
+-- Skipping CMD: bowtie-build -q /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K20.L20.DS.fa.min100 /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K20.L20.DS.fa.min100, checkpoint exists.
+-- Skipping CMD: bash -c " set -o pipefail; bowtie -a -m 20 --best --strata --threads 8  --chunkmbs 512 -q -S -f /wrk/ketaya/trinity/trinity_out_dir/chrysalis/inchworm.K20.L20.DS.fa.min100 both.fa  | samtools view -@ 8 -F4 -Sb - | samtools sort -m 80G -@ 8 -no - - > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm.bowtie.nameSorted.bam" , checkpoint exists.
+-- Skipping CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/trinity-plugins/scaffold_iworm_contigs/scaffold_iworm_contigs /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm.bowtie.nameSorted.bam /wrk/ketaya/trinity/trinity_out_dir/inchworm.K20.L20.DS.fa > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm_scaffolds.txt, checkpoint exists.
+-- Skipping CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/GraphFromFasta -i /wrk/ketaya/trinity/trinity_out_dir/inchworm.K20.L20.DS.fa -r both.fa -min_contig_length 200 -min_glue 2 -glue_factor 0.05 -min_iso_ratio 0.05 -t 8 -k 19 -kk 38  -scaffolding /wrk/ketaya/trinity/trinity_out_dir/chrysalis/iworm_scaffolds.txt  > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/GraphFromIwormFasta.out, checkpoint exists.
+-- Skipping CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/CreateIwormFastaBundle -i /wrk/ketaya/trinity/trinity_out_dir/chrysalis/GraphFromIwormFasta.out -o /wrk/ketaya/trinity/trinity_out_dir/chrysalis/bundled_iworm_contigs.fasta -min 200, checkpoint exists.
+-- Skipping CMD: /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/Chrysalis/ReadsToTranscripts -i both.fa -f /wrk/ketaya/trinity/trinity_out_dir/chrysalis/bundled_iworm_contigs.fasta -o /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out -t 8 -max_mem_reads 50000000 , checkpoint exists.
+-- Skipping CMD: /bin/sort -T . -S 80G -k 1,1n /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out > /wrk/ketaya/trinity/trinity_out_dir/chrysalis/readsToComponents.out.sort, checkpoint exists.
+
+
+--------------------------------------------------------------------------------
+------------ Trinity Phase 2: Assembling Clusters of Reads ---------------------
+--------------------------------------------------------------------------------
+
+$VAR1 = {
+          'grid' => 'SLURM',
+          'cmd' => 'sbatch -M csc -p serial --mem=10000 --time=12:00:00 -J trin_sub',
+          'max_nodes' => '500',
+          'cmds_per_node' => '200'
+        };
+-note, 73162 commands already completed successfully. Skipping them here.
+-there are 600 cmds left to run here.
+  CMDS: 200 / 600  [1/500 nodes in use]     CMDS: 400 / 600  [2/500 nodes in use]     CMDS: 600 / 600  [3/500 nodes in use]   
+* All cmds submitted to grid.  Now waiting for them to finish.
+  CMDS: 600 / 600  [2/500 nodes in use]     CMDS: 600 / 600  [1/500 nodes in use]     CMDS: 600 / 600  [0/500 nodes in use]   
+* All nodes completed.  Now auditing job completion status values
+
+
+** Harvesting all assembled transcripts into a single multi-fasta file...
+
+Tuesday, November 17, 2015: 18:10:41	CMD: find read_partitions/  -name '*inity.fasta'  | /homeappl/appl_taito/bio/trinity/trinityrnaseq-2.1.0/util/support_scripts/partitioned_trinity_aggregator.pl TRINITY_DN > Trinity.fasta.tmp
+All commands completed successfully.
+Finished.
+
+All commands completed successfully on the computing grid.
+
+
+###################################################################
+Butterfly assemblies are written to /wrk/ketaya/trinity/trinity_out_dir/Trinity.fasta
+###################################################################
+
+
+jobid: 7668850 
+cores:          8  
+reqmem_per_node: 85.93 GB 
+used_mem_(per_node):  GB 
+wasted_memory:  GB or  % of_allocation_per_node 
+req_runtime:   12:00:00  
+used_runtime:   00:49:16  
+architecture: snb 
+partition: serial
