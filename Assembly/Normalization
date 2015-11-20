@@ -1,0 +1,6 @@
+# NORMALIZATION
+* ~4 hours using 24 cores and 255GB of memory *
+
+Reads were normalized using 25-mers (K25) and a coverage size of 50 (C50).
+
+10,099,252 (3.85%) pairs were selected
