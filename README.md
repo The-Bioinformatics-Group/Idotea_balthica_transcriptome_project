@@ -18,7 +18,9 @@ Using TRINITY (20/25/30mers)
 
 
 # Quality Evaluation / Optimization
-Using TRANSRATE
+1. Quality evaluation and filtering with TRANSRATE
+2. Assess the completeness using BUSCO
+3. Find ORFs and generate protein sequences with TRANSDECODER
 
 
 # Annotation 
