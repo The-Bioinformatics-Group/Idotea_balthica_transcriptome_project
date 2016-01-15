@@ -1,0 +1,12 @@
+CD-HIT v4.6.1
+
+cd-hit-est -i trinity.all.fasta -o trinity.all.nr95.fasta -c 0.95 -n 10 -d 0 -M 16000 -T 16
+
+## runtime: 5 mins
+
+
+
+### HEADERS RENAMED TO WORK WITH TRANSRATE ###
+(TRANSRATE cannot handle non-unique headers)
+
+python rename_fast.py trinity.all.nr95.fasta _ trinity.all.r95.renamed.fasta
