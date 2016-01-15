@@ -15,6 +15,7 @@ All analysis will be done on the Taito supercluster at CSC.
 
 # De novo Assembly
 Using TRINITY (20/25/30mers)
+Clustering using CD-HIT
 
 
 # Quality Evaluation / Optimization
@@ -25,3 +26,4 @@ Using TRINITY (20/25/30mers)
 
 # Annotation 
 Using PANNZER
+BLASTX to nr
