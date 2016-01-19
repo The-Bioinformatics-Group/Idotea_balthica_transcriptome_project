@@ -1,0 +1,3665 @@
+Tetrahymena thermophila SB210	2554
+Zootermopsis nevadensis	2099
+Paramecium tetraurelia	1376
+Stegodyphus mimosarum	786
+Escherichia coli	441
+Litopenaeus vannamei	430
+Pseudocohnilembus persalinus	421
+Aedes aegypti	340
+Penaeus monodon	298
+Anopheles gambiae str. PEST	240
+Eriocheir sinensis	230
+Procambarus clarkii	218
+Scylla paramamosain	213
+Marsupenaeus japonicus	196
+Culex quinquefasciatus	186
+Lasius niger	167
+Tetrahymena thermophila	154
+Crassostrea gigas	152
+Fenneropenaeus chinensis	150
+Ichthyophthirius multifiliis	145
+Oryctes borbonicus	124
+Drosophila melanogaster	123
+Cherax quadricarinatus	120
+Drosophila willistoni	116
+Daphnia pulex	112
+Danio rerio	106
+Drosophila mojavensis	105
+Macrobrachium nipponense	97
+Habropoda laboriosa	92
+Drosophila ananassae	85
+Stylonychia lemnae	84
+Lepeophtheirus salmonis	83
+Anopheles sinensis	82
+Harpegnathos saltator	81
+Camponotus floridanus	79
+Oxytricha trifallax	77
+Macrobrachium rosenbergii	77
+Bombyx mori	77
+Callinectes sapidus	73
+Papilio xuthus	70
+Oncorhynchus mykiss	68
+Melipona quadrifasciata	68
+Xenopus laevis	68
+Mus musculus	67
+Drosophila virilis	66
+Portunus trituberculatus	64
+Panulirus argus	62
+Anopheles darlingi	62
+Cerapachys biroi	61
+Drosophila grimshawi	61
+Operophtera brumata	59
+Drosophila pseudoobscura pseudoobscura	59
+Drosophila persimilis	58
+Drosophila yakuba	57
+Tribolium castaneum	57
+Papilio machaon	54
+Drosophila erecta	51
+Homarus americanus	49
+Homo sapiens	46
+Schistosoma mansoni	45
+Xenopus (Silurana) tropicalis	44
+Drosophila sechellia	41
+Danaus plexippus	41
+Pacifastacus leniusculus	40
+Drosophila busckii	40
+Idotea baltica	40
+Drosophila simulans	39
+Paradoxornis webbianus	39
+Biomphalaria glabrata	39
+Acromyrmex echinatior	39
+Larimichthys crocea	38
+Scylla olivacea	37
+Acyrthosiphon pisum	36
+Cherax destructor	36
+Sarcoptes scabiei	35
+Limnoria quadripunctata	35
+Eurydice pulchra	34
+Pandalopsis japonica	34
+Caligus rogercresseyi	33
+Scolitantides orion	32
+Riptortus pedestris	31
+Ligia exotica	30
+Tetraodon nigroviridis	30
+Fenneropenaeus merguiensis	30
+synthetic construct	29
+Palaemon carinicauda	29
+Solemya velum gill symbiont	28
+Caenorhabditis elegans	28
+Schistosoma japonicum	27
+Scleropages formosus	27
+Acanthamoeba castellanii str. Neff	26
+Salmo salar	26
+Mnemiopsis leidyi	26
+Paradoxornis alphonsianus	26
+Locusta migratoria	25
+Caligus clemensi	25
+Coptotermes formosanus	24
+Vitrella brassicaformis CCMP3155	23
+Cherax cainii	23
+Rattus norvegicus	22
+Galdieria sulphuraria	22
+Bos taurus	21
+Saccoglossus kowalevskii	21
+Salpingoeca rosetta	20
+Saduria entomon	20
+Cancer borealis	20
+Panulirus interruptus	19
+Chelonia mydas	19
+Trichinella pseudospiralis	19
+Gallus gallus	19
+Clonorchis sinensis	19
+Neocaridina denticulata	18
+Caenorhabditis briggsae	18
+Cricetulus griseus	18
+Gonioctena pallida	18
+Haemonchus contortus	17
+Toxocara canis	17
+Capsaspora owczarzaki ATCC 30864	16
+Acanthochelys spixii	16
+Chlamydia pneumoniae	16
+Thelohanellus kitauei	16
+Callorhinchus milii	16
+Trichinella papuae	16
+Trichomonas vaginalis G3	16
+Artemia franciscana	16
+Lactobacillus crispatus ST1	16
+Tigriopus japonicus	16
+Thecamonas trahens ATCC 50062	16
+Amblyomma variegatum	15
+Rimicaris exoculata	15
+Oikopleura dioica	15
+Nilaparvata lugens	15
+Trichuris trichiura	15
+Ascaris suum	15
+Amphibalanus amphitrite	15
+Shijimiaeoides divina	14
+Blastocystis hominis	14
+Armadillidium vulgare	14
+Halocaridina rubra	14
+Araschnia levana	14
+Lyngbya sp. PCC 8106	14
+Dictyostelium discoideum AX4	14
+Lucilia cuprina	14
+Brugia malayi	14
+Escherichia coli O157	13
+Ciona intestinalis	13
+Strongyloides ratti	13
+Fonticula alba	12
+Chondrus crispus	12
+Thalassiosira pseudonana CCMP1335	12
+Pterocles gutturalis	12
+Medicago truncatula	12
+Serratia marcescens subsp. marcescens	12
+Naegleria gruberi	12
+Escherichia coli K-12	12
+Gecarcinus lateralis	12
+Anopheles gambiae	11
+Merops nubicus	11
+Brotheas granulatus	11
+Gryllus bimaculatus	11
+Alligator mississippiensis	11
+Paramecium tetraurelia strain d4-2	11
+Ophiophagus hannah	11
+Parhyale hawaiensis	11
+Rhizophagus irregularis DAOM 197198w	11
+Arabidopsis thaliana	11
+Nullibrotheas allenii	11
+Lichtheimia corymbifera JMRC:FSU:9682	10
+Serratia marcescens	10
+Trichinella spiralis	10
+Rhodopirellula baltica SWK14	10
+Rhodopirellula baltica	10
+Tigriopus californicus	10
+Trypanosoma congolense IL3000	10
+Roseobacter sp. AzwK-3b	10
+Hadrurus hirsutus	10
+Oryza sativa Japonica Group	10
+Ixodes scapularis	9
+Tauraco erythrolophus	9
+Oratosquilla oratoria	9
+Mycobacterium tuberculosis	9
+Tuber magnatum	9
+Escherichia coli O26	9
+Oesophagostomum dentatum	9
+Autographa californica nucleopolyhedrovirus	9
+Tetrahymena pyriformis	9
+CUPA3_CANPG RecName: Full=Cuticle protein AM1199; Short=CPAM119	9
+Trichinella nelsoni	9
+Trichinella sp. T6	9
+Calypte anna	9
+Lactobacillus rhamnosus GG	9
+Tupaia chinensis	9
+Porcellio scaber	9
+Chrysochromulina sp. CCMP291	9
+Leucothrix mucor	9
+Homarus gammarus	9
+Carcinus maenas	9
+Pristionchus pacificus	9
+Zostera marina	9
+Ancylostoma duodenale	8
+Cyanidioschyzon merolae strain 10D	8
+Theobroma cacao	8
+M Chain M, Control Of Ribosomal Subunit Rotation By Elongation Factor G	8
+Astacus astacus	8
+Cupiennius salei	8
+Schizosaccharomyces cryophilus OY26	8
+Bacteroides vulgatus	8
+Rhipicephalus microplus	8
+Palaemon varians	8
+Cuculus canorus	8
+Chiasmia clathrata	8
+Pinus koraiensis	8
+Lasiocampa quercus	7
+Ictalurus punctatus	7
+Ectocarpus siliculosus	7
+Dragonfly orbiculatusvirus	7
+Anas platyrhynchos	7
+1004229A CPase 	7
+Shigella sonnei	7
+Hymenolepis microstoma	7
+Synechocystis sp. PCC 6803	6
+Nasonia vitripennis	6
+Cariama cristata	6
+Myotis brandtii	6
+Strongylocentrotus purpuratus	6
+Trichinella britovi	6
+Agrotis exclamationis	6
+Mucor ambiguus	6
+Leptosomus discolor	6
+Myotis davidii	6
+Cryptosporidium parvum Iowa II	6
+Necator americanus	6
+Trichinella patagoniensis	6
+Babesia microti strain RI	6
+PreXMRV-1/PreXMRV-2 recombinant	6
+Tityus serrulatus	6
+Autographa californica multiple nucleopolyhedrovirus	6
+Picoides pubescens	6
+M Chain M, Crystal Structure Of The E. Coli 70s Ribosome In An Intermediate State Of Ratcheting	6
+Angomonas deanei	6
+Dictyostelium fasciculatum	6
+Morus notabilis	6
+Nannochloropsis gaditana CCMP526	6
+Paracyclopina nana	6
+Podiceps cristatus	6
+Trichinella sp. T9	6
+Aplysia californica	6
+Trichinella zimbabwensis	6
+Gecarcoidea natalis	6
+Strigamia maritima	5
+Periplaneta americana	5
+MD2L2_BOVIN RecName: Full=Mitotic spindle assembly checkpoint protein MAD2B; AltName: Full=Mitotic arrest deficient 2-like protein 2; Short=MAD2-like protein 2	5
+Phengaris teleius	5
+Rana catesbeiana	5
+Lysiphlebus testaceipes	5
+O Chain O, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	5
+O Chain O, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	5
+Albugo candida	5
+Acanthisitta chloris	5
+Ancylostoma ceylanicum	5
+Escherichia coli O157:H7	5
+SIBD2_CUPSA RecName: Full=Single insulin-like growth factor-binding domain protein-2; Short=SIBD-2; Flags: Precursor	5
+Pyronema omphalodes CBS 100304	5
+O Chain O, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	5
+O Chain O, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	5
+O Chain O, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	5
+O Chain O, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	5
+TBB2_HOMAM RecName: Full=Tubulin beta-2 chain; AltName: Full=Beta-II tubulin	5
+Arhopala japonica	5
+TBB1_HOMAM RecName: Full=Tubulin beta-1 chain; AltName: Full=Beta-I tubulin	5
+Loa loa	5
+Lactobacillus rhamnosus Lc 705	5
+Streptococcus pneumoniae	5
+Rozella allomycis CSF55	5
+Haemophilus parainfluenzae T3T1	5
+Osmerus mordax	5
+Egretta garzetta	5
+Paralithodes camtschaticus	5
+Artemia sinica	5
+Pararhodospirillum photometricum DSM 122	5
+Caenorhabditis remanei	5
+Mythimna sp. GAS-2011	5
+Escherichia coli str. K-12 substr. MG1655	5
+Daphnia magna	5
+Drosophila miranda	5
+Trichinella sp. T8	5
+Cryptocaryon irritans	5
+Crangon crangon	5
+Gregarina niphandrodes	4
+A Chain A, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 1	4
+Ceratitis rosa	4
+Odontodactylus scyllarus	4
+Protopterus annectens	4
+Monochamus alternatus	4
+Trametes versicolor FP-101664 SS1	4
+Cathartes aura	4
+Coccomyxa subellipsoidea C-169	4
+Blastocystis sp. ST4	4
+Ostreococcus lucimarinus CCE9901	4
+RL22_TETTS RecName: Full=60S ribosomal protein L22	4
+A Chain A, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 2.	4
+Euperipatoides kanangrensis	4
+U Chain U, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4.	4
+U Chain U, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2.	4
+Rhizobium sp. YS-1r	4
+A Chain A, Tyrosine Kinase As - A Common Ancestor Of Src And Abl	4
+RL13_TETTS RecName: Full=60S ribosomal protein L13	4
+M Chain M, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1	4
+M Chain M, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2.	4
+Spironucleus salmonicida	4
+Phoenicopterus ruber ruber	4
+A Chain A, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 3.	4
+U Chain U, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3.	4
+Saccharothrix sp. NRRL B-16348	4
+Chironomus circumdatus	4
+Branchiostoma belcheri	4
+Aureimonas sp. Leaf324	4
+TBB_TETTH RecName: Full=Tubulin beta chain; AltName: Full=Beta-tubulin	4
+Takifugu rubripes	4
+M Chain M, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4.	4
+Vibrio sinaloensis	4
+M Chain M, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3.	4
+Marinobacter sp. AK21	4
+Schizosaccharomyces japonicus yFS275	4
+Xenopsylla cheopis	4
+Mesitornis unicolor	4
+B Chain B, Esterase Domain Of The Zfl2-1 Orf1 Protein From The Zebrafish Zfl2-1 Retrotransposon	4
+A Chain A, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 4.	4
+Bacteroides sp. HPS0048	4
+Eurypyga helias	4
+Anuroctonus pococki	4
+Volvox carteri f. nagariensis	4
+C Chain C, Esterase Domain Of The Zfl2-1 Orf1 Protein From The Zebrafish Zfl2-1 Retrotransposo	4
+bacterium 336/3	4
+Methylophaga thiooxydans	4
+Lineus viridis	4
+RL8_TETTS RecName: Full=60S ribosomal protein L8	4
+Suberites domuncula	4
+Trichosporon asahii var. asahii CBS 2479	4
+U Chain U, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1	4
+Trichinella nativa	4
+Apis mellifera	4
+Monoraphidium neglectum	4
+Paenibacillus sp. Root52	4
+Drosophila americana	4
+Escherichia coli ONT:H33 str. C48/93	4
+Magnaporthe oryzae 70-15	4
+Sphaeroforma arctica JP610	4
+MTNA_DROWI RecName: Full=Methylthioribose-1-phosphate isomerase; Short=M1Pi; Short=MTR-1-P isomerase; AltName: Full=S-methyl-5-thioribose-1-phosphate isomerase; AltName: Full=Translation initiation factor eIF-2B subunit alpha/beta/delta-like protein	4
+Babesia gibsoni	4
+Biston betularia	4
+Lysobacter sp. Root983	4
+Alteromonas macleodii	4
+A Chain A, Tyrosine Kinase As - A Common Ancestor Of Src And Abl Bound To Gleeve	4
+B56679 probable reverse transcriptase - house mosquito	4
+A Chain A, Esterase Domain Of The Zfl2-1 Orf1 Protein From The Zebrafish Zfl2-1 Retrotransposon	4
+Theope virgilius	4
+Komagataella phaffii GS115	4
+Helicoverpa armigera	4
+Ligia oceanica	4
+Trichuris suis	4
+Aegilops tauschii	4
+Catocyclotis adelina	4
+H2B2_TETTS RecName: Full=Histone H2B.2; Short=H2B-2	4
+Nephrops norvegicus	4
+GNAS_HOMAM RecName: Full=Guanine nucleotide-binding protein G(s) subunit alpha; AltName: Full=Adenylate cyclase-stimulating G alpha protein	4
+Schistosoma haematobium	4
+Trichoplax adhaerens	4
+Nephila pilipes	4
+Scolopendra subspinipes japonica	4
+Culex pipiens	4
+Columba livia	4
+Saprolegnia parasitica CBS 223.65	4
+Schizosaccharomyces octosporus yFS286	4
+Sterkiella histriomuscorum	3
+Thrips palmi	3
+Cytophaga hutchinsonii	3
+Brettanomyces bruxellensis AWRI1499	3
+Glycine soja	3
+M Chain M, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	3
+Rhodopirellula maiorica	3
+P Chain P, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	3
+Bemisia tabaci	3
+Heteropterus morpheus	3
+Polysphondylium pallidum PN500	3
+Callithrix jacchus	3
+Herminiimonas sp. CN	3
+D Chain D, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	3
+Euphausia superba	3
+Phytomonas sp. isolate Hart1	3
+G Chain G, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	3
+G Chain G, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	3
+G Chain G, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	3
+G Chain G, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	3
+Bacteroides caccae	3
+Trypanosoma congolense	3
+Bacillus badius	3
+Ochlerotatus taeniorhynchus	3
+Amazona aestiva	3
+Lymantria dispar	3
+TRET1_POLVA RecName: Full=Facilitated trehalose transporter Tret1; Short=PvTret1	3
+Polypedilum vanderplanki	3
+Escherichia coli O121	3
+Apaloderma vittatum	3
+Burkholderia pseudomallei Pakistan 9	3
+Chrysomela tremula	3
+Trichosporon oleaginosus	3
+Latrodectus hesperus	3
+CISY_TETTH RecName: Full=Citrate synthase, mitochondrial; AltName: Full=14 nm filament-forming protein; AltName: Full=49 kDa protein; Flags: Precursor	3
+Nematostella vectensis	3
+Gammarus duebeni	3
+Leptinotarsa decemlineata	3
+D Chain D, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	3
+Oncopeltus fasciatus	3
+Hymenobacter sp. AT01-02	3
+Saccharomyces cerevisiae x Saccharomyces kudriavzevii VIN7	3
+Lactobacillus paraplantarum	3
+Tenebrio molitor	3
+Camelus ferus	3
+Sporidiobolus salmonicolor	3
+Perkinsela sp. CCAP 1560/4	3
+Leishmania donovani	3
+Macrophthalmus japonicus	3
+Escherichia coli W	3
+Apis florea	3
+Fukomys damarensis	3
+FBRL_TETTH RecName: Full=rRNA 2'-O-methyltransferase fibrillarin; AltName: Full=Histone-glutamine methyltransferase	3
+Placozoa sp. H4	3
+D Chain D, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	3
+M Chain M, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	3
+Anguilla japonica	3
+Azumapecten farreri	3
+Metopus es	3
+G Chain G, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	3
+G Chain G, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	3
+Mucor circinelloides f. circinelloides 1006PhL	3
+Dictyocaulus viviparus	3
+D Chain D, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	3
+uncultured Mediterranean phage uvMED	3
+Dehalobacter sp. CF	3
+Anoplopoma fimbria	3
+Zea mays	3
+Platynereis dumerilii	3
+Escherichia coli 2.4168	3
+Panulirus japonicus	3
+Sulfurihydrogenibium azorense	3
+Glossina morsitans morsitans	3
+M Chain M, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	3
+M Chain M, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	3
+Gammarus fossarum	3
+Pteropus alecto	3
+Trichinella murrelli	3
+S28954 calmodulin - Tetrahymena thermophila	3
+Helicosporidium sp. ATCC 50920	3
+D Chain D, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	3
+D Chain D, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	3
+Hydra vulgaris	3
+Paramecium caudatum	3
+Escherichia coli O104:H4 str. C227-11	3
+PDH_EURPU RecName: Full=Pigment-dispersing hormone peptides; Contains: RecName: Full=PDH precursor-related peptide; Short=PPRP; Contains: RecName: Full=Pigment-dispersing hormone; Short=PDH; Flags: Precursor	3
+P Chain P, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	3
+P Chain P, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	3
+Pelecanus crispus	3
+Cytophaga hutchinsonii ATCC 33406	3
+Maconellicoccus hirsutus	3
+Rhizopus delemar RA 99-880	3
+Lycosa singoriensis	3
+Dermacentor variabilis	3
+Nannochloropsis gaditana	3
+Legionella sainthelensi	3
+Palaemon modestus	3
+Portunus pelagicus	3
+Fusarium avenaceum	3
+Coenobita clypeatus	3
+Pontibacter sp. BAB1700	3
+P Chain P, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	3
+P Chain P, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	3
+P Chain P, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	3
+Anopheles arabiensis	3
+Escherichia fergusonii	3
+Kibdelosporangium sp. MJ126-NF4	3
+Staphylococcus warneri Lyso 1 2011	3
+Thiothrix lacustris	3
+Hyriopsis cumingii	3
+M Chain M, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	3
+M Chain M, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	3
+Rhodopirellula maiorica SM1	3
+Artemia parthenogenetica	3
+Strigomonas culicis	3
+Reticulomyxa filosa	3
+Manacus vitellinus	3
+CALM_TETPY RecName: Full=Calmodulin; Short=CaM	3
+Salmonella enterica subsp. enterica serovar Enteritidis str. 50-5646	2
+Cystobacter fuscus DSM 2262	2
+Kiloniella sp. P1-1	2
+Oberthueria caeca	2
+Candidatus Portiera aleyrodidarum BT-QVLC	2
+Xenococcus sp. PCC 7305	2
+Caldisalinibacter kiritimatiensis	2
+Verrucomicrobium sp. BvORR034	2
+M Chain M, Allosteric Control Of The Ribosome By Small-Molecule Antibiotics	2
+Pseudooceanicola atlanticus	2
+Bathycoccus prasinos	2
+RBM34_MOUSE RecName: Full=RNA-binding protein 34; AltName: Full=RNA-binding motif protein 34	2
+Escherichia coli 97.0259	2
+Oryzias latipes	2
+K Chain K, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	2
+Escherichia coli Nissle 1917	2
+Shigella dysenteriae Sd197	2
+Ponticoccus sp. UMTAT08	2
+Lactobacillus parabuchneri	2
+Rahnella aquatilis CIP 78.65 = ATCC 33071	2
+Epinephelus coioides	2
+Arcobacter sp. L	2
+Magnaporthe oryzae Y34	2
+Elizabethkingia anophelis Ag1	2
+E Chain E, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	2
+Echinococcus multilocularis	2
+Escherichia coli P0304816.6	2
+Escherichia coli ECC-1470	2
+Wallemia mellicola CBS 633.66	2
+Entamoeba dispar SAW760	2
+Cobetia amphilecti	2
+Drosophila immigrans	2
+Cryptococcus gattii IND107	2
+Photobacterium marinum	2
+VATL_NEPNO RecName: Full=V-type proton ATPase 16 kDa proteolipid subunit; Short=V-ATPase 16 kDa proteolipid subunit; AltName: Full=Vacuolar proton pump 16 kDa proteolipid subunit	2
+Sciscionella marina	2
+Bacteroides nordii	2
+Blaesoxipha plinthopyga	2
+Reticulitermes flavipes	2
+Pyrinomonas methylaliphatogenes	2
+Anopheles stephensi	2
+Escherichia coli UMN026	2
+Aphanomyces invadans	2
+K Chain K, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	2
+K Chain K, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	2
+K Chain K, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	2
+Oligotropha carboxidovorans OM5	2
+Weissella confusa	2
+Flagellimonas sp. DK169	2
+Elizabethkingia meningoseptica	2
+Arthrobacter nitrophenolicus	2
+Pygoscelis adeliae	2
+Mycobacterium heckeshornense	2
+Bipolaris zeicola 26-R-13	2
+Luteibacter yeojuensis	2
+Lactobacillus acidophilus	2
+Escherichia coli O177:NM str. 2010C-4558	2
+N Chain N, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2.	2
+Rhodosporidium toruloides	2
+Pedobacter sp. Hv1	2
+RS27_HOMAM RecName: Full=40S ribosomal protein S27	2
+Toxoplasma gondii p89	2
+Azohydromonas australica	2
+Vibrio hyugaensis	2
+Shigella dysenteriae CDC 74-1112	2
+Taphrina deformans PYCC 5710	2
+Chlamydotis macqueenii	2
+Emiliania huxleyi CCMP1516	2
+H Chain H, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 1	2
+Chlorobium tepidum TLS	2
+Escherichia coli DH1	2
+Lactobacillus ginsenosidimutans	2
+Streptomyces decoyicus	2
+Bacillus sp. FJAT-18019	2
+Metapenaeus ensis	2
+Chlamydomonas reinhardtii	2
+C Chain C, In Silico And In Vitro Co-Evolution Of A High Affinity Complementary Protein-Protein Interface	2
+Chlamydia trachomatis	2
+Auricularia subglabra TFB-10046 SS5	2
+Mycobacterium phage Che8	2
+Flavobacterium enshiense DK69	2
+Phytomonas sp. isolate EM1	2
+Coccidioides immitis H538.4	2
+Panulirus cygnus	2
+Calothrix sp. PCC 7507	2
+Zunongwangia profunda SM-A87	2
+Toxoplasma gondii MAS	2
+Carcinoscorpius rotundicauda	2
+Flavobacterium suncheonense	2
+E Chain E, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	2
+E Chain E, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	2
+E Chain E, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	2
+Cyanothece sp. CCY0110	2
+Shigella dysenteriae 1617	2
+Mycetophagus quadripustulatus	2
+Thalassocalyce inconstans	2
+Bradyrhizobium sp. BTAi1	2
+Planktothricoides sp. SR001	2
+Pontibacter korlensis	2
+Escherichia coli TA007	2
+Alteromonas macleodii str. 'Black Sea 11'	2
+Actinoplanes missouriensis	2
+Plutella xylostella multiple nucleopolyhedrovirus	2
+Vorticella microstoma	2
+Zunongwangia profunda	2
+Loktanella sp. 3ANDIMAR09	2
+Scolopendra subspinipes	2
+Theileria orientalis strain Shintoku	2
+Wolbachia endosymbiont of Callosobruchus chinensis	2
+Escherichia coli O111	2
+N Chain N, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4.	2
+Phaeobacter sp. 11ANDIMAR09	2
+Cordyceps militaris CM01	2
+Cyclobacteriaceae bacterium AK24	2
+Shigella flexneri	2
+Escherichia coli B7A	2
+Cytophaga aurantiaca	2
+H Chain H, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 4.	2
+Brenneria sp. EniD312	2
+Ogataea parapolymorpha DL-1	2
+Magnaporthiopsis poae ATCC 64411	2
+Fictibacillus gelatini	2
+Salmonella enterica subsp. enterica serovar Enteritidis str. SA20092320	2
+Heterocephalus glaber	2
+Dugesia japonica	2
+Magnaporthe oryzae P131	2
+Hellea balneolensis	2
+Guillardia theta CCMP2712	2
+Tyto alba	2
+AR2BP_CHICK RecName: Full=ADP-ribosylation factor-like protein 2-binding protein; Short=ARF-like 2-binding protein	2
+Elizabethkingia anophelis R26	2
+Thysanoplusia orichalcea nucleopolyhedrovirus	2
+Oceanicaulis sp. HTCC2633	2
+Prevotella sp. BV3P1	2
+Adineta vaga	2
+Thermoplasmatales archaeon BRNA1	2
+PPX4_PARTE RecName: Full=Serine/threonine-protein phosphatase PP-X homolog 4	2
+uncultured bacterium	2
+Chlorobaculum tepidum	2
+Pseudomonas savastanoi pv. phaseolicola	2
+Citrobacter sp. MGH 55	2
+Drosophila pseudoobscura	2
+Clostridium] mangenotii	2
+Escherichia coli O157:H7 str. 2009EL1449	2
+Elizabethkingia miricola	2
+Escherichia coli O83:H1 str. NRG 857C	2
+Escherichia coli O104:H4 str. 2011C-3493	2
+Cryptosporidium hominis TU502	2
+Microtus levis	2
+Spodoptera exigua	2
+RL10_TETTS RecName: Full=60S ribosomal protein L10	2
+Escherichia coli O157:H7 str. EDL933	2
+Bacillus amyloliquefaciens	2
+Caenorhabditis brenneri	2
+Komagataella phaffii CBS 7435	2
+Paraglaciecola psychrophila 170	2
+Phytophthora sojae	2
+XYLT_DROPS RecName: Full=Xylosyltransferase oxt; AltName: Full=Peptide O-xylosyltransferase	2
+Candida tropicalis MYA-3404	2
+Pseudomonas sp. GM78	2
+Escherichia coli KO11FL	2
+Escherichia coli KTE198	2
+N Chain N, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3.	2
+Acidilobus saccharovorans 345-15	2
+Escherichia coli O157:H7 str. K1845	2
+Escherichia coli D6-113.11	2
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	2
+Ectromelia virus	2
+Echinococcus granulosus	2
+Giardia intestinalis	2
+Karlodinium veneficum	2
+Thermotoga neapolitana DSM 4359	2
+Coniophora puteana RWD-64-598 SS2	2
+Sphaerius sp. APV-2005	2
+Crocodylus niloticus	2
+C Chain C, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	2
+Dictyostelium purpureum	2
+K Chain K, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	2
+Solirubrobacter soli	2
+Manduca sexta	2
+Colius striatus	2
+Shigella flexneri 2a str. 301	2
+M Chain M, Crystal Structure Of The Bacterial Ribosome From Escherichia Coli In Complex With The Antibiotic Kasugamyin At 3.5a Resolution. This File Contains The 30s Subunit Of One 70s Ribosome. The Entire Crystal Structure Contains Two 70s Ribosomes And Is Described In Remark 400.	2
+CUPA1_CANPG RecName: Full=Cuticle protein AM/CP1114; AltName: Full=CPAM/CPAM111	2
+Rahnella	2
+Treponema putidum	2
+TL5B_TACTR RecName: Full=Techylectin-5B; Flags: Precursor	2
+Pedobacter sp. Leaf216	2
+E Chain E, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	2
+Clostridium celatum DSM 1785	2
+Chaetomium thermophilum var. thermophilum DSM 1495	2
+Shigella flexneri 2a str. 2457T	2
+AACS_DANRE RecName: Full=Acetoacetyl-CoA synthetas	2
+A Chain A, Crystal Structure Of Designed 3-Fold Symmetric Protein, Threefoi	2
+Papilio polytes	2
+SDSL_MOUSE RecName: Full=Serine dehydratase-like; AltName: Full=L-serine deaminase; AltName: Full=L-serine dehydratase/L-threonine deaminase; AltName: Full=L-threonine dehydratase; Short=TDH; AltName: Full=SDH	2
+H Chain H, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 2.	2
+Glyptonotus cf. antarcticus FK-2009	2
+Struthio camelus australis	2
+Rhynchosciara americana	2
+Shewanella sp. cp20	2
+Leptonema illini DSM 21528	2
+Leptospira wolffii serovar Khorat str. Khorat-H2	2
+C Chain C, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	2
+C Chain C, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	2
+C Chain C, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	2
+C Chain C, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	2
+Roseiflexus sp. RS-1	2
+H Chain H, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 3.	2
+Leptospira yanagawae	2
+Phalacrocorax carbo	2
+Clavispora lusitaniae ATCC 42720	2
+Phaeodactylum tricornutum CCAP 1055/1	2
+Haliaeetus albicilla	2
+SIM14_MOUSE RecName: Full=Small integral membrane protein 14	2
+Escherichia coli O157:H7 str. Sakai	2
+Brangas neora	2
+Colponema vietnamica	2
+Gammarus sp. KV-2010a	2
+Phengaris arion	2
+Bosea sp. Root483D1	2
+ZBT8B_MOUSE RecName: Full=Zinc finger and BTB domain-containing protein 8B	2
+Parasesarma erythrodactyla	2
+Tetrahymena sp. nsp15	2
+Geitlerinema sp. PCC 7407	2
+Entamoeba nuttalli P19	2
+Androctonus bicolor	2
+NUD16_HOMVI RecName: Full=U8 snoRNA-decapping enzyme; AltName: Full=IDP phosphatase; Short=IDPase; AltName: Full=Inosine diphosphate phosphatase; AltName: Full=Nucleoside diphosphate-linked moiety X motif 16; Short=Nudix motif 16; AltName: Full=m7GpppN-mRNA hydrolas	2
+NADP	2
+Alteromonas macleodii ATCC 27126	2
+Bacteriovorax sp. BSW11_IV	2
+Tachypleus tridentatus	2
+Magnaporthe grisea	2
+Scytonema millei VB511283	2
+Debaryomyces hansenii CBS767	2
+Plebejus argus	2
+Plasmodium vivax Brazil I	2
+CISY1_AEDAE RecName: Full=Probable citrate synthase 1, mitochondrial; Flags: Precursor	2
+Pseudoloma neurophilia	2
+Methylomonas denitrificans	2
+Desulfovibrio alkalitolerans DSM 16529	2
+Chilo suppressalis	2
+Mortierella verticillata NRRL 6337	2
+Paralichthys olivaceus	2
+Elizabethkingia anophelis	2
+Leptospira yanagawae serovar Saopaulo str. Sao Paulo = ATCC 700523	2
+Bacillus sp. Soil531	2
+RL44_CAEEL RecName: Full=60S ribosomal protein L44; AltName: Full=L41	2
+Punctularia strigosozonata HHB-11173 SS5	2
+Nitrosomonas communis	2
+Equus caballus	2
+Phaeodactylibacter xiamenensis	2
+Deinococcus sp. Leaf326	2
+Aminobacter sp. Root100	2
+Chaetura pelagica	2
+C Chain C, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	2
+Hammondia hammondi	2
+Phengaris nausithous	2
+Leptospira wolffii	2
+Phytophthora infestans T30-4	2
+Photobacterium aquae	2
+Nakaseomyces delphensis	2
+Burkholderia pseudomallei	2
+ADAT1_XENTR RecName: Full=tRNA-specific adenosine deaminase 1; AltName: Full=tRNA-specific adenosine-37 deaminase	2
+Atyoida bisulcata	2
+Escherichia coli BL21(DE3)	2
+Rhodothermus marinus	2
+Rhodosporidium toruloides NP11	2
+K Chain K, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	2
+Escherichia coli ATCC 25922	2
+Sagitta elegans	2
+DRE2_IXOSC RecName: Full=Anamorsin homolog; AltName: Full=Fe-S cluster assembly protein DRE2 homolog	2
+Erythrolamprus poecilogyrus	2
+Tetrahymena malaccensis	2
+E Chain E, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	2
+Brassica napus	2
+Neosisyphus mirabilis	2
+Lodderomyces elongisporus NRRL YB-4239	2
+Fusarium sp. FIESC_5 CS3069	2
+H2AX_TETPY RecName: Full=Histone H2AX; AltName: Full=Histone H2A.1; Short=H2A1; AltName: Full=Histone H2A.	2
+Photobacterium halotolerans	2
+Glaciecola sp. 4H-3-7+YE-5	2
+Cystobacter fuscus	2
+Leptospira meyeri serovar Semaranga str. Veldrot Semarang 173	2
+alpha proteobacterium HIMB59	2
+Aspergillus niger	2
+Duganella sp. Root1480D1	2
+Bacillus methylotrophicus	2
+Marinilabilia salmonicolor	2
+Loktanella sp. 1ANDIMAR09	2
+Cipangopaludina cathayensis	2
+Phragmatopoma lapidosa	2
+Escherichia coli KTE56	2
+RPB11_ANOGA RecName: Full=DNA-directed RNA polymerase II subunit RPB11; Short=RNA polymerase II subunit B11; AltName: Full=DNA-directed RNA polymerase II subunit J	2
+Clostridium] sordellii	2
+Magnaporthe oryzae	2
+Opisthorchis viverrini	2
+Enterobacteriaceae	2
+Apis andreniformis	2
+Nipponia nippon	2
+Cyberlindnera jadinii	2
+Escherichia coli IAI39	2
+Saccharomyces cerevisiae S288c	2
+Abraxas sylvata	2
+Chilodonella uncinata	2
+Scytonema millei	2
+Physcomitrella patens	2
+H2AY_TETTS RecName: Full=Histone H2A.Y	2
+Candidatus Portiera aleyrodidarum BT-B-HRs	2
+Scylla serrata	2
+Saccharomyces sp. 'boulardii'	2
+Acidilobus saccharovorans	2
+Psychrobacter piscatorii	2
+Burkholderia sp. BT03	2
+Bacillus cereus E33L	2
+Tetrahymena pigmentosa	2
+Achromobacter sp.	2
+Dianemobius nigrofasciatus	2
+Brassica rapa	2
+Gloeophyllum trabeum ATCC 11539	2
+Cytophagales bacterium B6	2
+Orconectes limosus	2
+Trichoderma lixii	2
+Dichomitus squalens LYAD-421 SS1	2
+Panulirus longipes bispinosus	2
+delta proteobacterium MLMS-1	2
+Pseudoalteromonas phenolica	2
+Natrix tessellata	2
+Cladophialophora psammophila CBS 110553	2
+Fulmarus glacialis	2
+Leptonema illini	2
+Escherichia coli KTE120	2
+Saccharomyces cerevisiae	2
+Mytilus edulis	2
+N Chain N, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1	2
+RL27_TETTH RecName: Full=60S ribosomal protein L27	2
+Vargula sp. RS-2014	2
+Flavobacterium filum	2
+Aphanomyces astaci	2
+Termitomyces sp. J132	2
+Oniscus asellus	2
+Schistocerca americana	2
+Pisum sativum	2
+Mictyris longicarpus	2
+Pseudozyma antarctica	2
+R Chain R, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	1
+R Chain R, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	1
+Escherichia coli O157:H7 str. K4527	1
+R Chain R, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	1
+R Chain R, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	1
+Branchiostoma floridae	1
+Escherichia coli ER2796	1
+F Chain F, Structure Of The 30s Subunit And The Trnas Of E. Coli Ribosome In Post-Accommodation State	1
+Escherichia coli 1-250-04_S1_C3	1
+Escherichia coli 1-250-04_S1_C2	1
+Escherichia coli 1-250-04_S1_C1	1
+Escherichia coli O145:H28 str. RM13516	1
+Escherichia coli O145:H28 str. RM13514	1
+Escherichia coli UMEA 3298-1	1
+Escherichia coli FDA504	1
+Escherichia coli FDA505	1
+Escherichia coli FDA506	1
+Escherichia coli FDA507	1
+Escherichia coli HVH 175 (4-3405184)	1
+Escherichia coli O121:H19 str. 2009C-4050	1
+Escherichia coli 2-460-02_S1_C2	1
+Selenomonas bovis	1
+Escherichia coli 6-175-07_S4_C2	1
+Escherichia coli 8.2524	1
+Escherichia coli 5905	1
+RS13_SHIF8 RecName: Full=30S ribosomal protein S13	1
+Candidatus Scalindua brodae	1
+Oscillochloris trichoides	1
+Thamnocephalus platyurus	1
+Saccharomyces cerevisiae YJM1342	1
+Ferrimonas senticii	1
+Escherichia coli O157:H7 str. K1420	1
+Desulfovibrio piger ATCC 29098	1
+Shigella sonnei str. Moseley	1
+Mya arenaria	1
+Agrobacterium rubi	1
+Tetrahymena elliotti	1
+T18197 reverse transcriptase-like protein - silkworm	1
+Escherichia coli HVH 216 (4-3042952)	1
+Dendroctonus armandi	1
+Escherichia coli NB8	1
+Escherichia coli BW25113	1
+Puccinia striiformis f. sp. tritici PST-78	1
+Proteus mirabilis ATCC 29906	1
+Escherichia coli UMEA 3671-1	1
+Escherichia coli KTE237	1
+Escherichia coli O157:H7 str. 2011EL-2091	1
+Escherichia coli O157:H7 str. 2011EL-2090	1
+Escherichia coli O157:H7 str. 2011EL-2093	1
+Escherichia coli SCI-07	1
+Escherichia coli O157:H7 str. 2011EL-2094	1
+Escherichia coli O157:H7 str. 2011EL-2097	1
+Escherichia coli O157:H7 str. 2011EL-2096	1
+Escherichia coli O157:H7 str. 2011EL-2099	1
+Escherichia coli O157:H7 str. 2011EL-2098	1
+Escherichia coli HVH 173 (3-9175482)	1
+Escherichia coli O45:H2 str. 2010C-3876	1
+Symbiodinium sp. C3	1
+Shigella flexneri 2930-71	1
+PPX3_PARTE RecName: Full=Serine/threonine-protein phosphatase PP-X homolog 3	1
+Escherichia coli E1728	1
+Escherichia coli O157:H7 str. K7140	1
+Acetobacter tropicalis	1
+Salmonella enterica subsp. enterica serovar Enteritidis	1
+Escherichia coli O104:H4 str. Ec11-9450	1
+Escherichia coli O111:H11 str. CVM9545	1
+DCD1B_DICDI RecName: Full=Protein dcd1B; AltName: Full=Acid ceramidase-like protein B; Flags: Precursor	1
+Escherichia coli 95.0183	1
+Serratia marcescens FGI94	1
+Escherichia coli BW2952	1
+Escherichia coli HVH 121 (4-6877826)	1
+Pectinophora gossypiella	1
+CDC22_MEDSA RecName: Full=Cell division control protein 2 homolog 2	1
+Ustilaginoidea virens	1
+Serratia sp. M24T3	1
+Escherichia coli 99.1781	1
+Escherichia coli O157:H7 str. F7377	1
+Cryptococcus gattii MMRL2647	1
+Cryptococcus gattii CA1280	1
+GXLT1_DANRE RecName: Full=Glucoside xylosyltransferase 1; AltName: Full=Glycosyltransferase 8 domain-containing protein 3	1
+NPT2B_BOVIN RecName: Full=Sodium-dependent phosphate transport protein 2B; Short=Sodium-phosphate transport protein 2B; AltName: Full=Na(+)-dependent phosphate cotransporter 2B; AltName: Full=Sodium/phosphate cotransporter 2B; Short=Na(+)/Pi cotransporter 2B; Short=NaPi-2b; AltName: Full=Solute carrier family 34 member 2	1
+Escherichia coli KTE67	1
+Escherichia coli KTE66	1
+Escherichia coli KTE65	1
+Escherichia coli KTE63	1
+Escherichia coli KTE62	1
+Escherichia coli KTE61	1
+Escherichia coli KTE60	1
+Haloferax sp. ATB1	1
+Escherichia coli KTE69	1
+Escherichia coli KTE68	1
+Microgenomates bacterium GW2011_GWF2_45_18	1
+Escherichia coli O111:NM str. 04-3211	1
+A Chain A, Fiddler Crab Collagenase Complexed To Ecotin	1
+Escherichia coli KTE132	1
+Escherichia coli KTE133	1
+Escherichia coli KTE130	1
+Escherichia coli KTE131	1
+Escherichia coli MP021561.2	1
+Escherichia coli KTE137	1
+Escherichia coli KTE134	1
+Escherichia coli KTE135	1
+Escherichia coli KTE138	1
+Escherichia coli KTE139	1
+Escherichia coli O157:H7 str. 2009EL2109	1
+Escherichia coli HVH 167 (4-6073565)	1
+Escherichia coli UMEA 3221-1	1
+Escherichia coli 6-175-07_S3_C3	1
+Saccharomyces cerevisiae YJM978	1
+Pseudomonas syringae pv. lapsa	1
+Escherichia coli UMEA 3264-1	1
+Escherichia coli O26:H11 str. 2009C-4760	1
+Saccharomyces cerevisiae YJM428	1
+Nonlabens dokdonensis	1
+Escherichia coli HVH 28 (4-0907367)	1
+Tubulanus polymorphus	1
+Saccharomyces cerevisiae Kyokai no. 7	1
+Escherichia coli HVH 89 (4-5885604)	1
+Saccharomyces cerevisiae YJM193	1
+Escherichia coli W26	1
+Anteholosticha manca	1
+1212288A elongation factor 1bet	1
+Escherichia coli 2730350	1
+Escherichia coli NC101	1
+Escherichia coli O174:H21 str. 03-3269	1
+Escherichia coli HVH 116 (4-6879942)	1
+RS13_ECOLI RecName: Full=30S ribosomal protein S13	1
+Escherichia coli HVH 6 (3-8296502)	1
+Escherichia coli O121:H19 str. 06-3822	1
+Kluyveromyces lactis	1
+Cancer pagurus	1
+Ictalurus furcatus	1
+Actinomyces urogenitalis	1
+Bacteroides fragilis str. 3986 N(B)19	1
+mice, Peptide Partial, 688 aa	1
+Escherichia coli UMEA 3200-1	1
+Saccharomyces cerevisiae YJM993	1
+Escherichia coli 1-110-08_S4_C3	1
+Escherichia coli 1-110-08_S4_C2	1
+Escherichia coli KOEGE 32 (66a)	1
+Escherichia coli 8-415-05_S4_C3	1
+Escherichia coli EC1865	1
+Escherichia coli EC1864	1
+Escherichia coli EC1866	1
+Escherichia coli O121:H19 str. F6714	1
+Escherichia coli EC1863	1
+Escherichia coli EC1862	1
+Escherichia coli EC1869	1
+Escherichia coli EC1868	1
+Sphaerochaeta globosa	1
+Kosakonia radicincitans DSM 16656	1
+Escherichia coli P0304777.8	1
+Escherichia coli P0304777.9	1
+Escherichia coli P0304777.7	1
+Escherichia coli P0304777.4	1
+Escherichia coli P0304777.5	1
+Escherichia coli P0304777.2	1
+Escherichia coli P0304777.3	1
+Nyctotherus ovalis	1
+Escherichia coli P0304777.1	1
+Escherichia coli O121:H19 str. 2010EL1058	1
+A Chain A, Structural Determinants For Improved Thermal Stability Of Designed Ankyrin Repeat Proteins With A Redesigned C- Capping Module.	1
+Rhodoferax ferrireducens T118	1
+Escherichia coli O111:NM str. 01-3076	1
+Escherichia coli DEC6A	1
+Escherichia coli HVH 211 (4-3041891)	1
+Shigella boydii Sb227	1
+Escherichia coli DEC6B	1
+Escherichia coli DEC6E	1
+Escherichia coli DEC6D	1
+Escherichia coli O104:H4 str. C236-11	1
+Escherichia coli 2749250	1
+Escherichia coli EC1738	1
+Escherichia coli EC1735	1
+Escherichia coli EC1734	1
+Escherichia coli O104:H4 str. 2009EL-2071	1
+Escherichia coli EC1736	1
+Trittame loki	1
+Escherichia coli HVH 195 (3-7155360)	1
+Escherichia coli 2-474-04_S3_C1	1
+Escherichia coli 2-474-04_S3_C2	1
+Escherichia coli 2-474-04_S3_C3	1
+A Chain A, Structure Of The C-domain Of Calcium-saturated Calmodulin Bound To The Iq Motif Of Nav1.	1
+Escherichia coli J96	1
+Escherichia coli 179550	1
+Escherichia coli ATCC 700728	1
+Amycolatopsis azurea	1
+Escherichia coli UCI 65	1
+Escherichia coli UCI 66	1
+F10A1_CHICK RecName: Full=Hsc70-interacting protein; Short=Hip; AltName: Full=Protein FAM10A1; AltName: Full=Protein ST13 homolog	1
+Escherichia coli 7-233-03_S1_C3	1
+Escherichia coli 7-233-03_S1_C2	1
+Bacteroides uniformis	1
+Arenibacter certesii	1
+Nocardiopsis sp. SBT366	1
+Escherichia coli 2-052-05_S4_C2	1
+Escherichia coli 201600.1	1
+Escherichia coli O45:H2 str. 2009C-3686	1
+Escherichia coli F11	1
+Escherichia coli P0304816.2	1
+Escherichia coli P0304816.3	1
+Escherichia coli P0304816.1	1
+Escherichia coli P0304816.7	1
+Escherichia coli P0304816.4	1
+Escherichia coli P0304816.5	1
+Escherichia coli M718	1
+Escherichia coli P0304816.8	1
+Escherichia coli P0304816.9	1
+Escherichia coli 2875000	1
+Escherichia coli B90	1
+Escherichia coli HVH 227 (4-2277670)	1
+Escherichia coli B94	1
+Escherichia coli B95	1
+Escherichia coli O103:H2 str. 12009	1
+Saccharomyces cerevisiae YJM975	1
+OTU6B_XENTR RecName: Full=OTU domain-containing protein 6B	1
+Saccharomyces cerevisiae YJM972	1
+Candidatus Microthrix parvicella RN1	1
+Escherichia coli 8-415-05_S4_C2	1
+Escherichia coli 8-415-05_S4_C1	1
+Escherichia coli UMEA 3632-1	1
+Escherichia coli PA28	1
+Escherichia coli UMEA 3290-1	1
+Escherichia coli PA25	1
+Escherichia coli PA24	1
+Escherichia coli PA23	1
+Escherichia coli PA22	1
+Escherichia coli O6:H16 str. F5656C1	1
+Opisthocomus hoazin	1
+Escherichia coli O157:H7 str. K4396	1
+Escherichia coli DEC4C	1
+Shigella flexneri VA-6	1
+Corynebacterium lubricantis	1
+Escherichia coli HVH 149 (4-4451880)	1
+Marmoricola sp. URHB0036	1
+Escherichia coli 6-537-08_S4_C2	1
+Escherichia coli 6-537-08_S4_C1	1
+Pseudolucia collina	1
+Saccharomyces cerevisiae YJM1439	1
+Escherichia coli 97.0246	1
+Citrobacter amalonaticus	1
+Escherichia coli 2-222-05_S1_C2	1
+Escherichia coli P0304777.10	1
+Escherichia coli BIDMC 37	1
+Saccharomyces cerevisiae YJM1338	1
+Escherichia coli H120	1
+Escherichia coli P0304777.11	1
+Chironomus tentans	1
+Escherichia coli O111:NM str. 2010C-4086	1
+Escherichia coli P0304777.12	1
+Escherichia coli O157:H7 str. F7410	1
+Pecten maximus	1
+Bacillus cereus HuA4-10	1
+Escherichia coli BIDMC 58	1
+Escherichia coli P0304777.13	1
+Escherichia coli P0304777.14	1
+Pinctada martensii	1
+Rhodonellum psychrophilum GCM71 = DSM 17998	1
+Escherichia coli 2-222-05_S4_C1	1
+Rickettsia hoogstraalii	1
+Shigella sonnei 4822-66	1
+Escherichia coli H494	1
+Cryptococcus gattii CA1014	1
+Escherichia coli CE418	1
+Escherichia coli 1-182-04_S3_C2	1
+Escherichia coli O157:H7 str. F7384	1
+Ensifer sp. Root231	1
+Saccharomyces cerevisiae YJM1242	1
+Saccharomyces cerevisiae YJM1244	1
+Saccharomyces cerevisiae YJM1248	1
+Cryptococcus gattii NT-10	1
+Escherichia coli O91:H14 str. 2009C-3227	1
+Escherichia coli O157:H7 str. 2011EL-2312	1
+Escherichia coli O157:H7 str. 2011EL-2313	1
+Saccharothrix syringae	1
+Diaphorina citri	1
+Escherichia coli O111:NM str. 2010C-4799	1
+Escherichia coli HVH 26 (4-5703913)	1
+Escherichia coli UMEA 4075-1	1
+Escherichia coli O157:H7 str. K5607	1
+Escherichia coli O157:H7 str. K5602	1
+Escherichia coli MP021017.12	1
+Escherichia coli 6-319-05_S1_C2	1
+Escherichia coli MP021017.10	1
+Escherichia coli MP021017.11	1
+Serratia sp. SCBI	1
+Escherichia coli O157:H7 str. K5609	1
+Escherichia coli HVH 40 (4-1219782)	1
+Escherichia coli O103:H25 str. 2010C-4529	1
+Escherichia coli O104:H4 str. Ec11-4988	1
+Escherichia coli O111:H11 str. CVM9553	1
+Escherichia coli ATCC BAA-2219	1
+Escherichia coli O104:H4 str. Ec11-4984	1
+Escherichia coli O104:H4 str. Ec11-4987	1
+Escherichia coli O104:H4 str. Ec11-4986	1
+Pontibacillus marinus	1
+Euglena gracilis	1
+Escherichia coli O157:H7 str. 2011EL-2092	1
+Piriformospora indica DSM 11827	1
+Shigella boydii 4444-74	1
+Escherichia coli HVH 38 (4-2774682)	1
+Escherichia coli 3-020-07_S1_C3	1
+Nitrospira sp. 1 'RAS filter enrichment'	1
+Hyacinthus orientalis	1
+Escherichia coli KOEGE 30 (63a)	1
+Escherichia coli ATCC BAA-2196	1
+Escherichia coli KTE12	1
+Escherichia coli KTE13	1
+Escherichia coli KTE10	1
+Archangium gephyra	1
+Escherichia coli KTE16	1
+Escherichia coli KTE17	1
+Escherichia coli KTE14	1
+Escherichia coli KTE15	1
+Escherichia coli KTE18	1
+Escherichia coli KTE19	1
+Escherichia coli HVH 154 (4-5636698)	1
+Escherichia coli O26:H11 str. 2011C-3387	1
+Shigella flexneri K-218	1
+A Chain A, Structural Diversity Of The Active Conformation Of The N- Terminal Kinase Domain Of P90 Ribosomal S6 Kinase 	1
+Belliella baltica DSM 15883	1
+Q Chain Q, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1	1
+Escherichia coli O157:H7 str. EC4196	1
+Saccharomyces cerevisiae YJM969	1
+Escherichia coli UMEA 3391-1	1
+Smeringurus mesaensis	1
+Burkholderia multivorans ATCC 17616	1
+1 Chain 1, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	1
+RL34_TETTS RecName: Full=60S ribosomal protein L34	1
+1 Chain 1, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	1
+1 Chain 1, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	1
+1 Chain 1, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	1
+Escherichia coli HVH 22 (4-2258986)	1
+Escherichia coli 2846750	1
+Escherichia coli 3.2608	1
+Escherichia coli HVH 199 (4-5670322)	1
+Wolbachia endosymbiont of Culex quinquefasciatus Pel	1
+Escherichia coli 3-073-06_S3_C1	1
+Paenibacillus algorifonticola	1
+Escherichia coli HVH 1 (4-6876161)	1
+Escherichia coli 2770900	1
+Escherichia coli P0302293.10	1
+Thermotoga sp. RQ7	1
+Birgus latro	1
+Escherichia coli 2-427-07_S1_C2	1
+Acidobacterium sp. PMMR2	1
+Salmonella enterica subsp. enterica serovar Paratyphi B str. SARA42	1
+Escherichia coli B5-2	1
+Rhodopseudomonas palustris BisA53	1
+Escherichia coli HVH 150 (4-3258106)	1
+Escherichia coli BCE008_MS-13	1
+Escherichia coli UMEA 3178-1	1
+Escherichia coli TA124	1
+Microbacterium sp. Leaf351	1
+Escherichia coli ATCC BAA-2193	1
+Escherichia coli HVH 210 (4-3042480)	1
+Escherichia coli DEC5E	1
+Escherichia coli B093	1
+Escherichia coli DEC5A	1
+Escherichia coli DEC5B	1
+Escherichia coli DEC5C	1
+Eptatretus stoutii	1
+Escherichia coli O157:H7 str. K2622	1
+A Chain A, Crystal Structure Of The Second Bromodomain Of Pleckstrin Homology Domain Interacting Protein (Phip	1
+Clostridium] clariflavum	1
+Centroptilum triangulifer	1
+Escherichia coli KOEGE 33 (68a)	1
+Escherichia coli 5-172-05_S3_C1	1
+Escherichia coli 541-1	1
+Escherichia coli 5-172-05_S3_C3	1
+H31_TETTH RecName: Full=Histone H3; AltName: Full=H3S; AltName: Full=Histone H3-I/H3-II; AltName: Full=Major histone H3; Contains: RecName: Full=H3F	1
+Escherichia coli 96.0939	1
+Escherichia coli EC1870	1
+Escherichia coli HVH 146 (4-3189767)	1
+Escherichia coli 96.0932	1
+Escherichia coli O28ac:NM str. 02-3404	1
+Myxococcus sp. (contaminant ex DSM 436)	1
+Escherichia coli 1-176-05_S4_C2	1
+Escherichia coli O145:NM str. 08-4270	1
+Escherichia coli UMEA 3206-1	1
+Escherichia coli 2872000	1
+Escherichia coli 2-210-07_S1_C2	1
+Escherichia coli UMEA 3159-1	1
+Escherichia coli O111:NM str. 2010C-4715	1
+Escherichia coli 2860050	1
+Toxoplasma gondii GAB2-2007-GAL-DOM2	1
+Escherichia coli KOEGE 58 (171a)	1
+Malassezia sympodialis ATCC 42132	1
+Escherichia sp. KTE114	1
+Escherichia coli 97.0010	1
+Escherichia coli FRIK920	1
+Leptanilloides femoralis	1
+Roseovarius mucosus	1
+Escherichia coli E482	1
+Eubacterium limosum	1
+Escherichia coli UMEA 3190-1	1
+Serratia sp. Leaf51	1
+Escherichia coli 99.0816	1
+Spizellomyces punctatus DAOM BR117	1
+Entosiphon sulcatum	1
+Escherichia coli HVH 134 (4-6073441)	1
+Drosophila hydei	1
+Escherichia coli TW10246	1
+EIF3H_ANOGA RecName: Full=Eukaryotic translation initiation factor 3 subunit H; Short=eIF3h	1
+Scytodes thoracica	1
+Pseudomonas syringae pv. solidagae	1
+Escherichia coli UMEA 3609-1	1
+Escherichia coli H263	1
+Escherichia coli CFT073	1
+Borrelia miyamotoi	1
+uncultured bacterium A1Q1_fos_4	1
+Escherichia coli HVH 152 (4-3447545)	1
+Escherichia coli HVH 142 (4-5627451)	1
+Escherichia coli O157:H7 str. 2009EL1913	1
+Escherichia coli B83	1
+Shigella flexneri 5 str. 8401	1
+Escherichia coli B86	1
+Escherichia coli UMEA 3215-1	1
+Escherichia coli B84	1
+Salmonella enterica	1
+Escherichia coli B89	1
+Escherichia coli HVH 42 (4-2100061)	1
+Escherichia coli P0304816.14	1
+Escherichia coli P0304816.15	1
+Shigella flexneri 2850-71	1
+Escherichia coli P0304816.10	1
+Escherichia coli P0304816.11	1
+Escherichia coli P0304816.12	1
+Escherichia coli P0304816.13	1
+Serratia marcescens EGD-HP20	1
+Saccharomyces cerevisiae YJM1381	1
+Escherichia coli PA34	1
+Escherichia coli PA35	1
+Escherichia coli PA32	1
+Escherichia coli PA33	1
+Oxybasis rubra	1
+Escherichia coli PA31	1
+Escherichia coli 96.0428	1
+Escherichia coli HVH 109 (4-6977162)	1
+Escherichia coli O26:H11 str. 2009C-4826	1
+Macaca fuscata	1
+Escherichia coli 96.0427	1
+Escherichia coli O157:H7 str. 2009C-4258	1
+Saccharomyces cerevisiae YJM450	1
+Escherichia coli O26:NM str. 2010C-4788	1
+Escherichia coli 99.0678	1
+Escherichia coli HVH 25 (4-5851939)	1
+Escherichia coli 99.0672	1
+Escherichia coli 99.0670	1
+Escherichia coli UMEA 3124-1	1
+TT30A_XENTR RecName: Full=Tetratricopeptide repeat protein 30A; Short=TPR repeat protein 30A	1
+Escherichia coli H397	1
+Spodoptera frugiperda	1
+Escherichia coli 3-267-03_S1_C1	1
+Escherichia coli 3-267-03_S1_C2	1
+Escherichia coli 3-267-03_S1_C3	1
+P Chain P, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 3.	1
+Pseudomonas syringae pv. syringae	1
+Saccharomyces cerevisiae YJM1326	1
+Escherichia coli 89.0511	1
+Escherichia coli MP021017.9	1
+Syngnathus fuscus	1
+Escherichia coli 1-182-04_S3_C1	1
+Escherichia coli MP021017.1	1
+Escherichia coli MP021017.2	1
+Escherichia coli MP021017.3	1
+Escherichia coli MP021017.4	1
+Escherichia coli MP021017.5	1
+Escherichia coli MP021017.6	1
+Escherichia coli str. K-12 substr. MC4100	1
+Saccharomyces cerevisiae AWRI796	1
+Cryptococcus gattii Ram5	1
+Escherichia coli O26:H11 str. 2011C-3270	1
+Escherichia coli ThroopD	1
+Lachancea lanzarotensis	1
+Escherichia coli O121:H19 str. 2010C-4966	1
+Escherichia coli H489	1
+Escherichia coli O69:H11 str. 07-3763	1
+Saccharomyces cerevisiae YJM1250	1
+Corallococcus coralloides	1
+Pediculus humanus	1
+VPS45_DICDI RecName: Full=Vacuolar protein sorting-associated protein 45	1
+Deinococcus misasensis	1
+Balearica regulorum gibbericeps	1
+Serratia sp. FS14	1
+Escherichia coli UMEA 3140-1	1
+Escherichia coli 95.0943	1
+Escherichia coli O26:H11 str. 2010C-3902	1
+Escherichia coli O145:NM str. 2010C-3521	1
+Eulimnogammarus cyaneus	1
+Escherichia coli O145:NM str. 2010C-3526	1
+Sulfuricella sp. T08	1
+Escherichia coli ATCC BAA-2209	1
+Escherichia coli 97.1742	1
+Microlunatus phosphovorus NM-1	1
+Escherichia coli O121:H19 str. 2009C-4659	1
+Escherichia coli H736	1
+Escherichia coli UMEA 3144-1	1
+Escherichia coli H730	1
+Nosema apis BRL 01	1
+Escherichia coli UMEA 3889-1	1
+Saccharomyces cerevisiae YJM1418	1
+Escherichia coli HVH 209 (4-3062651)	1
+Carassius auratus	1
+Marthasterias glacialis	1
+Escherichia coli O157:H7 str. F7350	1
+Escherichia coli HVH 12 (4-7653042)	1
+Litopenaeus stylirostris	1
+Escherichia coli BIDMC 49a	1
+Escherichia coli TW10509	1
+Escherichia coli BIDMC 49b	1
+Escherichia coli STEC_O31	1
+Escherichia coli 5-366-08_S1_C1	1
+Escherichia coli 5-366-08_S1_C3	1
+Escherichia coli BCE032_MS-12	1
+Clostridium sp. CAG:299	1
+Escherichia coli 2362-75	1
+Euprymna scolopes	1
+Escherichia coli TT12B	1
+Escherichia coli 2862600	1
+Escherichia coli UMEA 3318-1	1
+Nonlabens ulvanivorans	1
+Escherichia coli UMEA 3703-1	1
+Escherichia coli O104:H4 str. 11-02092	1
+Escherichia coli O104:H4 str. 11-02093	1
+H2AX_TETTS RecName: Full=Histone H2AX; AltName: Full=Histone H2A.1; Short=H2A1; AltName: Full=Histone H2A.X	1
+Escherichia coli O111:NM str. K6722	1
+Escherichia coli O111:NM str. K6723	1
+Samia ricini	1
+Escherichia coli O111:NM str. K6728	1
+Escherichia coli 2-052-05_S4_C1	1
+Escherichia coli HVH 32 (4-3773988)	1
+Escherichia coli 2-052-05_S4_C3	1
+Escherichia coli KTE64	1
+Haemaphysalis qinghaiensis	1
+Candidatus Methanoperedens sp. BLZ1	1
+Escherichia coli 96.154	1
+Kiefferulus sp. 'cornishi'	1
+Escherichia coli O145:NM str. 2010C-4557C2	1
+Escherichia coli HVH 169 (4-1075578)	1
+Thermus sp. NMX2.A1	1
+Escherichia coli O26:H11 str. 2009C-3689	1
+Burkholderia sp. UYPR1.413	1
+Escherichia coli O78:H12 str. 00-3279	1
+Bacteroides sp. CAG:770	1
+Escherichia coli HVH 77 (4-2605759)	1
+Shigella sonnei 3233-85	1
+Escherichia coli O104:H4 str. 11-03439	1
+Cupriavidus necator N-1	1
+Escherichia coli Xuzhou21	1
+Escherichia coli BCE008_MS-01	1
+Escherichia coli ACN001	1
+Thermotoga neapolitana	1
+Escherichia coli 2-427-07_S1_C1	1
+Escherichia coli 4-203-08_S3_C3	1
+Escherichia coli 2-427-07_S1_C3	1
+Escherichia coli APEC O78	1
+Escherichia coli S88	1
+Escherichia coli O104:H4 str. 11-02281	1
+Escherichia coli HVH 223 (4-2976528)	1
+Serratia fonticola AU-P3(3)	1
+Chitinophagaceae bacterium PMP191F	1
+Paramecium octaurelia	1
+Escherichia coli P0305260.7	1
+Escherichia coli 2722950	1
+Porphyromonas gingivalis 381	1
+Escherichia coli 97.0007	1
+Amphidinium carterae	1
+Escherichia coli Envira 10/1	1
+DYHC_PARTE RecName: Full=Dynein heavy chain, cytoplasmic; AltName: Full=DHC08; AltName: Full=Dynein heavy chain, cytosolic; Short=DYHC	1
+Crocosphaera watsonii WH 0005	1
+Triatoma infestans	1
+Escherichia coli STEC_EH250	1
+Escherichia coli O157:H7 str. F6749	1
+Candidatus Portiera aleyrodidarum	1
+Escherichia coli M863	1
+Cryomorphaceae bacterium BACL7 MAG-121220-bin8	1
+Escherichia coli 1-110-08_S3_C1	1
+Escherichia coli 1-110-08_S3_C2	1
+Escherichia coli 1-110-08_S3_C3	1
+Euphausia crystallorophias	1
+Escherichia coli ECA-727	1
+Escherichia coli KTE103	1
+Schistocerca gregaria	1
+Isosphaera pallida	1
+Escherichia coli P0305260.1	1
+Escherichia coli P0305260.2	1
+Escherichia coli P0305260.3	1
+Escherichia coli P0305260.4	1
+Escherichia coli P0305260.5	1
+Escherichia coli P0305260.6	1
+Escherichia coli 3.4880	1
+Escherichia coli P0305260.8	1
+Escherichia coli P0305260.9	1
+Toxoplasma gondii GT1	1
+Escherichia coli 97.0003	1
+Escherichia coli 4-203-08_S1_C1	1
+Escherichia coli 4-203-08_S1_C2	1
+Escherichia coli 4-203-08_S1_C3	1
+Vibrio caribbeanicus	1
+Lactobacillus hokkaidonensis	1
+Toxoplasma gondii ME49	1
+Escherichia coli P0299438.7	1
+Escherichia coli DEC4B	1
+Escherichia coli P0299438.5	1
+Escherichia coli P0299438.4	1
+Escherichia coli P0299438.3	1
+Escherichia coli P0299438.2	1
+Escherichia coli DEC4E	1
+Escherichia coli DEC4D	1
+Escherichia coli KTE136	1
+Escherichia coli BIDMC 82	1
+Escherichia coli P0299438.9	1
+Escherichia coli MP021561.3	1
+Escherichia coli 3-073-06_S3_C2	1
+Escherichia coli B40-2	1
+Escherichia coli H252	1
+Curvibacter gracilis	1
+Escherichia coli B40-1	1
+RM52_DROME RecName: Full=39S ribosomal protein L52, mitochondrial; Short=L52mt; Short=MRP-L52; Flags: Precursor	1
+Odontaster validus	1
+Escherichia coli 2-177-06_S1_C2	1
+Escherichia coli 2-177-06_S1_C3	1
+Escherichia coli 2-177-06_S1_C1	1
+Escherichia coli 2534-86	1
+Escherichia coli M605	1
+Circulifer tenellus	1
+Francisella guangzhouensis	1
+Escherichia coli P0299438.6	1
+Saccharomyces cerevisiae YJM1133	1
+Turneriella parva	1
+Escherichia coli DEC4A	1
+Escherichia coli HVH 153 (3-9344314)	1
+Porphyromonas gingivalis	1
+Escherichia coli G58-1	1
+Escherichia coli DEC4F	1
+Sphingomonas sp. PAMC 26605	1
+Escherichia coli MA6	1
+Escherichia coli O104:H4 str. 01-09591	1
+Escherichia coli TW07793	1
+archaeon GW2011_AR11	1
+Thermorudis peleae	1
+Escherichia coli UMEA 3705-1	1
+Escherichia coli 3-105-05_S4_C1	1
+Escherichia coli 3-105-05_S4_C2	1
+Escherichia coli O104:H4 str. 11-3677	1
+Escherichia coli HVH 95 (4-6074464)	1
+Escherichia coli O104:H4 str. 11-4404	1
+Ensifer sp. Root258	1
+Escherichia coli BIDMC 70	1
+Escherichia coli O111:NM str. 2010C-4221	1
+Escherichia coli HVH 74 (4-1034782)	1
+Escherichia coli BIDMC 74	1
+Escherichia coli BIDMC 75	1
+Escherichia coli BIDMC 76	1
+Escherichia coli BIDMC 77	1
+Escherichia coli BIDMC 78	1
+Escherichia coli BIDMC 79	1
+Bacteroides clarus YIT 12056	1
+Trichoderma reesei RUT C-30	1
+Escherichia coli 4.0522	1
+Oxytenis modestia	1
+Escherichia coli MP021552.12	1
+Escherichia coli MP021552.11	1
+A Chain A, Crystal Structure Of An 8 Repeat Consensus Tpr Superhelix (Trigonal Crystal Form)	1
+Escherichia coli 10.0869	1
+Saccharomyces cerevisiae YJM1311	1
+Escherichia coli HVH 162 (4-5627982)	1
+Escherichia coli O157:H7 str. G5303	1
+Escherichia coli O121:H19 str. 2010C-4824	1
+Escherichia coli HVH 76 (4-2538717)	1
+Escherichia coli 95NR1	1
+Escherichia coli UMEA 3160-1	1
+Serratia sp. Ag2	1
+Carassius carassius	1
+Chania multitudinisentens RB-25	1
+Escherichia coli 178900	1
+Escherichia coli O145:NM str. 2010C-3516	1
+Escherichia coli O145:NM str. 2010C-3517	1
+Leeuwenhoekiella sp. MAR_2009_132	1
+Stygiocaris lancifera	1
+Escherichia coli HVH 126 (4-6034225)	1
+Escherichia coli O145:NM str. 2010C-3511	1
+Escherichia coli BCE011_MS-01	1
+Escherichia coli O145:NM str. 2010C-3518	1
+Y4701_DICDI RecName: Full=Enolase superfamily member DDB_G0284701	1
+Escherichia coli HVH 117 (4-6857191)	1
+L Chain L, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 1	1
+Escherichia coli 8-415-05_S3_C3	1
+Escherichia coli O157:H7 str. 08-3527	1
+Escherichia coli O157:H7 str. 08-3037	1
+Escherichia coli UMEA 3694-1	1
+Escherichia coli KTE147	1
+Escherichia coli 8-415-05_S3_C1	1
+Escherichia coli KTE146	1
+Escherichia coli UMEA 3490-1	1
+Escherichia coli O157:H7 str. K5418	1
+Escherichia coli O104:H4 str. 11-4623	1
+Escherichia coli 2872800	1
+Escherichia coli ABU 83972	1
+Escherichia coli 2-210-07_S4_C2	1
+Escherichia coli O104:H4 str. 11-02318	1
+Escherichia coli 2-210-07_S4_C1	1
+Escherichia coli HVH 16 (4-7649002)	1
+Escherichia coli KTE38	1
+Escherichia coli KTE39	1
+Escherichia coli UMEA 4207-1	1
+Shigella dysenteriae 155-74	1
+Escherichia coli KTE35	1
+Escherichia coli KTE36	1
+Escherichia coli KTE37	1
+Escherichia coli KTE33	1
+Uca uruguayensis	1
+Aedes albopictus	1
+Drosophila subobscura	1
+Escherichia coli HVH 88 (4-5854636)	1
+Shigella flexneri K-272	1
+Echinoidea	1
+Escherichia coli 8.0586	1
+Escherichia coli 1-176-05_S1_C3	1
+Escherichia coli 1-176-05_S1_C2	1
+Escherichia coli 1-176-05_S1_C1	1
+Achlya hypogyna	1
+Escherichia coli HVH 106 (4-6881831)	1
+Escherichia coli STEC_H.1.8	1
+Escherichia coli HVH 161 (4-3119890)	1
+Escherichia coli VL2874	1
+Microbacterium sp. Leaf347	1
+CFA20_PARTE RecName: Full=Cilia- and flagella-associated protein 20; Short=Bug22p	1
+Escherichia coli B36-1	1
+Escherichia coli B36-2	1
+Clostridium baratii	1
+Escherichia coli LAU-EC10	1
+Aspergillus ostianus	1
+Escherichia coli B49-2	1
+Brachionus manjavacas	1
+Escherichia coli 6.0172	1
+Escherichia coli UMEA 3230-1	1
+Escherichia coli UMEA 3180-1	1
+Prevotella copri	1
+Escherichia coli O118:H16 str. 06-3612	1
+Saccharomyces cerevisiae Lalvin QA23	1
+Marinobacterium jannaschii	1
+Escherichia coli UMEA 3220-1	1
+Escherichia coli O104:H4 str. 2011EL-1675A	1
+Escherichia coli KOEGE 43 (105a)	1
+Cryptococcus gattii Ru294	1
+Shigella flexneri K-671	1
+Promicromonospora sukumoe	1
+Metacarcinus magister	1
+Ensifer sp. Root1252	1
+Escherichia coli HVH 7 (4-7315031)	1
+Escherichia coli HVH 221 (4-3136817)	1
+Escherichia coli HVH 208 (4-3112292)	1
+Fischerella thermalis	1
+Escherichia coli T924_01	1
+Helianthus annuus	1
+Saccharomyces cerevisiae YJM453	1
+Escherichia coli UMEA 3052-1	1
+Escherichia coli O157:H7 str. K1795	1
+Escherichia coli 5-172-05_S4_C1	1
+Escherichia coli 5-172-05_S4_C2	1
+Escherichia coli 5-172-05_S4_C3	1
+Escherichia coli 2-474-04_S1_C1	1
+bacterium JGI-22	1
+Escherichia coli 3.4870	1
+Escherichia sp. KTE31	1
+Escherichia coli JJ1886	1
+Escherichia coli O111:H11 str. CFSAN001630	1
+Bifidobacterium stercoris JCM 15918	1
+Yoldia scissurata	1
+Escherichia coli UMEA 3201-1	1
+Escherichia coli PA3	1
+Capnocytophaga canimorsus	1
+Escherichia coli 9.1649	1
+Escherichia coli O69:H11 str. 07-4281	1
+Escherichia coli HVH 56 (4-2153033)	1
+Escherichia coli O111:NM str. 2011C-3632	1
+Escherichia coli P0299438.11	1
+Escherichia coli P0299438.10	1
+Wolbachia endosymbiont of Drosophila ananassae	1
+Escherichia coli HVH 122 (4-6851606)	1
+Pseudomonas syringae pv. maculicola	1
+Saccharomyces cerevisiae YJM693	1
+Escherichia coli O157:H7 str. F6750	1
+Escherichia coli O157:H7 str. F6751	1
+Escherichia coli str. K-12 substr. DH10B	1
+Escherichia coli MP1	1
+Escherichia coli 2762100	1
+Escherichia coli HVH 157 (4-3406229)	1
+Pinus taeda	1
+PESC_MONBE RecName: Full=Pescadillo homolog	1
+Escherichia coli 2-005-03_S1_C2	1
+Escherichia coli TW09098	1
+Macrostomum lignano	1
+Escherichia coli O111:NM str. 2009C-4052	1
+Escherichia coli UMEA 3161-1	1
+Escherichia coli VR50	1
+4 Chain 4, The Cryo-em Structure Of The Archaeal 50s Ribosomal Subunit In Complex With Initiation Factor 6	1
+Saccharomyces cerevisiae RM11-1a	1
+Escherichia coli B113	1
+Escherichia coli PA14	1
+Escherichia coli PA15	1
+Escherichia coli PA10	1
+Escherichia coli PA11	1
+Escherichia coli B41	1
+Escherichia coli PA13	1
+Locusta migratoria manilensis	1
+Escherichia coli HVH 151 (4-5755573)	1
+Escherichia coli PA19	1
+ACT_OXYRB RecName: Full=Actin	1
+Escherichia coli 9.0111	1
+Saccharomyces cerevisiae YJM1574	1
+Escherichia coli HVH 197 (4-4466217)	1
+Babesia bovis	1
+Escherichia coli O104:H4 str. LB226692	1
+Leptospira meyeri	1
+Methanosaeta harundinacea 6Ac	1
+Escherichia coli O121:H19 str. K5269	1
+Phaethon lepturus	1
+UBE2C_XENLA RecName: Full=Ubiquitin-conjugating enzyme E2 C; AltName: Full=(E3-independent) E2 ubiquitin-conjugating enzyme C; AltName: Full=E2 ubiquitin-conjugating enzyme C; AltName: Full=UBC-X; AltName: Full=Ubiquitin carrier protein C; AltName: Full=Ubiquitin-protein ligase C	1
+Escherichia coli O104:H4 str. 09-7901	1
+Rubinisphaera brasiliensis DSM 5305	1
+Saccharomyces cerevisiae P301	1
+Escherichia coli ECC-Z	1
+Zygophyllum xanthoxylon	1
+Cryptococcus neoformans var. neoformans JEC21	1
+Escherichia coli UMEA 3203-1	1
+Escherichia coli 174900	1
+Sphingomonas astaxanthinifaciens	1
+Escherichia coli TX1999	1
+Erebia theano	1
+Shigella boydii ATCC 9905	1
+Escherichia coli 1-110-08_S4_C1	1
+Escherichia coli O26:NM str. 2010C-4347	1
+Saccharomyces cerevisiae YJM990	1
+Escherichia coli ETEC H10407	1
+Saccharomyces cerevisiae YJM1304	1
+Escherichia coli O104:H4 str. E112/10	1
+Saccharomyces cerevisiae FostersO	1
+Saccharomyces cerevisiae YJM996	1
+RS13_ECOUT RecName: Full=30S ribosomal protein S13	1
+Escherichia sp. 4_1_40B	1
+Euplotes sp. BB-2004	1
+PP2C4_PARTE RecName: Full=Probable protein phosphatase 2C 4; Short=PP2C 4	1
+Escherichia coli UMEA 3899-1	1
+RS13_SHIDS RecName: Full=30S ribosomal protein S13	1
+Staphylococcus aureus	1
+Glaucoma chattoni	1
+Oxyuranus scutellatus scutellatus	1
+Clostridium sp. FS41	1
+Candidatus Portiera aleyrodidarum MED (Bemisia tabaci)	1
+Escherichia coli HVH 145 (4-5672112)	1
+Shewanella loihica PV-4	1
+Shigella flexneri J1713	1
+Shigella flexneri 2747-71	1
+Escherichia coli O157:H- str. H 2687	1
+Escherichia coli O157:H7 str. 2011EL-2290	1
+Escherichia coli CE516	1
+Escherichia coli HVH 138 (4-6066704)	1
+Cupriavidus sp. HMR-1	1
+Providencia alcalifaciens R90-1475	1
+Escherichia coli O113:H21 str. 07-4224	1
+Dysgonomonas sp. BGC7	1
+UFM1_ANOGA RecName: Full=Ubiquitin-fold modifier 1; Flags: Precursor	1
+Canis lupus familiaris	1
+Escherichia coli O6:H16:CFA/II str. B2C	1
+Sinonovacula constricta	1
+Escherichia coli 2785200	1
+Escherichia coli O145:NM str. 2010C-3509	1
+Escherichia coli O145:NM str. 2010C-3508	1
+Escherichia coli UMEA 3117-1	1
+RS13_SHIBS RecName: Full=30S ribosomal protein S13	1
+Escherichia coli HVH 220 (4-5876842)	1
+Escherichia coli 08BKT77219	1
+Escherichia coli B26-2	1
+Escherichia coli KTE240	1
+Escherichia coli O145:NM str. 2010C-3507	1
+Trypanosoma cruzi	1
+Escherichia coli 3-373-03_S4_C1	1
+Escherichia coli 3-373-03_S4_C3	1
+Brevibacterium linens	1
+Escherichia coli O157:H7 str. 06-3745	1
+Escherichia coli TW11039	1
+Escherichia coli KTE29	1
+Escherichia coli KTE28	1
+Escherichia coli KTE23	1
+Escherichia coli KTE22	1
+Escherichia coli KTE21	1
+Escherichia coli KTE20	1
+Escherichia coli KTE27	1
+Escherichia coli KTE26	1
+Escherichia coli KTE25	1
+Escherichia coli KTE24	1
+Saccharomyces cerevisiae YJM1460	1
+Saccharomyces cerevisiae YJM1463	1
+Escherichia coli HVH 206 (4-3128229)	1
+Catelliglobosispora koreensis	1
+Turneriella parva DSM 21527	1
+Escherichia coli O26:H11 str. 2011C-3282	1
+Escherichia coli O157:H7 str. K6676	1
+Escherichia coli 3-020-07_S4_C3	1
+Lithodes turritus	1
+Escherichia coli UMEA 3718-1	1
+Pseudomonas sp. MOIL14HWK12:I2	1
+EFGM_DROVI RecName: Full=Elongation factor G, mitochondrial; Short=EF-Gmt; AltName: Full=Elongation factor G 1, mitochondrial; Short=mEF-G 1; AltName: Full=Elongation factor G1; Flags: Precursor	1
+RS13_ECO57 RecName: Full=30S ribosomal protein S13	1
+Escherichia coli O157:H7 str. 1125	1
+Magnetospirillum magneticum	1
+Escherichia coli 180200	1
+Escherichia coli O26:H11 str. 2009C-3612	1
+Escherichia coli 53638	1
+Lycodichthys dearborni	1
+Euphausia pacifica	1
+Escherichia coli HVH 107 (4-5860571)	1
+Escherichia coli O111:NM str. 2011C-3679	1
+Escherichia coli BIDMC 71	1
+Escherichia coli BIDMC 72	1
+Escherichia coli P0298942.10	1
+Escherichia coli P0298942.11	1
+Escherichia coli P0298942.12	1
+Escherichia coli BIDMC 73	1
+Escherichia coli P0298942.14	1
+Escherichia coli P0298942.15	1
+Saccharomyces cerevisiae YJM554	1
+Escherichia coli WV_060327	1
+Rubinisphaera brasiliensis	1
+Rickettsia felis	1
+Achaearanea tepidariorum	1
+Escherichia coli UMEA 3233-1	1
+Neisseria elongata subsp. glycolytica ATCC 29315	1
+Bacteroides coprosuis	1
+Escherichia coli UMEA 3199-1	1
+Escherichia coli KOEGE 61 (174a)	1
+Frankia symbiont of Datisca glomerata	1
+1 Chain 1, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	1
+Pelosinus sp. UFO1	1
+Escherichia coli KOEGE 131 (358a)	1
+Escherichia coli O145:H25 str. 07-3858	1
+Escherichia coli UMEA 3257-1	1
+Escherichia coli 3.2303	1
+Escherichia coli HVH 172 (4-3248542)	1
+Cryptosporidium muris RN66	1
+Escherichia coli O115	1
+Sebastes schlegelii	1
+V Chain V, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 2	1
+Escherichia coli O119	1
+Escherichia coli HVH 147 (4-5893887)	1
+Escherichia coli HVH 228 (4-7787030)	1
+Escherichia coli DEC6C	1
+Escherichia coli 1-392-07_S3_C3	1
+Escherichia coli 1-392-07_S3_C2	1
+Escherichia coli 1-392-07_S3_C1	1
+Caenispirillum salinarum AK4	1
+L Chain L, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2.	1
+Escherichia coli 2848050	1
+Escherichia coli KTE7	1
+Cupriavidus necator	1
+Escherichia coli NE098	1
+Cyprinus carpio 'jian'	1
+Marinobacterium stanieri	1
+Pristigloma alba	1
+Escherichia coli O127:H27 str. C43/90	1
+Escherichia coli O08	1
+Escherichia coli 1.2264	1
+Escherichia coli J53	1
+Chironomus nepeanensis	1
+Shigella flexneri K-227	1
+Escherichia coli O111:NM str. K6898	1
+Dalcerides ingenita	1
+Shigella flexneri 2002017	1
+Escherichia coli O111:NM str. K6890	1
+Escherichia coli O111:NM str. K6897	1
+Escherichia coli O111:NM str. K6895	1
+M Chain M, Crystal Structure Of The E. Coli Ribosome Bound To Cem-101. This File Contains The 30s Subunit Of The Second 70s Ribosome.	1
+Fluviicola taffensis	1
+Luminiphilus syltensis NOR5-1B	1
+Escherichia coli EC1737	1
+B Chain B, Crystal Structure Of E. Coli Primosomol Protein Prib Bound To Ssdn	1
+Escherichia coli 6-537-08_S3_C3	1
+Escherichia coli O157:H7 str. K5453	1
+Candidatus Korarchaeum cryptofilum	1
+Eucosma biquadrana	1
+Escherichia coli HVH 132 (4-6876862)	1
+Escherichia coli 3-020-07_S1_C2	1
+Escherichia coli 3-020-07_S1_C1	1
+Rhodopirellula sp. SWK7	1
+Shewanella marina	1
+Saccharomyces cerevisiae YJM1336	1
+Holospora obtusa F1	1
+Q Chain Q, Structural Insights Into Cognate Vs. Near-Cognate Discrimination During Decoding. This Entry Contains The Small Subunit Of A Ribosome Programmed With A Near-Cognate Codon, AT-Site Trna, P-Site Trna, Mrna And Ef-Tu	1
+Escherichia coli HVH 164 (4-5953081)	1
+Escherichia coli O103:H2 str. 2010C-4433	1
+M Chain M, Crystal Structure Of Release Factor Rf3 Trapped In The Gtp State On A Rotated Conformation Of The Ribosome	1
+Escherichia coli 5.2239	1
+Candidatus Rickettsia amblyommii str. Darkwater	1
+Human herpesvirus 7	1
+Crassostrea sikamea	1
+Escherichia coli BCE030_MS-09	1
+Folsomia candida	1
+Escherichia coli O111:H8 str. CVM9574	1
+Escherichia coli HVH 5 (4-7148410)	1
+Escherichia coli HVH 98 (4-5799287)	1
+Escherichia coli NE1487	1
+B Chain B, Crystal Structure Of The Ttift52-46 Comple	1
+Escherichia coli HVH 140 (4-5894387)	1
+Escherichia coli HVH 36 (4-5675286)	1
+Escherichia coli MP021552.8	1
+Escherichia coli HVH 178 (4-3189163)	1
+Escherichia coli BIDMC 15	1
+Clostridium sp. CAG:780	1
+Escherichia coli 88.1467	1
+Escherichia coli 199900.1	1
+Escherichia coli MP021552.7	1
+Escherichia coli 2-210-07_S3_C3	1
+Escherichia coli 2-210-07_S3_C2	1
+Escherichia coli 2-210-07_S3_C1	1
+Escherichia coli O26:H11 str. 2010C-4834	1
+Escherichia coli P4-NR	1
+Escherichia coli 88.1042	1
+Escherichia coli 6-175-07_S1_C3	1
+Escherichia coli UMEA 3152-1	1
+Escherichia coli FRIK523	1
+Escherichia coli O157:H7 str. K2191	1
+Shigella boydii 3594-74	1
+Saccharomyces cerevisiae YJM1208	1
+Escherichia coli EC4203	1
+Saccharomyces cerevisiae YJM1202	1
+B Chain B, Structural Determinants For Improved Thermal Stability Of Designed Ankyrin Repeat Proteins With A Redesigned C- Capping Module.	1
+Escherichia coli HVH 37 (4-2773848)	1
+Escherichia coli 08BKT055439	1
+Pseudozyma antarctica T-34	1
+RS13_SHISS RecName: Full=30S ribosomal protein S13	1
+Gammarus marinus	1
+Escherichia coli XH140A	1
+Escherichia coli O157:H7 str. 2011EL-2286	1
+Escherichia coli O157:H7 str. 2011EL-2287	1
+Escherichia coli O157:H7 str. 2011EL-2288	1
+Escherichia coli O157:H7 str. 2011EL-2289	1
+Escherichia coli O157:H7 str. K2192	1
+Escherichia coli HVH 29 (4-3418073)	1
+Escherichia coli O111:NM str. 2010C-4592	1
+Escherichia coli BIDMC 43b	1
+Escherichia coli HVH 91 (4-4638751)	1
+Escherichia coli B107	1
+Escherichia coli O157:H7 str. G5101	1
+Escherichia coli ARS4.2123	1
+Anteros formosus	1
+L Chain L, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3.	1
+Escherichia coli HVH 118 (4-7345399)	1
+Arcobacter	1
+Limnoporus dissortis	1
+Escherichia coli B112	1
+Escherichia coli 2-011-08_S3_C1	1
+Escherichia coli 2-011-08_S3_C3	1
+Escherichia coli 2-011-08_S3_C2	1
+Escherichia coli HVH 137 (4-2124971)	1
+Campylobacter corcagiensis	1
+Escherichia coli CAG:4	1
+Escherichia coli UMEA 3176-1	1
+Escherichia coli 93.0055	1
+Escherichia coli 93.0056	1
+Escherichia coli B26-1	1
+Escherichia coli UMEA 3662-1	1
+Saccharomyces cerevisiae YJM1479	1
+Saccharomyces cerevisiae YJM1478	1
+Escherichia coli O157:H7 str. EC4486	1
+Escherichia coli B109	1
+Eulimnogammarus vittatus	1
+Escherichia coli O26:H11 str. 2011C-3506	1
+Saccharomyces cerevisiae YJM1477	1
+Escherichia coli O26:H11 str. CVM10026	1
+Fusarium oxysporum f. sp. cubense race 1	1
+Saccharomyces cerevisiae EC1118	1
+F Chain F, Structure Of The 30s Subunit And The Trnas Of E. Coli Ribosome In Pre- Accommodation State	1
+Escherichia coli MRSN 10204	1
+candidate division TM6 bacterium GW2011_GWF2_37_49	1
+Ensifer sp. Root127	1
+Escherichia coli RN587/1	1
+Escherichia coli O145:NM str. 2010C-3510	1
+Escherichia coli P0298942.8	1
+Escherichia coli P0298942.9	1
+Escherichia coli P0298942.6	1
+Escherichia coli P0298942.7	1
+Escherichia coli P0298942.4	1
+Escherichia coli P0298942.2	1
+Escherichia coli P0298942.3	1
+1 Chain 1, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	1
+Escherichia coli P0298942.1	1
+Escherichia coli O157:H7 str. 2010C-4979C1	1
+Escherichia coli O45:H2 str. 01-3147	1
+Anastrepha suspensa	1
+A Chain A, Solution Structure Of Rsgi Ruh-062, A Dcx Domain From Huma	1
+Vibrio nigripulchritudo	1
+Escherichia coli MP021566.1	1
+Fibrisoma limi	1
+Escherichia coli 1-250-04_S3_C1	1
+Escherichia coli P02997067.6	1
+Escherichia coli O157:H7 str. 08-4529	1
+Haloarcula amylolytica JCM 13557	1
+Stigmatella aurantiaca	1
+Acetes chinensis	1
+Bombylius major	1
+Escherichia coli Tx3800	1
+Escherichia coli 6-175-07_S1_C1	1
+Escherichia coli TW15901	1
+Escherichia coli 6-175-07_S1_C2	1
+Escherichia coli KTE183	1
+Escherichia coli KTE182	1
+Escherichia coli KTE181	1
+Escherichia coli KTE180	1
+Escherichia coli KTE187	1
+Escherichia coli KTE186	1
+Escherichia coli KTE185	1
+Escherichia coli KTE184	1
+Escherichia coli KTE189	1
+Escherichia coli KTE188	1
+Sinorhizobium fredii	1
+Escherichia coli AA86	1
+Escherichia coli KLY	1
+Escherichia coli DEC9A	1
+Escherichia coli DEC9B	1
+Escherichia coli DEC9C	1
+Escherichia coli DEC9D	1
+Escherichia coli DEC9E	1
+Escherichia coli G3/10	1
+Escherichia coli O111:H8 str. CVM9602	1
+Wolbachia endosymbiont of Culex quinquefasciatus JHB	1
+Shigella flexneri 1485-80	1
+Escherichia coli 2850750	1
+CCB23_ORCLI RecName: Full=Crustacean calcium-binding protein 23; Short=CCBP-2	1
+Ornithodoros parkeri	1
+Escherichia coli 3-475-03_S3_C2	1
+Escherichia coli 3-475-03_S3_C1	1
+Escherichia coli VL2732	1
+Escherichia coli HVH 92 (4-5930790)	1
+Escherichia coli 2-460-02_S1_C1	1
+Mirocaris fortunata	1
+Escherichia coli UMEA 3342-1	1
+Escherichia coli E128010	1
+Escherichia coli 3-105-05_S3_C1	1
+Escherichia coli 2-460-02_S1_C3	1
+Escherichia coli 3-105-05_S3_C3	1
+Escherichia coli HVH 51 (4-2172526)	1
+PLK4_DROYA RecName: Full=Serine/threonine-protein kinase PLK4; AltName: Full=Polo-like kinase 4; Short=PLK-4; AltName: Full=Serine/threonine-protein kinase SAK	1
+Escherichia sp. KTE11	1
+Escherichia coli 2741950	1
+Cydia pomonella	1
+Escherichia coli UMEA 3617-1	1
+RS13_ECOK1 RecName: Full=30S ribosomal protein S13	1
+Escherichia coli CB7326	1
+Escherichia coli HVH 63 (4-2542528)	1
+Escherichia coli HVH 115 (4-4465997)	1
+Escherichia coli O104:H4 str. Ec12-0466	1
+Escherichia coli O104:H4 str. Ec12-0465	1
+Escherichia coli 6-537-08_S1_C3	1
+Pseudomonas plecoglossicida	1
+Escherichia coli B93	1
+Citrobacter braakii	1
+Mizuhopecten yessoensis	1
+Amycolatopsis azurea DSM 43854	1
+Variovorax paradoxus	1
+Sphaerochaeta globosa str. Buddy	1
+Escherichia coli EPEC C342-62	1
+RL21_TETTS RecName: Full=60S ribosomal protein L21	1
+Escherichia coli 2850400	1
+Wolbachia endosymbiont of Operophtera brumata	1
+Escherichia coli HVH 139 (4-3192644)	1
+Escherichia coli SE11	1
+Hyposoter didymator ichnovirus	1
+Escherichia coli SE15	1
+Escherichia coli UMEA 3088-1	1
+Escherichia coli BWH 40	1
+Osedax symbiont Rs2	1
+Escherichia coli HVH 111 (4-7039018)	1
+Plasmodium vivax Sal-1	1
+Escherichia coli DEC14A	1
+Escherichia coli O91:H14 str. 06-3691	1
+Escherichia coli DEC14C	1
+Escherichia coli DEC14B	1
+Escherichia coli KRX	1
+Escherichia coli DEC14D	1
+Escherichia coli UMEA 3217-1	1
+Citrobacter sp. KTE32	1
+Escherichia coli KOEGE 7 (16a)	1
+Saccharomyces cerevisiae YJM248	1
+Escherichia coli HVH 18 (4-8589585)	1
+Escherichia coli O104:H4 str. Ec11-9990	1
+Escherichia coli O121:H19 str. K5198	1
+Escherichia coli UMEA 3355-1	1
+Escherichia coli O26:H11 str. 03-3500	1
+Sporothrix schenckii 1099-18	1
+Escherichia coli NA114	1
+Escherichia coli H591	1
+EF1B_ARTSA RecName: Full=Elongation factor 1-beta; Short=EF-1-beta	1
+Escherichia coli O157:H7 str. 07-3091	1
+GT253_BOVIN RecName: Full=Probable inactive glycosyltransferase 25 family member 3; AltName: Full=Cerebral endothelial cell adhesion molecule; Flags: Precursor	1
+Belliella baltica	1
+Neohelice granulata	1
+Q Chain Q, Structural Insights Into Cognate Vs. Near-Cognate Discrimination During Decoding.This Entry Contains The Small Subunit Of A Ribosome Programmed With A Cognate Codon, AT-Site Trna, P-Site Trna, Mrna And Ef-Tu	1
+Solimonas variicoloris	1
+Escherichia coli 90.0091	1
+Escherichia coli O157:H7 str. TW14588	1
+Escherichia coli UMEA 3122-1	1
+Shigella dysenteriae 225-75	1
+Escherichia coli UMEA 3244-1	1
+Escherichia coli 2-052-05_S1_C1	1
+Escherichia coli Bd5610_99	1
+Bos mutus	1
+Celeribacter marinus	1
+Trichosporon asahii var. asahii CBS 8904	1
+Barnesiella viscericola DSM 18177	1
+Gordonia terrae NBRC 100016	1
+Saccharomyces cerevisiae YJM320	1
+Anabaena cylindrica PCC 7122	1
+ENO_HOMGA RecName: Full=Enolase; AltName: Full=2-phospho-D-glycerate hydro-lyase; AltName: Full=2-phosphoglycerate dehydratas	1
+Escherichia coli 2-210-07_S4_C3	1
+Escherichia coli MP020940.1	1
+Leucocryptos marina	1
+Caldilinea aerophila	1
+Escherichia coli UMEA 3314-1	1
+Escherichia coli HVH 85 (4-0792144)	1
+Halocynthiibacter arcticus	1
+Escherichia coli chi7122	1
+Escherichia coli 3-373-03_S3_C1	1
+Escherichia coli 3-373-03_S3_C2	1
+Escherichia coli 3-373-03_S3_C3	1
+Escherichia coli KTE224	1
+Escherichia coli LF82	1
+Escherichia coli 0.1304	1
+A Chain A, Crystal Structure Of A Designed Full Consensus Ankyri	1
+Escherichia coli O111:H8 str. 2009C-4126	1
+B Chain B, Crystal Structure Of Litopenaeus Vannamei Arginine Kinase In Ternary Complex With Arginine, Adp-mg And No	1
+Escherichia coli UMEA 3329-1	1
+1501350A knirps related gen	1
+Clostridiales	1
+Escherichia coli BCE001_MS16	1
+Escherichia coli P0299917.10	1
+Escherichia coli HVH 10 (4-6832164)	1
+Escherichia coli FRIK1997	1
+Escherichia coli FRIK1996	1
+Elisabethiella glumosae	1
+Escherichia coli FRIK1990	1
+Escherichia coli 6-319-05_S1_C3	1
+Escherichia coli FRIK1999	1
+P Chain P, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 4.	1
+Escherichia coli KTE34	1
+Cryptococcus gattii R265	1
+Escherichia coli IS29	1
+Escherichia coli BIDMC 2B	1
+Shigella sonnei 3226-85	1
+Escherichia coli O121:H19 str. 2010C-4254	1
+Alistipes sp. ZOR0009	1
+Triops granarius	1
+Escherichia coli HVH 53 (4-0631051)	1
+Ruminococcus] torques	1
+Escherichia coli KOEGE 62 (175a)	1
+Microgenomates bacterium GW2011_GWF1_44_10	1
+Escherichia coli 2.3916	1
+Saccharomyces cerevisiae YJM1447	1
+Saccharomyces cerevisiae YJM1444	1
+Saccharomyces cerevisiae YJM1443	1
+Gammarus oceanicus	1
+Orconectes immunis	1
+Escherichia coli 2-156-04_S1_C3	1
+Escherichia coli 6-537-08_S1_C1	1
+Escherichia coli 6-537-08_S1_C2	1
+Escherichia coli p0305293.8	1
+Escherichia coli p0305293.9	1
+Escherichia coli p0305293.6	1
+Escherichia coli p0305293.7	1
+Escherichia coli p0305293.4	1
+Escherichia coli p0305293.5	1
+Escherichia coli p0305293.2	1
+Escherichia coli p0305293.3	1
+Escherichia coli p0305293.1	1
+Escherichia coli UMEA 3323-1	1
+Cnaphalocrocis medinalis	1
+Escherichia coli BIDMC 9	1
+Pontibacillus marinus BH030004 = DSM 16465	1
+Escherichia coli UMEA 3065-1	1
+Escherichia coli BIDMC 6	1
+Escherichia coli O165:H25 str. 2010C-4874	1
+Escherichia coli BIDMC 3	1
+Escherichia coli XH001	1
+Escherichia coli STEC_S1191	1
+Escherichia coli 2720900	1
+Escherichia coli KTE190	1
+Escherichia coli HVH 73 (4-2393174)	1
+Escherichia coli KTE192	1
+Escherichia coli KTE193	1
+Escherichia coli KTE194	1
+Escherichia coli KTE195	1
+Escherichia coli KTE196	1
+Escherichia coli KTE197	1
+Escherichia coli KTE199	1
+Escherichia coli HVH 2 (4-6943160)	1
+Escherichia coli B7-1	1
+Escherichia coli B7-2	1
+Shigella flexneri CCH060	1
+Escherichia coli 900105 (10e)	1
+Escherichia coli HVH 55 (4-2646161)	1
+GLCTK_DANRE RecName: Full=Glycerate kinase	1
+Escherichia coli 2845650	1
+A Chain A, 4ank: A Designed Ankyrin Repeat Protein With Four Identical Consensus Repeat	1
+Escherichia coli O111:H8 str. CVM9634	1
+Escherichia coli O157:H16 str. 98-3133	1
+Escherichia coli HVH 186 (4-3405044)	1
+Escherichia coli 7-233-03_S4_C3	1
+Escherichia coli 2-222-05_S1_C1	1
+CALM_PARTE RecName: Full=Calmodulin; Short=CaM	1
+Escherichia coli O7:K1 str. CE10	1
+Escherichia coli P0299438.8	1
+Candidatus Microthrix parvicella	1
+Thermus scotoductus SA-01	1
+2208428A dynein:SUBUNIT=heavy chai	1
+P Chain P, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 2.	1
+Borrelia miyamotoi FR64b	1
+Serratia sp. DD3	1
+Escherichia coli HVH 80 (4-2428830)	1
+Escherichia coli HVH 198 (4-3206106)	1
+Escherichia coli DEC15D	1
+Escherichia coli DEC15E	1
+Escherichia coli DEC15B	1
+Escherichia coli DEC15C	1
+Escherichia coli DEC15A	1
+B Chain B, Fiddler Crab Collagenase Complexed To Ecoti	1
+Escherichia coli 4-203-08_S3_C1	1
+Mytilus galloprovincialis	1
+Escherichia coli 2866350	1
+Escherichia coli 99.0848	1
+Escherichia coli N1	1
+Saccharomyces cerevisiae YJM1332	1
+Escherichia coli HVH 65 (4-2262045)	1
+Escherichia coli HVH 58 (4-2839709)	1
+Escherichia coli DEC8E	1
+Escherichia coli DEC8D	1
+Escherichia coli DEC8C	1
+Escherichia coli DEC8B	1
+Escherichia coli DEC8A	1
+Escherichia coli KOEGE 44 (106a)	1
+Oscillochloris trichoides DG-6	1
+Escherichia coli UMEA 3185-1	1
+Methanolinea tarda	1
+Escherichia coli BIDMC 59	1
+Escherichia fergusonii ATCC 35469	1
+Escherichia coli O157:H7 str. 06-4039	1
+Anabaena cylindrica	1
+M Chain M, Crystal Structure Of The E. Coli Ribosome Bound To Cem-101. This File Contains The 30s Subunit Of The First 70s Ribosome.	1
+Ostrinia furnacalis	1
+Escherichia coli O26:H11 str. CFSAN001629	1
+Parachlamydiaceae bacterium HS-T3	1
+Escherichia coli Envira 8/11	1
+Escherichia coli 88.0221	1
+Harbansus paucichelatus	1
+Escherichia coli UMEA 3014-1	1
+Escherichia coli O157:H7 str. TW14359	1
+Escherichia coli O104:H4 str. Ec11-5603	1
+Neolithodes nipponensis	1
+Escherichia coli O111:NM str. 2009C-4006	1
+Escherichia coli O104:H4 str. Ec11-5604	1
+Luminiphilus syltensis	1
+Escherichia coli O157:H7 str. 2009EL1705	1
+Escherichia coli HVH 41 (4-2677849)	1
+Chorispora bungeana	1
+Serratia fonticola AU-AP2C	1
+Escherichia coli 2731150	1
+Elizabethkingia meningoseptica FMS-007	1
+A Chain A, Structure Of The Human Multidrug Resistance Protein 1 Nucleotide Binding Domain 	1
+Dinothrombium pandorae	1
+Escherichia coli 96.0109	1
+Escherichia coli B str. REL606	1
+Escherichia coli PA49	1
+Escherichia coli PA48	1
+Escherichia coli PA47	1
+Escherichia coli PA45	1
+Escherichia coli PA42	1
+Escherichia coli 96.0107	1
+Escherichia coli PA40	1
+Escherichia coli 2-222-05_S4_C2	1
+Escherichia coli 2875150	1
+A Chain A, The Crystal Structure Of The Monomeric Reverse Transcriptase From Moloney Murine Leukemia Viru	1
+Escherichia coli 2-011-08_S4_C1	1
+Escherichia coli 2-011-08_S4_C3	1
+Escherichia coli TW09195	1
+Escherichia coli O121:H19 str. 2010C-3794	1
+Escherichia coli 174750	1
+Escherichia coli HVH 203 (4-3126218)	1
+Escherichia coli E1520	1
+Anophryoides haemophila	1
+Clostridium celatum	1
+Escherichia coli E2265	1
+Serratia marcescens VGH107	1
+Escherichia coli HVH 207 (4-3113221)	1
+Escherichia fergusonii B253	1
+Saccharomyces cerevisiae YJM1199	1
+Saccharomyces cerevisiae YJM1190	1
+Escherichia coli EPECa12	1
+Escherichia coli 2853500	1
+Escherichia coli EPECa14	1
+Thiothrix flexilis	1
+Escherichia coli 3-267-03_S4_C2	1
+Escherichia coli 3-267-03_S4_C1	1
+Escherichia coli T1840_97	1
+Escherichia coli 99.0713	1
+Escherichia coli HVH 87 (4-5977630)	1
+Escherichia coli 178850	1
+Clostridium] clariflavum DSM 19732	1
+Escherichia coli 10.0821	1
+Escherichia coli HVH 50 (4-2593475)	1
+Escherichia coli E22	1
+Escherichia coli 7-233-03_S3_C3	1
+Escherichia coli BIDMC 19A	1
+Escherichia coli BIDMC 19B	1
+Escherichia coli BIDMC 19C	1
+Saccharomyces cerevisiae YJM1252	1
+Escherichia coli 2733950	1
+Escherichia coli 1-182-04_S3_C3	1
+Escherichia coli 4_1_47FAA	1
+Escherichia coli HVH 155 (4-4509048)	1
+Sulfolobus islandicus Y.N.15.51	1
+Escherichia coli BIDMC 38	1
+Escherichia coli BIDMC 39	1
+Escherichia coli O111:H11 str. CVM9534	1
+Escherichia coli HVH 215 (4-3008371)	1
+Escherichia coli HVH 127 (4-7303629)	1
+Escherichia coli CE549	1
+Escherichia coli HVH 27 (4-7449267)	1
+Chironomus thummi	1
+Bacillus muralis	1
+Q Chain Q, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 2	1
+Cryptococcus gattii 99/473	1
+Escherichia coli O26:H11 str. 2010C-3871	1
+Escherichia coli 5-172-05_S1_C3	1
+Escherichia coli DORA_A_5_14_21	1
+Escherichia coli HVH 100 (4-2850729)	1
+Agathon elegantulus	1
+Escherichia coli FRIK1985	1
+V Chain V, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	1
+Q Chain Q, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4.	1
+Xenorhabdus sp. NBAII XenSa04	1
+Clostridium sp. Ade.TY	1
+Escherichia coli MGH 58	1
+Escherichia coli HVH 171 (4-3191958)	1
+Hydra viridissima	1
+Plasmopara halstedii	1
+Escherichia coli KTE98	1
+Escherichia coli KTE99	1
+Escherichia coli O55:H7 str. RM12579	1
+Escherichia coli HVH 163 (4-4697553)	1
+Escherichia coli O26:H11 str. 2011C-3274	1
+Escherichia coli KTE93	1
+Escherichia coli KTE90	1
+Escherichia coli KTE91	1
+Escherichia coli 180050	1
+Escherichia coli KTE97	1
+Escherichia coli KTE94	1
+Escherichia coli KTE95	1
+Escherichia coli KTE213	1
+Escherichia coli KTE212	1
+Escherichia coli KTE211	1
+Escherichia coli KTE210	1
+Escherichia coli KTE217	1
+Escherichia coli KTE216	1
+Escherichia coli KTE215	1
+Escherichia coli KTE214	1
+Escherichia coli KTE219	1
+Escherichia coli KTE218	1
+Ensifer sp. Root142	1
+Candida maltosa Xu316	1
+Saccharomyces cerevisiae YJM1450	1
+Escherichia coli O121:H19 str. 2011C-3108	1
+Escherichia coli 2788150	1
+SAR324 cluster bacterium SCGC AAA240-J09	1
+Escherichia coli UMEA 3656-1	1
+Escherichia coli EC4402	1
+Escherichia coli ISC7	1
+Escherichia coli 4.0967	1
+M Chain M, Ribosome-Secy Complex. This Entry 3kc4 Contains 30s Ribosomal Subnit. The 50s Ribosomal Subunit Can Be Found In Pdb Entry 3kcr	1
+Escherichia coli O121:H19 str. 2009C-4750	1
+Tenacibaculum sp. 47A_GOM-205m	1
+Escherichia coli HVH 189 (4-3220125)	1
+Escherichia coli O157:H7 str. EC4113	1
+Paradoxornis verreauxi	1
+Escherichia coli O157:H7 str. EC4115	1
+Escherichia coli O26:H11 str. 2010C-4430	1
+Escherichia coli UMEA 3222-1	1
+Escherichia coli HVH 190 (4-3255514)	1
+Pseudomonas congelans	1
+Carchesium polypinum	1
+Escherichia coli 2-222-05_S1_C3	1
+Saccharomyces cerevisiae YJM541	1
+Escherichia coli 1-250-04_S4_C1	1
+Escherichia coli 1-250-04_S4_C2	1
+Escherichia coli KTE8	1
+Escherichia coli KTE9	1
+Escherichia coli KTE145	1
+Escherichia coli KTE144	1
+Escherichia coli KTE143	1
+Escherichia coli KTE142	1
+Escherichia coli KTE141	1
+Escherichia coli KTE140	1
+Escherichia coli KTE1	1
+Escherichia coli KTE2	1
+Escherichia coli KTE3	1
+Escherichia coli KTE4	1
+Escherichia coli KTE5	1
+Escherichia coli KTE6	1
+Escherichia coli KTE148	1
+Escherichia coli TW07945	1
+Escherichia coli 2730450	1
+Escherichia coli ED1a	1
+Metallosphaera yellowstonensis	1
+Escherichia coli O128	1
+Saccharomyces cerevisiae YJM456	1
+Escherichia coli 2-474-04_S1_C2	1
+Escherichia coli PA8	1
+Escherichia coli PA9	1
+Escherichia coli PA7	1
+Escherichia coli PA4	1
+Escherichia coli PA5	1
+Escherichia coli PA2	1
+Escherichia coli 90.2281	1
+Escherichia coli HVH 144 (4-4451937)	1
+Escherichia coli UMEA 3174-1	1
+Escherichia coli O26:H11 str. 06-3464	1
+BACE_STRPU RecName: Full=Beta-secretase; Flags: Precursor	1
+Escherichia coli 2-005-03_S1_C1	1
+Escherichia coli 2-005-03_S1_C3	1
+Escherichia coli O157:H7 str. EC4206	1
+Escherichia coli 6-319-05_S1_C1	1
+Escherichia coli 2735000	1
+Escherichia sp. 3_2_53FAA	1
+Escherichia coli UMEA 3652-1	1
+Actinomyces urogenitalis DSM 15434	1
+Yarrowia lipolytica CLIB122	1
+Bacteroides coprosuis DSM 18011	1
+Escherichia coli 2-316-03_S3_C2	1
+Escherichia coli 2-316-03_S3_C3	1
+Escherichia coli 2-316-03_S3_C1	1
+Wolbachia endosymbiont of Onchocerca volvulus	1
+Flavobacterium enshiense	1
+Escherichia coli O26:H11 str. 2010C-3472	1
+Escherichia coli HVH 192 (4-3054470)	1
+Escherichia coli KOEGE 70 (185a)	1
+Microgenomates (Levybacteria) bacterium GW2011_GWA2_40_8	1
+V Chain V, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 3	1
+Escherichia coli 3-475-03_S4_C2	1
+Escherichia coli 3-475-03_S4_C1	1
+Chironomus tepperi	1
+Escherichia coli ATCC BAA-2215	1
+Escherichia coli 2726950	1
+Shigella sonnei 53G	1
+Escherichia coli O111:H8 str. CVM9570	1
+Escherichia coli BWH 24	1
+Escherichia coli DEC12C	1
+Escherichia coli DEC12B	1
+Escherichia coli DEC12A	1
+Escherichia coli HVH 136 (4-5970458)	1
+Escherichia coli DEC12E	1
+Escherichia coli DEC12D	1
+PP11_ARATH RecName: Full=Serine/threonine-protein phosphatase PP1 isozyme 1	1
+Pseudomonas mosselii	1
+Lawsonia intracellularis PHE/MN1-00	1
+Escherichia coli 178200	1
+Escherichia coli O25:NM str. E2539C1	1
+Labeo rohita	1
+Chrysomya bezziana	1
+Petromyzon marinus	1
+Saccharomyces cerevisiae YJM1078	1
+Escherichia coli HVH 46 (4-2758776)	1
+Ixodes pacificus	1
+Escherichia coli C-34666	1
+DRE21_PARTE RecName: Full=Anamorsin homolog 1; AltName: Full=Fe-S cluster assembly protein DRE2 homolog 1	1
+Escherichia coli UMEA 3341-1	1
+Escherichia coli APEC IMT5155	1
+RL36_TETTS RecName: Full=60S ribosomal protein L36	1
+Microbacterium	1
+Escherichia coli UMEA 3426-1	1
+TFP11_XENTR RecName: Full=Tuftelin-interacting protein 11; AltName: Full=Septin and tuftelin-interacting protein 1; Short=STIP-1	1
+Saccharomyces cerevisiae YJM682	1
+Francisella sp. W12-1067	1
+Acraga philetera	1
+Chlamydomonas sp. ICE-L	1
+Escherichia coli Tx1686	1
+bacterium JGI-5	1
+MMAC_CHICK RecName: Full=Methylmalonic aciduria and homocystinuria type C protein homolog	1
+BYST_NEMVE RecName: Full=Bystin	1
+Streptomyces sp. 142MFCol3.1	1
+Escherichia coli 3006	1
+D Chain D, In Silico And In Vitro Co-Evolution Of A High Affinity Complementary Protein-Protein Interface	1
+Escherichia coli 3003	1
+Chironex fleckeri	1
+Chionoecetes opilio	1
+Escherichia coli 10.0833	1
+Escherichia coli O174:H8 str. 04-3038	1
+Haliotis gigantea	1
+Escherichia coli 5.0959	1
+Escherichia coli O157:H7 str. 2011EL-2114	1
+Escherichia coli O127:H6 str. E2348/69	1
+Plasmodium vivax India VII	1
+Massilia timonae CCUG 45783	1
+Lepidurus apus lubbocki	1
+Branchiostoma californiense	1
+Escherichia coli cloneA_i1	1
+Neospora caninum Liverpool	1
+Solenopsis invicta	1
+Arsenophonus nasoniae	1
+Escherichia coli O157:H7 str. 2011EL-2112	1
+Escherichia coli HVH 82 (4-2209276)	1
+Dicentrarchus labrax	1
+Albertisius excellens	1
+Escherichia coli UMEA 4076-1	1
+Escherichia coli TA271	1
+Escherichia coli LAU-EC9	1
+Escherichia coli MGH 57	1
+Serratia marcescens SM39	1
+Saccharomyces cerevisiae YJM1527	1
+Saccharomyces cerevisiae YJM1526	1
+Escherichia coli 3-073-06_S1_C2	1
+Escherichia coli O111:NM str. 2010C-3053	1
+Escherichia coli 3-073-06_S1_C1	1
+Gemmata obscuriglobus	1
+Cryptococcus gattii LA55	1
+Escherichia coli BCE002_MS12	1
+A Chain A, Crystal Structure Of Anopheles Gambiae SerTHR PHOSPHATASE COMPLEXED With Zn2	1
+Escherichia sp. KTE172	1
+Escherichia coli P0301867.5	1
+Escherichia coli P0301867.4	1
+Escherichia coli P0301867.7	1
+Escherichia coli P0301867.1	1
+Escherichia coli P0301867.3	1
+Escherichia coli P0301867.2	1
+Escherichia coli P0301867.8	1
+Shigella flexneri 6603-63	1
+Escherichia coli O121:H7 str. 2009C-3299	1
+Rhizobiales bacterium HL-109	1
+Escherichia coli O15:H18 str. K1516	1
+Escherichia coli 7.1982	1
+Escherichia coli HVH 44 (4-2298570)	1
+Saccharomyces cerevisiae JAY291	1
+Escherichia coli 2-222-05_S3_C1	1
+Escherichia coli 2-222-05_S3_C2	1
+Escherichia coli 2-222-05_S3_C3	1
+Escherichia coli UMEA 3173-1	1
+Yarrowia lipolytica	1
+Serratia marcescens subsp. marcescens ATCC 13880	1
+Escherichia coli KTE89	1
+Escherichia coli KTE88	1
+Escherichia coli LAU-EC6	1
+Escherichia coli KTE81	1
+Escherichia coli KTE80	1
+Escherichia coli KTE83	1
+Escherichia coli KTE82	1
+Escherichia coli KTE85	1
+Escherichia coli KTE84	1
+Escherichia coli KTE87	1
+Escherichia coli KTE86	1
+Escherichia coli KTE200	1
+Escherichia coli KTE201	1
+Escherichia coli KTE202	1
+Escherichia coli KTE203	1
+Escherichia coli KTE204	1
+Escherichia coli KTE205	1
+Escherichia coli KTE206	1
+Escherichia coli KTE207	1
+Escherichia coli KTE208	1
+Escherichia coli KTE209	1
+Escherichia coli 6-319-05_S3_C3	1
+Escherichia coli 6-319-05_S3_C2	1
+Escherichia coli O103:H2 str. CVM9450	1
+Escherichia coli O111:H8 str. CFSAN001632	1
+Escherichia coli LAU-EC7	1
+Escherichia coli EC4439	1
+CMC3_CAEEL RecName: Full=Probable calcium-binding mitochondrial carrier F17E5.2	1
+Escherichia coli UMEA 3053-1	1
+Shigella boydii 5216-82	1
+Escherichia coli UMEA 3337-1	1
+Proteobacteria	1
+Escherichia coli 4-203-08_S4_C2	1
+Escherichia coli EC4437	1
+Escherichia coli EC4436	1
+Massilia timonae	1
+Escherichia coli P0299483.1	1
+Escherichia coli P0299483.3	1
+Escherichia coli P0299483.2	1
+Aquilegia formosa	1
+Escherichia coli O26:H11 str. 11368	1
+Antheraea pernyi	1
+Escherichia coli ATCC 35150	1
+Histoplasma capsulatum H88	1
+Escherichia coli 4-203-08_S4_C3	1
+Escherichia coli 2-316-03_S4_C3	1
+Escherichia coli 2-316-03_S4_C2	1
+Escherichia coli 2-316-03_S4_C1	1
+R Chain R, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	1
+Escherichia coli O26:H11 str. 2010EL-1699	1
+Spraguea lophii 42_110	1
+R Chain R, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 1	1
+Pseudomonas fluorescens	1
+Escherichia coli KOEGE 56 (169a)	1
+Escherichia coli KTE154	1
+Escherichia coli B799	1
+Escherichia coli KTE156	1
+Escherichia coli KTE157	1
+Escherichia coli KTE150	1
+Escherichia coli KTE153	1
+Escherichia coli KTE158	1
+Escherichia coli O26:H11 str. 05-3646	1
+Clostridium] cellobioparum	1
+Anurida maritima	1
+Escherichia coli HVH 135 (4-4449320)	1
+Escherichia coli 2866750	1
+Escherichia coli UMEA 3022-1	1
+Escherichia coli 5-366-08_S3_C3	1
+Escherichia coli 5-366-08_S3_C2	1
+Escherichia coli 5-366-08_S3_C1	1
+Escherichia coli STEC_94C	1
+Saccharomyces cerevisiae YJM683	1
+Saccharomyces cerevisiae YJM681	1
+Escherichia coli HS	1
+Elizabethkingia meningoseptica 502	1
+Escherichia coli DEC13A	1
+Escherichia coli DEC13B	1
+Escherichia coli 536	1
+Escherichia coli DEC13D	1
+Escherichia coli DEC13E	1
+Escherichia coli UMEA 3707-1	1
+Escherichia coli O10:K5(L):H4 str. ATCC 23506	1
+Escherichia coli O121:H19 str. 2009EL1412	1
+Oligotropha carboxidovorans	1
+Hyalella azteca	1
+Anopheles albimanus	1
+Escherichia coli M919	1
+Escherichia coli O104:H21 str. 94-3025	1
+Escherichia coli O104:H4 str. 11-03943	1
+Synechocystis sp. PCC 6803 substr. GT-I	1
+Saccharomyces cerevisiae YJM1592	1
+Escherichia coli HVH 191 (3-9341900)	1
+Zavarzinella formosa	1
+Escherichia coli 'BL21-Gold(DE3)pLysS AG'	1
+Escherichia coli TW14301	1
+Escherichia coli O111:NM str. 03-3484	1
+2208428B dynein:SUBUNIT=heavy chai	1
+Escherichia coli HVH 119 (4-6879578)	1
+Escherichia coli HVH 112 (4-5987253)	1
+Escherichia coli HVH 86 (4-7026218)	1
+Escherichia coli HVH 102 (4-6906788)	1
+Toxoplasma gondii RUB	1
+Escherichia coli P0304799.3	1
+Escherichia coli UMEA 3193-1	1
+Flexibacter elegans	1
+Escherichia coli HVH 182 (4-0985554)	1
+Escherichia coli 2-427-07_S3_C3	1
+Escherichia coli 2-427-07_S3_C1	1
+Escherichia coli BWH 34	1
+Escherichia coli BCE007_MS-11	1
+Mucilaginibacter paludis	1
+Escherichia coli HVH 184 (4-3343286)	1
+Escherichia coli 2-460-02_S3_C3	1
+Escherichia coli 2-460-02_S3_C2	1
+Escherichia coli HVH 104 (4-6977960)	1
+alpha proteobacterium IMCC14465	1
+Escherichia coli UMEA 3212-1	1
+Escherichia coli HVH 202 (4-3163997)	1
+Tinamus guttatus	1
+Hymenobacter sp. MIMtkLc17	1
+COQ42_PARTE RecName: Full=Ubiquinone biosynthesis protein COQ4 homolog 2, mitochondrial; AltName: Full=Coenzyme Q biosynthesis protein 4 homolog 2; Flags: Precursor	1
+Escherichia coli HVH 201 (4-4459431)	1
+Pandalus platyceros	1
+Saccharomyces cerevisiae Vin13	1
+Escherichia coli HVH 204 (4-3112802)	1
+Escherichia coli 1-392-07_S4_C2	1
+Escherichia coli 3-105-05_S4_C3	1
+Escherichia coli 1-392-07_S4_C1	1
+Escherichia coli UMEA 3216-1	1
+Escherichia coli O118:H16 str. 07-4255	1
+Toxoplasma gondii FOU	1
+Phenacoccus solenopsis	1
+Escherichia coli 1-182-04_S1_C1	1
+Escherichia coli 1-182-04_S1_C3	1
+Escherichia coli 1-182-04_S1_C2	1
+Escherichia coli O69:H11 str. 06-3325	1
+Escherichia coli O104:H4 str. 11-02033-1	1
+Escherichia coli O103:H25 str. CVM9340	1
+GNAQ_HOMAM RecName: Full=Guanine nucleotide-binding protein G(q) subunit alpha; AltName: Full=Guanine nucleotide-binding protein alpha-q	1
+Escherichia coli HVH 23 (4-6066488)	1
+Ensifer	1
+Escherichia coli 2886-75	1
+Escherichia coli 8-415-05_S3_C2	1
+CCD22_CULQU RecName: Full=Coiled-coil domain-containing protein 22 homolog	1
+A Chain A, Crystal Structure Of E. Coli Primosomol Protein Prib Bound To Ssdna	1
+Ostrea edulis	1
+Triticum aestivum	1
+Escherichia coli 96.0497	1
+Nonlabens dokdonensis DSW-6	1
+Escherichia coli O157:H7 str. K5806	1
+Saccharomyces cerevisiae P283	1
+Rhodoferax ferrireducens	1
+SEM1A_SCHAM RecName: Full=Semaphorin-1A; AltName: Full=Fasciclin IV; AltName: Full=Fasciclin-4; AltName: Full=Semaphorin-I; Short=Sema I; Flags: Precursor	1
+Escherichia coli UMEA 3172-1	1
+Escherichia coli UMEA 3150-1	1
+M Chain M, Coordinates Of The B1b Bridge-Forming Protein Structures Fitted Into The Cryo-Em Map Of E.Coli 70s Ribosome (Emd-1056)	1
+REST_RAT RecName: Full=RE1-silencing transcription factor; AltName: Full=Neural-restrictive silencer factor	1
+Escherichia coli BIDMC 17B	1
+Escherichia coli HVH 188 (4-2356988)	1
+Escherichia coli BIDMC 17A	1
+Shigella boydii	1
+Agrotis segetum	1
+B Chain B, Crystal Structure Of The E130y Mutant Of Human Soluble Calcium-Activated Nucleotidase (Scan) With Calcium Io	1
+Escherichia coli KOEGE 40 (102a)	1
+Escherichia coli O121:H19 str. 2009EL1302	1
+endosymbiont of Acanthamoeba sp. UWC36	1
+Escherichia coli 2-177-06_S3_C1	1
+Escherichia coli 2-177-06_S3_C2	1
+Escherichia coli 2-177-06_S3_C3	1
+Escherichia coli UMNF18	1
+Saccharomyces cerevisiae YJM689	1
+Saccharomycetaceae sp. 'Ashbya aceri'	1
+Escherichia coli O157:H7 str. K2188	1
+Escherichia coli B28-1	1
+Escherichia coli B28-2	1
+LACB2_DANRE RecName: Full=Beta-lactamase-like protein 2	1
+Somatochlora uchidai	1
+Cyberlindnera fabianii	1
+Escherichia coli O26:H11 str. 2009C-3996	1
+Thiothrix disciformis	1
+Escherichia coli UMEA 3121-1	1
+Escherichia coli 2756500	1
+Escherichia coli TA206	1
+Shigella flexneri 5a str. M90T	1
+Escherichia coli KTE155	1
+Escherichia coli O118:H16 str. 06-3256	1
+Lychas mucronatus	1
+Rahnella sp. Y9602	1
+Hyalangium minutum	1
+Scyliorhinus torazame	1
+Escherichia coli O111:NM str. 2010C-4735	1
+synthetic Escherichia coli C321.deltaA	1
+Escherichia coli O26:H11 str. 2011C-3655	1
+Acetobacter tropicalis NBRC 101654	1
+Shigella flexneri G1663	1
+Escherichia coli JB1-95	1
+Escherichia coli EC4421	1
+Escherichia coli UMEA 3317-1	1
+Escherichia coli O157:H7 str. K6687	1
+Serratia sp. Ag1	1
+Escherichia coli HVH 78 (4-2735946)	1
+Escherichia coli 8.0569	1
+Acinetobacter baumannii 993520	1
+Enterobacter cloacae EcWSU1	1
+Saccharomyces cerevisiae YJM1129	1
+Escherichia coli 95JB1	1
+Escherichia coli 6-175-07_S4_C3	1
+Escherichia coli 7-233-03_S4_C2	1
+Escherichia coli 8.0566	1
+M Chain M, Visualization Of Two Trnas Trapped In Transit During Ef-g-mediated Translocation (30s Subunit + Ligands)	1
+Escherichia coli HVH 213 (4-3042928)	1
+Escherichia coli KTE235	1
+Escherichia coli KTE234	1
+Escherichia coli SEPT362	1
+Escherichia coli 8.0416	1
+Escherichia coli KTE231	1
+Escherichia coli KTE230	1
+Escherichia coli KTE233	1
+Escherichia coli KTE232	1
+Escherichia coli O153:H2 str. 2010C-5034	1
+Saccharomyces cerevisiae YJM1434	1
+Saccharomyces cerevisiae YJM1433	1
+Escherichia coli O69:H11 str. 2009C-3601	1
+Escherichia coli 99.1775	1
+Escherichia coli LT-68	1
+Pseudomonas syringae pv. aceris	1
+Nasutitermes takasagoensis	1
+Saccharomyces cerevisiae YJM1341	1
+Thermus	1
+Paraglaciecola psychrophila	1
+Escherichia coli O157:H7 str. EC4042	1
+Escherichia coli O157:H7 str. EC4045	1
+Clostridium sp. CAG:571	1
+Escherichia coli str. K12 substr. W3110	1
+Escherichia coli BCE006_MS-23	1
+Zoothamnium arbuscula	1
+Strongyloides stercoralis	1
+Saccharomyces cerevisiae VL3	1
+Escherichia coli O32:H37 str. P4	1
+A Chain A, Crystal Structure Of Lrp6p3e3p4e	1
+Escherichia coli KTE161	1
+Escherichia coli KTE160	1
+Escherichia coli KTE163	1
+Escherichia coli KTE162	1
+Escherichia coli KTE165	1
+Escherichia coli P0304777.15	1
+Escherichia coli KTE167	1
+Escherichia coli KTE166	1
+Escherichia coli KTE169	1
+Escherichia coli KTE168	1
+Escherichia sp. KTE52	1
+Balanus improvisus	1
+Escherichia coli AD30	1
+Escherichia coli HVH 214 (4-3062198)	1
+Oceanobacillus massiliensis	1
+Escherichia coli HVH 196 (4-4530470)	1
+Escherichia coli 94.0618	1
+Escherichia coli HVH 187 (4-4471660)	1
+L Chain L, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 4.	1
+Escherichia coli KOEGE 68 (182a)	1
+Gossypium arboreum	1
+Lamprocystis purpurea	1
+Escherichia coli O6:H16 str. 99-3165	1
+Escherichia coli UMEA 3271-1	1
+Escherichia coli O121:H19 str. 2010C-4732	1
+Escherichia coli 1-176-05_S4_C1	1
+Byssochlamys spectabilis No. 5	1
+Escherichia coli 1-176-05_S4_C3	1
+Escherichia coli DEC3F	1
+LIAS1_DROYA RecName: Full=Lipoyl synthase 1, mitochondrial; AltName: Full=Lipoate synthase 1; Short=LS 1; Short=Lip-syn 1; AltName: Full=Lipoic acid synthase 1; Flags: Precursor	1
+Escherichia coli DEC3D	1
+Escherichia coli DEC3E	1
+Escherichia coli DEC3B	1
+Escherichia coli DEC3C	1
+Escherichia coli DEC3A	1
+A Chain A, Crystal Structure Of Ctpr3y	1
+Acavomonas peruviana	1
+Escherichia coli OK1180	1
+Saccharomyces cerevisiae CEN.PK113-7D	1
+Escherichia coli HVH 114 (4-7037740)	1
+A Chain A, Crystal Structure Of An 8 Repeat Consensus Tpr Superhelix (Orthorombic Crystal Form	1
+Escherichia coli ATCC BAA-2192	1
+Escherichia coli 8-415-05_S1_C1	1
+Escherichia coli DEC5D	1
+Escherichia coli O111:NM str. K6915	1
+Escherichia coli HVH 180 (4-3051617)	1
+Escherichia coli O55:H7 str. USDA 5905	1
+Colpoda cucullus	1
+Lipophrys pholis	1
+Escherichia coli S17	1
+Saccharomyces cerevisiae YJM270	1
+Roseovarius mucosus DSM 17069	1
+Saccharomyces cerevisiae YJM789	1
+Escherichia coli UMEA 3108-1	1
+Halomonas anticariensis FP35 = DSM 16096	1
+Shigella flexneri CDC 796-83	1
+Thermosphaera aggregans DSM 11486	1
+Escherichia coli TW14313	1
+Leptospira phage vB_LnoZ_CZ214-LE1	1
+Escherichia coli O111:NM str. 2011C-3573	1
+Escherichia coli HVH 13 (4-7634056)	1
+Escherichia coli HVH 194 (4-2356805)	1
+Niponia nodulosa	1
+Escherichia coli UMEA 3240-1	1
+Escherichia coli LAU-EC8	1
+Escherichia coli DEC10E	1
+Escherichia coli DEC10D	1
+Escherichia coli DEC13C	1
+Escherichia coli DEC10A	1
+Escherichia coli DEC10C	1
+Escherichia coli DEC10B	1
+Escherichia coli CUMT8	1
+Escherichia coli 2729250	1
+Escherichia coli HVH 69 (4-2837072)	1
+Escherichia coli O157:H7 str. SS52	1
+Escherichia coli 1-110-08_S1_C2	1
+Escherichia coli 1-110-08_S1_C3	1
+Escherichia coli 1-110-08_S1_C1	1
+PGK_GLACH RecName: Full=Phosphoglycerate kinase	1
+Escherichia coli HVH 158 (4-3224287)	1
+Escherichia coli STEC_DG131-3	1
+Escherichia coli OK1357	1
+NTAQ1_ANOGA RecName: Full=Protein N-terminal glutamine amidohydrolase; AltName: Full=Protein NH2-terminal glutamine deamidase; Short=N-terminal Gln amidase; Short=Nt(Q)-amidase; AltName: Full=Protein tungus	1
+Escherichia coli P0301867.11	1
+Escherichia coli P0301867.13	1
+Sarcophaga peregrina	1
+Escherichia coli 1.2741	1
+Klebsiella pneumoniae IS22	1
+Escherichia coli 3-267-03_S3_C2	1
+Escherichia coli 3-267-03_S3_C1	1
+Escherichia coli DEC7D	1
+Escherichia coli HVH 110 (4-6978754)	1
+Metallosphaera yellowstonensis MK1	1
+Escherichia coli O157:H43 str. T22	1
+Escherichia coli O157:H7 str. K1796	1
+Escherichia coli O157:H7 str. 08-4169	1
+Escherichia coli O157:H7 str. K1792	1
+Escherichia coli O157:H7 str. K1793	1
+Rhizoctonia solani AG-3 Rhs1AP	1
+A Chain A, Crystal Structure Of The Catalytic Subunit Of Human Protein Kinase Ck	1
+Escherichia coli EC4196	1
+Escherichia coli 6-175-07_S4_C1	1
+Saccharomyces cerevisiae YJM1399	1
+Brevibacillus agri BAB-2500	1
+Enterobacter sp. GN02600	1
+Escherichia coli O103:H2 str. 2009C-3279	1
+Escherichia coli 90.0039	1
+Escherichia coli HVH 59 (4-1119338)	1
+Clostridiales bacterium oral taxon 876	1
+Escherichia coli HVH 43 (4-2173468)	1
+Phaseolus vulgaris	1
+Escherichia coli 2-052-05_S1_C3	1
+Escherichia coli O128:H2 str. 2011C-3317	1
+Escherichia coli HVH 193 (4-3331423)	1
+Escherichia coli 99.0741	1
+Starmerella bombicola	1
+Escherichia coli HVH 128 (4-7030436)	1
+Seison nebaliae	1
+Acinetobacter baumannii ABNIH10	1
+Phengaris alcon	1
+Thermobia domestica	1
+Escherichia coli 5412	1
+uncultured Acidilobus sp. MG	1
+Bacteroidales bacterium TBC1	1
+Escherichia coli HVH 35 (4-2962667)	1
+Escherichia coli O111:NM str. 2010C-4818	1
+Saccharomyces cerevisiae R103	1
+Escherichia coli O157:H7 str. K5467	1
+Escherichia coli EC096/10	1
+Blastomyces dermatitidis ATCC 18188	1
+Bacillus cereus	1
+Escherichia coli HVH 125 (4-2634716)	1
+Escherichia coli O39:NM str. F8704-2	1
+Escherichia coli STEC_7v	1
+Escherichia coli 101-1	1
+Saccharomyces cerevisiae YJM1549	1
+Sporomusa sp. An4	1
+Diploptera punctata	1
+Bradyrhizobium yuanmingense	1
+Escherichia coli 6-319-05_S3_C1	1
+Erysipelotrichaceae bacterium CAG:64	1
+Escherichia coli 042	1
+Octopus vulgaris	1
+Escherichia coli O121:H19 str. 2010C-4989	1
+Saccharomyces arboricola H-6	1
+Escherichia coli E110019	1
+Vibrio variabilis	1
+Cloning vector pVZ-CAM.fa	1
+Escherichia coli 2-460-02_S4_C2	1
+Charybdis japonica	1
+Escherichia coli UMEA 3585-1	1
+Escherichia coli 6-319-05_S4_C2	1
+Escherichia coli 6-319-05_S4_C3	1
+Escherichia coli UTI89	1
+Myxococcales bacterium SG8_38_1	1
+Salix arbutifolia	1
+Gonodactylus smithii	1
+Firmicutes bacterium CAG:240	1
+Escherichia coli UMEA 3834-1	1
+Escherichia coli HVH 113 (4-7535473)	1
+Escherichia coli O146:H21 str. 2010C-3325	1
+Escherichia coli ECA-0157	1
+Escherichia coli E1167	1
+Escherichia coli KTE228	1
+Escherichia coli KTE229	1
+Caridina japonica	1
+Escherichia coli KTE222	1
+Escherichia coli KTE223	1
+Escherichia coli KTE220	1
+Escherichia coli KTE221	1
+Escherichia coli KTE226	1
+Escherichia coli KTE227	1
+Escherichia sp. KTE159	1
+Escherichia coli KTE225	1
+Escherichia coli IS25	1
+Saccharomyces cerevisiae YJM1402	1
+Rhodnius prolixus	1
+Saccharomyces cerevisiae YJM1400	1
+Escherichia coli Jurua 18/11	1
+Escherichia coli 99.1762	1
+Cryptococcus gattii 2001/935-1	1
+Escherichia coli 07798	1
+JAG1A_DANRE RecName: Full=Protein jagged-1a; Short=Jagged1; Short=Jagged1a; Flags: Precursor	1
+Wuchereria bancrofti	1
+Escherichia coli HVH 217 (4-1022806)	1
+POL2_DROME RecName: Full=Retrovirus-related Pol polyprotein from transposon 297; Includes: RecName: Full=Protease; Includes: RecName: Full=Reverse transcriptase; Includes: RecName: Full=Endonuclease	1
+Escherichia coli O157:H7 str. EC508	1
+Escherichia coli UMEA 3041-1	1
+Escherichia coli KOEGE 118 (317a)	1
+Shigella flexneri 4343-70	1
+Escherichia coli O157:H7 str. EC4076	1
+Butyrivibrio sp. AE2032	1
+Escherichia coli O104:H4 str. 11-02030	1
+Thraustotheca clavata	1
+Escherichia coli KTE70	1
+Escherichia coli BIDMC 43a	1
+Gemmatirosa kalamazoonesis	1
+Ruminococcus sp. CAG:382	1
+Escherichia coli 2865200	1
+Escherichia coli 2-222-05_S4_C3	1
+Myxosarcina sp. GI1	1
+Escherichia coli str. K-12 substr. MDS42	1
+Escherichia coli B171	1
+Escherichia coli KTE178	1
+Escherichia coli KTE179	1
+Escherichia coli KTE176	1
+Escherichia coli KTE177	1
+Escherichia coli KTE174	1
+Escherichia coli KTE175	1
+Escherichia coli KTE173	1
+Escherichia coli KTE170	1
+Escherichia coli KTE171	1
+Stemphylium lycopersici	1
+Escherichia coli T234_00	1
+Escherichia coli O111:H8 str. 2011C-3453	1
+Citrobacter koseri	1
+Escherichia coli DEC11B	1
+Escherichia coli DEC11C	1
+Escherichia coli DEC11A	1
+Escherichia coli O91:NM str. 2009C-3745	1
+Escherichia coli DEC11D	1
+Escherichia coli DEC11E	1
+Artemia salina	1
+Escherichia coli O157:H7 str. H2495	1
+Escherichia coli 4-203-08_S3_C2	1
+Escherichia coli O156:H25 str. 2011C-3602	1
+Escherichia coli O157:H7 str. H2498	1
+PPI2_SYNY3 RecName: Full=Peptidyl-prolyl cis-trans isomerase slr1251; Short=PPIase slr1251; AltName: Full=Rotamase slr1251	1
+Gordonia terrae	1
+Escherichia coli O26:H11 str. CVM10030	1
+Escherichia coli TW06591	1
+Bacteroides fragilis str. 3988 T1	1
+KARG_ARTSF RecName: Full=Arginine kinase; Short=AK	1
+Escherichia coli O111:NM str. K6904	1
+Doryctes anatolikus	1
+Desulfospira joergensenii	1
+Escherichia coli O111:NM str. K6908	1
+Saccharomyces cerevisiae YJM451	1
+Escherichia coli HVH 130 (4-7036876)	1
+Shigella flexneri K-404	1
+Devosia sp. Leaf420	1
+A Chain A, Crystal Structure Of The Carboxy Terminal Domain Of Yeast Eif4	1
+Firmicutes bacterium CAG:176	1
+Paramecium bursaria Chlorella virus OR0704.2.2	1
+Thermosphaera aggregans	1
+Escherichia coli HVH 115 (4-4465989)	1
+Actinobacteria bacterium OK074	1
+RS13_ECOL5 RecName: Full=30S ribosomal protein S13	1
+P Chain P, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 5s Rrna, 5.8s Rrna And Proteins Of Molecule 1	1
+Escherichia coli O157:H7 str. K2845	1
+Saccharomyces cerevisiae YJM1307	1
+Escherichia coli O79:H7 str. 06-3501	1
+Escherichia coli 3.3884	1
+Escherichia coli UMEA 3592-1	1
+Escherichia coli UMNK88	1
+Escherichia coli K02	1
+Escherichia coli O111:NM str. 2011C-3362	1
+Escherichia coli DEC2E	1
+Escherichia coli DEC2D	1
+Escherichia coli DEC2A	1
+Escherichia coli AI27	1
+Escherichia coli DEC2C	1
+Escherichia coli DEC2B	1
+Rhizoctonia solani AG-1 IB	1
+Escherichia coli UMEA 3268-1	1
+Escherichia coli UMEA 3162-1	1
+Bacteroides uniformis str. 3978 T3 i	1
+Saccharomyces cerevisiae YJM1615	1
+Variovorax paradoxus S110	1
+Escherichia coli HVH 225 (4-1273116)	1
+Leiolepis reevesii rubritaeniata	1
+Stigmatella aurantiaca DW4/3-1	1
+Oligotropha carboxidovorans OM4	1
+COGS_UCAPU RecName: Full=Brachyurin; AltName: Full=Collagenolytic protease	1
+Xenorhabdus bovienii	1
+Escherichia coli 2851500	1
+Escherichia coli D9	1
+Isosphaera pallida ATCC 43644	1
+Arenicola marina	1
+Escherichia coli APEC O1	1
+Serratia sp. Leaf50	1
+Vibrio parahaemolyticus Peru-466	1
+Roseivivax halodurans JCM 10272	1
+Escherichia coli M114	1
+Escherichia coli O119:H4 str. 03-3458	1
+Allosalinactinospora lopnorensis	1
+Actinomyces sp. oral taxon 170 str. F0386	1
+Escherichia coli UMEA 3139-1	1
+Escherichia coli UMEA 3033-1	1
+Escherichia coli MP020980.2	1
+Escherichia coli O121:H19 str. 2010C-3840	1
+Escherichia coli BWH 32	1
+Escherichia coli 3-020-07_S4_C1	1
+Escherichia coli UMEA 3304-1	1
+Escherichia coli UMEA 3208-1	1
+Squilla oratoria	1
+Escherichia coli KD1	1
+Escherichia coli O111:NM str. 2011C-3170	1
+Escherichia coli 2-460-02_S4_C3	1
+Escherichia coli 2-460-02_S4_C1	1
+Escherichia coli O157:H7 str. K1921	1
+Escherichia coli T1282_01	1
+Escherichia coli KTE191	1
+Escherichia coli HVH 31 (4-2602156)	1
+1715321B ZFX gen	1
+uncultured bacterium Contig956	1
+Bifidobacterium thermacidophilum subsp. thermacidophilum	1
+Escherichia coli HVH 3 (4-7276001)	1
+Escherichia coli O111:NM str. 2010C-4622	1
+Escherichia coli UMEA 3292-1	1
+Citrobacter sp. KTE151	1
+Roseivivax halodurans	1
+Escherichia coli O157:H7 str. EC869	1
+Escherichia coli O145:NM str. 06-3484	1
+Escherichia coli P0305260.12	1
+Escherichia coli P0305260.13	1
+Escherichia coli P0305260.10	1
+Escherichia coli P0305260.11	1
+Escherichia coli 2-460-02_S3_C1	1
+Escherichia coli P0305260.15	1
+Haloarcula amylolytica	1
+Escherichia coli UMEA 3113-1	1
+Escherichia coli P0299917.7	1
+Escherichia coli P0299917.6	1
+Escherichia coli P0299917.5	1
+Escherichia coli P0299917.4	1
+Escherichia coli P0299917.3	1
+Escherichia coli P0299917.2	1
+Escherichia coli P0299917.1	1
+Escherichia coli 2-177-06_S4_C1	1
+Escherichia coli 2-177-06_S4_C3	1
+Escherichia coli 2-177-06_S4_C2	1
+Escherichia coli P0299917.9	1
+Escherichia coli P0299917.8	1
+Rhodonellum psychrophilum	1
+Escherichia coli UM146	1
+Escherichia coli IAI1	1
+Escherichia coli O111:H- str. 11128	1
+Escherichia coli HVH 61 (4-2736020)	1
+Escherichia coli O26:H11 str. 2010C-5028	1
+Saccharomyces cerevisiae YJM1573	1
+Escherichia coli TW10598	1
+Escherichia coli 14A	1
+Ostreococcus tauri	1
+Escherichia coli LY180	1
+Escherichia coli P0301904.3	1
+Escherichia coli B354	1
+Escherichia coli EC4448	1
+Iurus dufoureius	1
+Escherichia coli HVH 177 (4-2876612)	1
+Escherichia coli 2864350	1
+YIPF6_DICDI RecName: Full=Protein YIPF6 homolog	1
+Miamiensis avidus	1
+H31_TETPY RecName: Full=Histone H3; AltName: Full=H3S; AltName: Full=Major histone H3; Contains: RecName: Full=H3F	1
+Escherichia coli 99.1753	1
+Psychromonas hadalis	1
+Escherichia coli O121:H19 str. 06-3003	1
+EI2BD_RAT RecName: Full=Translation initiation factor eIF-2B subunit delta; AltName: Full=eIF-2B GDP-GTP exchange factor subunit delta	1
+Saccharomyces cerevisiae YJM1415	1
+Escherichia coli KOEGE 73 (195a)	1
+RS13_SHIFL RecName: Full=30S ribosomal protein S13	1
+Escherichia coli 2-316-03_S1_C1	1
+Plasmodium chabaudi chabaudi	1
+Escherichia coli 1-182-04_S4_C1	1
+Streptomyces bicolor	1
+Pseudomonas syringae pv. alisalensis	1
+Escherichia coli O157:H7 str. 1044	1
+Escherichia coli KTE58	1
+Escherichia coli KTE59	1
+Escherichia coli KTE57	1
+Escherichia coli O157:H7 str. EC4401	1
+Escherichia coli KTE55	1
+Escherichia coli KTE53	1
+Escherichia coli KTE50	1
+Escherichia coli KTE51	1
+Shigella flexneri K-1770	1
+Escherichia coli DEC7C	1
+Escherichia coli HVH 24 (4-5985145)	1
+Escherichia coli HVH 17 (4-7473087)	1
+Escherichia coli UMEA 3336-1	1
+Escherichia coli O157:H7 str. K5460	1
+Escherichia coli KTE109	1
+Escherichia coli KTE108	1
+Escherichia coli B105	1
+Escherichia coli B104	1
+Escherichia coli HVH 68 (4-0888028)	1
+Escherichia coli B106	1
+Escherichia coli 95.1288	1
+Escherichia coli KTE102	1
+Escherichia coli KTE101	1
+Escherichia coli KTE100	1
+Escherichia coli KTE107	1
+Escherichia coli KTE106	1
+Escherichia coli KTE105	1
+Escherichia coli KTE104	1
+Escherichia coli 1-176-05_S3_C1	1
+Escherichia coli O86:H34 str. 99-3124	1
+Escherichia coli 1-176-05_S3_C2	1
+Synechocystis sp. PCC 6803 substr. PCC-N	1
+Escherichia coli HVH 48 (4-2658593)	1
+Escherichia coli 99.1805	1
+Escherichia coli 93-001	1
+Escherichia coli UMEA 3821-1	1
+Escherichia coli O26:H11 str. 2010C-3051	1
+Escherichia coli 2-011-08_S1_C3	1
+Escherichia coli 2-011-08_S1_C2	1
+Escherichia coli 2-011-08_S1_C1	1
+Ruditapes philippinarum	1
+Sebaldella termitidis ATCC 33386	1
+Escherichia coli O26:H1 str. 2009C-4747	1
+Oceanospirillum beijerinckii	1
+Escherichia coli 7-233-03_S4_C1	1
+Escherichia coli 1-392-07_S4_C3	1
+Escherichia coli O111:NM str. 2010C-3977	1
+Polaribacter sp. Hel_I_88	1
+Escherichia coli O91:H21 str. 2009C-4646	1
+Escherichia coli DEC1A	1
+Escherichia coli DEC1B	1
+Escherichia coli DEC1C	1
+Escherichia coli DEC1D	1
+Escherichia coli DEC1E	1
+Escherichia coli 1303	1
+Escherichia coli O121:H19 str. 2011C-3216	1
+KNRL_DROME RecName: Full=Knirps-related protein; AltName: Full=Nuclear receptor subfamily 0 group A member 2	1
+Shigella boydii CDC 3083-94	1
+Sebaldella termitidis	1
+Cryptococcus gattii EJB2	1
+Escherichia coli 1-250-04_S3_C2	1
+M Chain M, Crystal Structure Of Release Factor Rf3 Trapped In The Gtp State On A Rotated Conformation Of The Ribosome (Without Viomycin)	1
+Escherichia coli O26:H11 str. CVM9952	1
+Chondromyces crocatus	1
+Escherichia coli 3-020-07_S3_C1	1
+Shigella boydii 965-58	1
+Escherichia coli 3-020-07_S3_C2	1
+RS13_ECOL6 RecName: Full=30S ribosomal protein S13	1
+Escherichia coli HVH 183 (4-3205932)	1
+Wolbachia endosymbiont of Culex quinquefasciatus	1
+Escherichia coli B85	1
+Escherichia coli O26:H11	1
+Clostridium sp. MS1	1
+Escherichia coli HM605	1
+Escherichia coli 2860650	1
+Escherichia coli HVH 70 (4-2963531)	1
+Escherichia coli O104:H4 str. E92/11	1
+Escherichia coli O121:H19 str. 2011C-3500	1
+Escherichia coli O157:H7 str. K2581	1
+Escherichia coli O157:H7 str. K2854	1
+Escherichia coli 6-175-07_S3_C2	1
+Escherichia coli 6-175-07_S3_C1	1
+Escherichia coli O69:H11 str. 08-4661	1
+Kuraishia capsulata CBS 1993	1
+Escherichia coli O145:H28 str. 2009C-3292	1
+Escherichia sp. KTE96	1
+Escherichia coli O157:H7 str. K6590	1
+Escherichia coli 1-392-07_S1_C1	1
+Escherichia coli 5-366-08_S4_C2	1
+Escherichia coli 5-366-08_S4_C1	1
+Escherichia coli HVH 83 (4-2051087)	1
+TPM_CHIOP RecName: Full=Tropomyosin; AltName: Full=Tropomyosin, slow-tonic isoform; Short=Tm-Chio-tonic	1
+Ruminococcus flavefaciens	1
+Bacillus subtilis group	1
+Kurthia sp. Dielmo	1
+Dyadobacter alkalitolerans	1
+A Chain A, Solution Structure Of Ibr-ring2 Tandem Domain From Parki	1
+Halomonas anticariensis	1
+Blattella germanica	1
+Escherichia coli HVH 222 (4-2977443)	1
+Horaiella iota	1
+Escherichia coli HVH 84 (4-1021478)	1
+Escherichia coli O103:H2 str. 2011C-3750	1
+Candidatus Odyssella thessalonicensis	1
+Escherichia coli PA38	1
+Scedosporium apiospermum	1
+Escherichia coli PA39	1
+Escherichia coli 2-156-04_S4_C2	1
+Escherichia coli 2-156-04_S4_C3	1
+Escherichia coli 2-156-04_S4_C1	1
+Escherichia coli 3-105-05_S1_C3	1
+Escherichia coli 3-105-05_S1_C2	1
+Escherichia coli 3-105-05_S1_C1	1
+Escherichia coli O157:H7 str. 2011EL-1107	1
+Escherichia coli HVH 156 (4-3206505)	1
+TERT_TETTH RecName: Full=Telomerase reverse transcriptase; AltName: Full=Telomerase catalytic subunit; AltName: Full=Telomerase subunit P133	1
+Polypterus ornatipinnis	1
+Escherichia coli HVH 143 (4-5674999)	1
+Escherichia coli O104:H4 str. 04-8351	1
+Escherichia coli TW09109	1
+Escherichia coli BIDMC 20A	1
+Escherichia coli BIDMC 20B	1
+Escherichia coli SMS-3-5	1
+Escherichia coli O111:H8 str. 2009EL-2169	1
+Escherichia coli 3-373-03_S4_C2	1
+Burkholderia sp. MR1	1
+Escherichia coli UMEA 3687-1	1
+Saccharomyces cerevisiae YJM1389	1
+Saccharomyces cerevisiae YJM1388	1
+Haemaphysalis longicornis	1
+Saccharomyces cerevisiae YJM1385	1
+Saccharomyces cerevisiae YJM1387	1
+Saccharomyces cerevisiae YJM1386	1
+Escherichia coli 2-427-07_S4_C2	1
+Escherichia coli 2-427-07_S4_C3	1
+Saccharomyces cerevisiae YJM1383	1
+Escherichia coli 2-427-07_S4_C1	1
+Xenorhabdus bovienii str. kraussei Quebec	1
+Puccinia sorghi	1
+Escherichia coli 2854350	1
+Escherichia coli HVH 200 (4-4449924)	1
+RS25B_YEAST RecName: Full=40S ribosomal protein S25-B; AltName: Full=RP45; AltName: Full=S31; AltName: Full=YS23	1
+Escherichia coli O157:H7 str. 2011EL-2103	1
+Escherichia coli O157:H7 str. 2011EL-2101	1
+Escherichia coli O157:H7 str. 2011EL-2107	1
+Escherichia coli O157:H7 str. 2011EL-2106	1
+Escherichia coli O157:H7 str. 2011EL-2105	1
+Escherichia coli O157:H7 str. 2011EL-2104	1
+Escherichia coli UMEA 3155-1	1
+Escherichia coli O157:H7 str. 2011EL-2109	1
+Escherichia coli O157:H7 str. 2011EL-2108	1
+Escherichia coli PCN061	1
+Escherichia coli O157:H7 str. K5852	1
+Escherichia coli HVH 4 (4-7276109)	1
+Escherichia coli O45:H2 str. 2009C-4780	1
+Escherichia coli O157:H7 str. K2324	1
+Escherichia coli UMEA 3151-1	1
+Cryptococcus gattii E566	1
+Rhizoctonia solani 123E	1
+Saccharomyces cerevisiae YJM1419	1
+Escherichia coli TW07509	1
+Escherichia coli BIDMC 83	1
+Escherichia coli UMEA 3805-1	1
+Escherichia fergusonii ECD227	1
+TSPO_CHLTE RecName: Full=Tryptophan-rich protein TspO; AltName: Full=Translocator protein TspO	1
+Parasteatoda tepidariorum	1
+Escherichia coli O157: str. 2010EL-2044	1
+Escherichia coli O157: str. 2010EL-2045	1
+Actinomyces sp. oral taxon 170	1
+Escherichia coli O111:NM str. 2010C-4746	1
+Escherichia coli O145:H28 str. 4865/96	1
+Saccharomyces cerevisiae YJM984	1
+Escherichia coli O157:NM str. 08-4540	1
+Saccharomyces cerevisiae YJM1273	1
+Plasmodium vivax Mauritania I	1
+Escherichia coli B29-1	1
+Escherichia coli B29-2	1
+Toxoplasma gondii VEG	1
+Escherichia coli O111:H11 str. CVM9455	1
+Escherichia coli KOEGE 77 (202a)	1
+Saccharomyces cerevisiae YJM981	1
+Escherichia coli 93.0624	1
+Escherichia coli 2-005-03_S4_C2	1
+Escherichia coli 2-005-03_S4_C3	1
+Escherichia coli HVH 90 (4-3191362)	1
+Escherichia coli 2-005-03_S4_C1	1
+Lactococcus garvieae DCC43	1
+Escherichia coli O104:H4 str. Ec11-9941	1
+Escherichia coli HVH 133 (4-4466519)	1
+TBA_TETTH RecName: Full=Tubulin alpha chain; AltName: Full=Alpha-tubulin	1
+Escherichia coli E1140	1
+Wolbachia sp. wRi	1
+Nocardia sp. BMG111209	1
+Escherichia coli 2747800	1
+Ancylobacter sp. FA202	1
+Escherichia coli UMEA 3175-1	1
+Saccharomyces cerevisiae R008	1
+Escherichia coli STEC_B2F1	1
+Salmonella enterica subsp. enterica serovar Typhimurium	1
+Escherichia coli O139:H28 str. E24377A	1
+M Chain M, Coordinates Of The B1b Bridge-Forming Protein Structures Fitted Into The Cryo-Em Map Of Efg.Gdpnp-Bound E.Coli 70s Ribosome(Emd-1363)	1
+Escherichia coli O104:H4 str. Ec11-6006	1
+Escherichia coli 2861200	1
+Shigella flexneri K-315	1
+Escherichia coli DEC10F	1
+Escherichia coli O26:H11 str. 2010C-4244	1
+Bathyctena chuni	1
+Escherichia coli 3-105-05_S3_C2	1
+Trypanosoma cruzi strain CL Brener	1
+Escherichia coli KTE49	1
+Escherichia coli KTE48	1
+Lactobacillus taiwanensis DSM 21401	1
+Escherichia coli KTE45	1
+Escherichia coli KTE44	1
+Escherichia coli KTE47	1
+Escherichia coli KTE46	1
+Escherichia coli KTE41	1
+Escherichia coli KTE40	1
+Escherichia coli KTE43	1
+Escherichia coli KTE42	1
+Cecembia lonarensis	1
+Escherichia coli STEC_C165-02	1
+Carnobacterium funditum	1
+Escherichia coli KTE118	1
+Escherichia coli KTE119	1
+Escherichia coli 1-392-07_S1_C2	1
+Vibrio sinaloensis DSM 21326	1
+Escherichia coli B114	1
+Escherichia coli KTE111	1
+Escherichia coli KTE112	1
+Escherichia coli KTE113	1
+Escherichia coli KTE115	1
+Escherichia coli KTE116	1
+Escherichia coli KTE117	1
+GSTM1_BOVIN RecName: Full=Glutathione S-transferase Mu 1; AltName: Full=GST class-mu 1; AltName: Full=GSTM1-1	1
+Ceraceosorus bombacis	1
+Rahnella aquatilis HX2	1
+Escherichia coli 180600	1
+Escherichia coli 2866550	1
+Escherichia coli O123:H11 str. 2009C-3307	1
+Anopheles coluzzii	1
+Aptenodytes forsteri	1
+Saccharomyces cerevisiae YJM1083	1
+Candidatus Korarchaeum cryptofilum OPF8	1
+Escherichia coli O157:H7 str. EC4501	1
+Pseudomonas syringae pv. coryli	1
+Escherichia coli UMEA 3148-1	1
+Escherichia coli p0305293.10	1
+Escherichia coli p0305293.11	1
+Escherichia coli p0305293.12	1
+Escherichia coli p0305293.13	1
+Escherichia coli p0305293.14	1
+Escherichia coli p0305293.15	1
+Escherichia coli 3-073-06_S4_C1	1
+Escherichia coli 3-073-06_S4_C3	1
+Escherichia coli 3-073-06_S4_C2	1
+Escherichia coli UMEA 3682-1	1
+Escherichia coli EC1849	1
+Escherichia coli EC1848	1
+Saccharomyces cerevisiae YJM627	1
+Escherichia coli EC1847	1
+Escherichia coli EC1846	1
+Escherichia coli EC1845	1
+Escherichia coli UMEA 3489-1	1
+Anaeroarcus burkinensis	1
+Escherichia coli O26:H11 str. CVM9942	1
+Maribacter thermophilus	1
+Escherichia coli 2-156-04_S3_C3	1
+Escherichia coli 2-156-04_S3_C2	1
+Escherichia coli 2-156-04_S3_C1	1
+Geotrichum candidum	1
+Escherichia coli HVH 170 (4-3026949)	1
+Escherichia coli SWW33	1
+Escherichia coli KOEGE 3 (4a)	1
+Escherichia coli KTE54	1
+Escherichia coli HVH 120 (4-6978681)	1
+Escherichia coli TW00353	1
+Bdellovibrio bacteriovorus str. Tiberius	1
+Escherichia coli 2-052-05_S3_C3	1
+Escherichia coli 541-15	1
+Escherichia coli 8-415-05_S1_C2	1
+Anastrepha ludens	1
+Escherichia coli O121:H19 str. 2011C-3537	1
+Escherichia coli BIDMC 65	1
+STK_HYDVU RecName: Full=Tyrosine-protein kinase STK; AltName: Full=P57-STK	1
+Escherichia coli HVH 19 (4-7154984)	1
+Escherichia coli BIDMC 64	1
+Escherichia coli O104:H4 str. 2009EL-2050	1
+Escherichia coli EC4100B	1
+Escherichia coli BIDMC 63	1
+Escherichia coli O55:H7 str. 06-3555	1
+D Chain D, In Silico And In Vitro Co-Evolution Of A High Affinity Complementary Protein-Protein Interfac	1
+Escherichia coli E101	1
+Taylorella asinigenitalis	1
+Desulfovibrio piger	1
+Fluviicola taffensis DSM 16823	1
+Escherichia coli O118:H16 str. 08-3651	1
+Escherichia coli KTE236	1
+Escherichia coli O121:H19 str. 2010C-3609	1
+ZBT7A_CHICK RecName: Full=Zinc finger and BTB domain-containing protein 7A; AltName: Full=Leukemia/lymphoma-related factor; Short=cLRF	1
+Escherichia coli ATCC 8739	1
+Escherichia coli NE037	1
+Escherichia coli HVH 79 (4-2512823)	1
+Cryptococcus gattii CBS 10090	1
+Singulisphaera acidiphila	1
+Heteropneustes fossilis	1
+Escherichia coli IS1	1
+Escherichia coli 5.0588	1
+Eubacterium limosum KIST612	1
+Triops longicaudatus	1
+Escherichia coli IS9	1
+Moneuplotes crassus	1
+Escherichia coli HVH 9 (4-6942539)	1
+Escherichia coli 2-210-07_S1_C3	1
+FEN1_NEMVE RecName: Full=Flap endonuclease 1; Short=FEN-1; AltName: Full=Flap structure-specific endonuclease 1	1
+Escherichia coli O121:H19 str. 2011C-3072	1
+Escherichia coli FAP1	1
+Escherichia coli O55:H7 str. CB9615	1
+Escherichia coli HVH 45 (4-3129918)	1
+Escherichia coli O63	1
+Escherichia coli O111:NM str. 08-4487	1
+Eukaryota sp. JRG-2011	1
+Escherichia coli O26:H11 str. 2010C-4819	1
+Escherichia coli HVH 103 (4-5904188)	1
+Escherichia coli C691-71 (14b)	1
+Drosophila silvestris	1
+Escherichia coli 1827-70	1
+Escherichia coli TW10119	1
+Escherichia coli ST131	1
+Escherichia coli O157:H7 str. 07-3391	1
+Escherichia coli B103	1
+Escherichia coli H299	1
+Escherichia coli KOEGE 71 (186a)	1
+Ensifer sp. Root31	1
+Lactococcus garvieae	1
+Escherichia coli B102	1
+Escherichia coli P0302293.3	1
+Escherichia coli P0302293.2	1
+Escherichia coli P0302293.7	1
+Escherichia coli P0302293.6	1
+Escherichia coli CHS 77	1
+Escherichia coli P0302293.4	1
+Escherichia coli P0302293.9	1
+Escherichia coli P0302293.8	1
+Escherichia coli O157:H7 str. F6142	1
+Elizabethkingia	1
+Escherichia sp. 1_1_43	1
+Escherichia coli HVH 205 (4-3094677)	1
+Escherichia coli B108	1
+Synechocystis sp. PCC 6803 substr. PCC-P	1
+Escherichia coli O145:H28 str. RM12761	1
+Escherichia coli E1777	1
+Entamoeba histolytica HM-1:IMSS	1
+Cecembia lonarensis LW9	1
+Escherichia coli O157:H7 str. 2011EL-2111	1
+Escherichia coli 179100	1
+Escherichia coli O157:H7 str. 2011EL-2113	1
+Shigella dysenteriae WRSd3	1
+Escherichia coli 2867750	1
+Shigella dysenteriae WRSd5	1
+Escherichia coli 576-1	1
+Escherichia coli FDA517	1
+Escherichia coli O169:H41 str. F9792	1
+Escherichia coli HVH 21 (4-4517873)	1
+Escherichia coli 3431	1
+Sphyraena idiastes	1
+Escherichia coli EC96038	1
+Akkermansia muciniphila CAG:154	1
+Serratia nematodiphila	1
+Escherichia coli TA143	1
+Escherichia coli EC4013	1
+Shewanella loihica	1
+Macrotermes barneyi	1
+Escherichia coli 97.0264	1
+Saccharomyces cerevisiae YJM1356	1
+Escherichia coli STEC_MHI813	1
+Saccharomyces cerevisiae YJM1355	1
+Escherichia coli O145:H28 str. RM12581	1
+Thecla betulae	1
+Escherichia coli 95.0083	1
+Escherichia coli O157:H7 str. K4405	1
+Escherichia coli 7-233-03_S3_C2	1
+Escherichia coli O157:H7 str. K4406	1
+Cupriavidus	1
+Escherichia coli O103:H11 str. 2010C-3214	1
+Escherichia coli 2-474-04_S4_C1	1
+Escherichia coli 2-474-04_S4_C3	1
+Escherichia coli 2-474-04_S4_C2	1
+Escherichia coli O45:H2 str. 2010C-4211	1
+Serratia fonticola	1
+Chelon labrosus	1
+Escherichia coli 7-233-03_S3_C1	1
+Escherichia coli HVH 176 (4-3428664)	1
+Escherichia coli KOEGE 10 (25a)	1
+Bacteriovorax sp. DB6_IX	1
+Escherichia coli HVH 33 (4-2174936)	1
+Escherichia coli 09BKT078844	1
+Microlunatus phosphovorus	1
+Drepana sp. GAS-2011	1
+V Chain V, Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Initiation Factor 1. This File Contains The 40s Subunit And Initiation Factor For Molecule 2	1
+Escherichia coli O91:H21 str. 2009C-3740	1
+Escherichia coli 2-005-03_S3_C2	1
+Ewingella americana ATCC 33852	1
+Escherichia coli 2-005-03_S3_C1	1
+Leptospira sp. serovar Kenya str. Sh9	1
+Escherichia coli O157:H7 str. LSU-61	1
+NDK6_XENTR RecName: Full=Nucleoside diphosphate kinase 6; Short=NDK 6; Short=NDP kinase 6	1
+Macrobrachium amazonicum	1
+Sphingobacterium sp. IITKGP-BTPF85	1
+Escherichia coli HVH 141 (4-5995973)	1
+Escherichia coli O26:H11 str. CVM10224	1
+Escherichia coli Jurua 20/10	1
+Escherichia coli P0302308.2	1
+Escherichia coli P0302308.3	1
+Escherichia coli P0302308.1	1
+Shigella flexneri K-304	1
+Escherichia coli HVH 96 (4-5934869)	1
+Escherichia coli P0302308.4	1
+Escherichia coli P0302308.5	1
+Escherichia coli 3-475-03_S1_C1	1
+Escherichia coli O111:H8 str. F6627	1
+Escherichia coli 3-475-03_S1_C2	1
+Escherichia coli UMEA 3087-1	1
+Escherichia coli 99.1793	1
+Shigella dysenteriae 1012	1
+Escherichia coli KTE78	1
+Escherichia coli KTE79	1
+Escherichia coli O104:H4 str. 11-4522	1
+Escherichia coli HVH 218 (4-4500903)	1
+Gemma sp. JV-2012	1
+Shigella sonnei Ss046	1
+Escherichia coli KTE71	1
+Escherichia coli KTE72	1
+Escherichia coli KTE73	1
+Escherichia coli KTE74	1
+Escherichia coli KTE75	1
+Escherichia coli KTE76	1
+Escherichia coli KTE77	1
+Escherichia coli 0.1288	1
+Escherichia coli O104:H4 str. 11-4632 C3	1
+Escherichia coli O104:H4 str. 11-4632 C2	1
+Escherichia coli O104:H4 str. 11-4632 C1	1
+CBY1_RAT RecName: Full=Protein chibby homolog 1; AltName: Full=Cytosolic leucine-rich protein; AltName: Full=PIGEA-14; AltName: Full=PKD2 interactor, Golgi and endoplasmic reticulum-associated 1	1
+Sporocytophaga myxococcoides	1
+Escherichia coli O104:H4 str. 11-4632 C5	1
+Escherichia coli O104:H4 str. 11-4632 C4	1
+Escherichia coli FRIK2001	1
+Escherichia coli O157:H7 str. K5448	1
+Escherichia coli O157:H7 str. K5449	1
+Escherichia coli KD2	1
+Cryptococcus gattii CA1873	1
+Saccharomyces cerevisiae YJM555	1
+Escherichia coli O121:H19 str. 03-3227	1
+Escherichia coli KTE125	1
+Escherichia coli KTE124	1
+Escherichia coli KTE127	1
+Escherichia coli KTE126	1
+Escherichia coli KTE121	1
+Escherichia coli KTE123	1
+Escherichia coli KTE122	1
+Escherichia coli 6-537-08_S3_C2	1
+Escherichia coli 2871950	1
+Escherichia coli 6-537-08_S3_C1	1
+Escherichia coli KTE129	1
+Escherichia coli KTE128	1
+Escherichia coli 3-020-07_S4_C2	1
+Escherichia coli MP020980.1	1
+Escherichia coli HVH 108 (4-6924867)	1
+Escherichia coli O157:H7 str. K1927	1
+Escherichia coli 09BKT076207	1
+A Chain A, Mouse Gabp AlphaBETA DOMAIN BOUND TO DN	1
+Escherichia coli O104:H4 str. 11-02913	1
+Capnocytophaga sp. oral taxon 332 str. F0381	1
+Mytilus californianus	1
+Litopenaeus schmitti	1
+Escherichia coli 1-182-04_S4_C2	1
+Escherichia coli 1-182-04_S4_C3	1
+Capitella teleta	1
+Escherichia coli DEC7B	1
+Escherichia coli HVH 30 (4-2661829)	1
+Escherichia coli DEC7A	1
+Escherichia coli UMEA 3097-1	1
+Escherichia coli BCE034_MS-14	1
+Escherichia coli DEC7E	1
+Escherichia coli BIDMC 62	1
+Saccharomyces cerevisiae YJM470	1
+Saccharomyces cerevisiae YJM189	1
+Escherichia coli EC1850	1
+Escherichia coli EC1856	1
+Escherichia coli 09BKT024447	1
+Escherichia coli 2780750	1
+Toxoplasma gondii VAND	1
+Clostridiales bacterium oral taxon 876 str. F0540	1
+Medicago sativa	1
+Escherichia coli B15	1
+Escherichia coli PA41	1
+Deltaproteobacteria bacterium SG8_13	1
+Escherichia coli B17	1
+Pseudomonas mosselii SJ10	1
+Escherichia coli K71	1
+Escherichia coli 2866450	1
+A Chain A, Crystal Structure Of The E130y Mutant Of Human Soluble Calcium-Activated Nucleotidase (Scan) With Calcium Ion	1
+Escherichia coli UMEA 3702-1	1
+Andreprevotia chitinilytica	1
+Saccharomyces cerevisiae YJM987	1
+Escherichia coli HVH 212 (3-9305343)	1
+C Chain C, Structural Determinants For Improved Thermal Stability Of Designed Ankyrin Repeat Proteins With A Redesigned C- Capping Module	1
+Escherichia coli O5:K4(L):H4 str. ATCC 23502	1
+Escherichia coli UMEA 3893-1	1
+Escherichia coli IHE3034	1
+Escherichia coli 75	1
+Escherichia coli CHS 68	1
+Escherichia coli O157:H7 str. SS17	1
+Escherichia coli DSM 30083 = JCM 1649 = ATCC 11775	1
+Q Chain Q, T.Thermophila 60s Ribosomal Subunit In Complex With Initiation Factor 6. This File Contains 26s Rrna And Proteins Of Molecule 3.	1
+Escherichia coli UMEA 3955-1	1
+Nocardia higoensis	1
+Adhaeribacter aquaticus	1
+Escherichia coli RS218	1
+Thaumarchaeota archaeon N4	1
+Escherichia coli 2-052-05_S3_C1	1
+Escherichia coli O55:H7 str. 3256-97 TW 07815	1
+Escherichia coli 2-052-05_S3_C2	1
+Escherichia coli HVH 159 (4-5818141)	1
+Saccharomyces cerevisiae YJM326	1
+Macrocentrus cingulum	1
+Escherichia coli FVEC1302	1
+Escherichia coli O121:H19 str. 2011C-3609	1
+Escherichia coli 2-316-03_S1_C2	1
+Escherichia coli P0302308.14	1
+Escherichia coli EC4422	1
+Scytonema hofmanni	1
+Escherichia coli P0302308.10	1
+Escherichia coli P0302308.12	1
+Escherichia coli P0302308.13	1
+Candida auris	1
+Escherichia coli HVH 148 (4-3192490)	1
+A Chain A, Structural Basis Of Prospero-Dna Interaction; Implications For Transcription Regulation In Developing Cell	1
+Escherichia coli UMEA 3693-1	1
+PNO1_XENLA RecName: Full=RNA-binding protein PNO1	1
+Escherichia coli P4-96	1
+Escherichia coli FVEC1412	1
+Escherichia coli 2726800	1
+Escherichia coli O157:H7 str. EC1212	1
+Escherichia coli 2-005-03_S3_C3	1
+Escherichia coli 99.0839	1
+Escherichia coli HVH 20 (4-5865042)	1
+Saccharomyces kudriavzevii IFO 1802	1
+Escherichia coli O157:H- str. 493-89	1
+V Chain V, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 4	1
+Escherichia coli 3-373-03_S1_C2	1
+Escherichia coli 3-373-03_S1_C3	1
+Escherichia coli 3-373-03_S1_C1	1
+Escherichia coli HVH 185 (4-2876639)	1
+Bdellovibrio bacteriovorus	1
+Escherichia coli 2719100	1
+Escherichia coli O118:H16 str. 2009C-4446	1
+V Chain V, The Crystal Structure Of The Eukaryotic 40s Ribosomal Subunit In Complex With Eif1 And Eif1a - Complex 1	1
+Escherichia coli HVH 160 (4-5695937)	1
+Escherichia coli O103:H11 str. 04-3023	1
+Escherichia coli UCI 53	1
+Escherichia coli NCTC 50110	1
+Escherichia coli O81:NM str. 02-3012	1
+Escherichia coli CHS 69	1
+A Chain A, Structure Of The C-Domain Fragment Of Apo Calmodulin Bound To The Iq Motif Of Nav1.2	1
+Pleurobrachia bachei	1
+Janiodes laverna	1
+Escherichia coli UCI 58	1
+Escherichia coli 55989	1
+Escherichia coli UMEA 3163-1	1
+Vibrio	1
+Escherichia coli HVH 39 (4-2679949)	1
+Escherichia coli O104:H4 str. 11-04080	1
+Escherichia coli UCI 57	1
