@@ -1,0 +1,9 @@
+python parse_blast.py idotea_PARSEDblastx2nr.txt idotea_blastx2nr
+
+python ReParseBlastbycutoffs.py idotea_tophitreParsedBlastx2nr_e5.txt 12 0.00001 idotea_PARSEDblastx2nr.txt
+
+python ReParseBlast.py idotea_tophitreParsedBlastx2nr_e5.txt idotea_blastx2nr_e5_simple.txt
+
+python ReParseBlastByTerm.py idotea_blastx2nr_e5_simple.txt idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_bad.txt predicted,hypothetical,putative,unknown
+
+python GroupTaxon.py idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_good_taxon.txt
