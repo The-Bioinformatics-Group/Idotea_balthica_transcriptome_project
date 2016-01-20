@@ -1,9 +1,17 @@
+# PARSE BLASTX2NR XML RESULTS TO TXT FILE
 python parse_blast.py idotea_PARSEDblastx2nr.txt idotea_blastx2nr
 
+# REPARSE RESULTS USING AN e-5 CUTOFF VALUE
 python ReParseBlastbycutoffs.py idotea_tophitreParsedBlastx2nr_e5.txt 12 0.00001 idotea_PARSEDblastx2nr.txt
 
+# SIMPLIFY THE RESULTS
 python ReParseBlast.py idotea_tophitreParsedBlastx2nr_e5.txt idotea_blastx2nr_e5_simple.txt
 
+# SEPARATE OUT ‘UNINFORMATIVE’ TERMS
 python ReParseBlastByTerm.py idotea_blastx2nr_e5_simple.txt idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_bad.txt predicted,hypothetical,putative,unknown
 
+# DISCOVER TOP TAXON GROUPS
 python GroupTaxon.py idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_good_taxon.txt
+
+# SEPARATE OUT BACTERIA AND PROTOZOA
+python FilterByTaxon.py idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_good_NONbacproto.txt idotea_blastx2nr_e5_simple_good_bacproto.txt idotea_filterlist.txt
