@@ -1,0 +1,12 @@
+PASS	Basic Statistics	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Per base sequence quality	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Per tile sequence quality	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Per sequence quality scores	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+FAIL	Per base sequence content	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Per sequence GC content	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Per base N content	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+WARN	Sequence Length Distribution	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+FAIL	Sequence Duplication Levels	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Overrepresented sequences	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+PASS	Adapter Content	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
+FAIL	Kmer Content	out_rev_paired.cor.fq.normalized_K25_C50_pctSD200.fq
