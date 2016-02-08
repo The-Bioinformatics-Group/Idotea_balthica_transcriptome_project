@@ -15,3 +15,6 @@ python GroupTaxon.py idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_sim
 
 # SEPARATE OUT BACTERIA AND PROTOZOA
 python FilterByTaxon.py idotea_blastx2nr_e5_simple_good.txt idotea_blastx2nr_e5_simple_good_NONbacproto.txt idotea_blastx2nr_e5_simple_good_bacproto.txt idotea_filterlist.txt
+
+# Discover how many additional annotations BLASTX found (6189 more contigs annotated)
+python AddAno.py panzer_K25.DE idotea_blastx2nr_e5_simple_good_NONbacproto.txt annotation_numbers.txt

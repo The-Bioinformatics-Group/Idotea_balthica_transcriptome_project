@@ -1,0 +1,4 @@
+Pannzer Only: 9066
+BlastX Only: 6189
+Both: 4741
+Total Annotated Contigs: 19996
